@@ -10,9 +10,23 @@ td {
   border-collapse: collapse;
 }
 
+th {
+  font-size: 0.95rem;
+  background-color: #252525;
+  color: white;
+}
+
 th,
 td {
   padding: 0.25rem 0.25rem;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+table.striped tr:nth-child(even) {
+  background-color: #eee;
 }
 
 .text-right {

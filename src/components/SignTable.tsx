@@ -28,34 +28,36 @@ export function SignTable({ data }: { data: SignJson }) {
 
   const total = useMemo(() => formatPercentage(data.total / 100_000), [data.total]);
 
+  const nRegions = useMemo(
+    () => data.regionsAndValues.filter(({ value }) => value && value > 0).length,
+    [data.regionsAndValues],
+  );
+
   return (
     <div>
       <div style={{ marginBottom: '1rem' }}>
         <table>
           <tbody>
-            <tr>
-              <td>
-                <b>{'Всего подписей (сумма регионов)'}</b>
-              </td>
-              <td className="text-right text-mono">
-                <b>{data.total.toLocaleString()}</b>
-              </td>
+            <tr style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>
+              <td>{'Всего подписей (сумма регионов)'}</td>
+              <td className="text-right text-mono">{data.total.toLocaleString()}</td>
             </tr>
 
             <tr>
-              <td>
-                <b>{'Процент от необходимого'}</b>
-              </td>
-              <td className="text-right text-mono">
-                <b>{total}</b>
-              </td>
+              <td>{'Процент от необходимого (100 000)'}</td>
+              <td className="text-right text-mono">{total}</td>
+            </tr>
+
+            <tr>
+              <td>{'Всего регионов'}</td>
+              <td className="text-right text-mono">{nRegions}</td>
             </tr>
           </tbody>
         </table>
       </div>
 
       <div style={{ marginBottom: '1rem' }}>
-        <table>
+        <table className="striped">
           <thead>
             <tr>
               <th>{'Регион'}</th>
