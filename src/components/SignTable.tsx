@@ -77,12 +77,40 @@ export function SignTable({ data }: { data: SignJson }) {
 }
 
 export function Region({ region, value }: SignRegion) {
-  const percentage = useMemo(() => formatPercentage(value / 2_500), [value]);
+  const percentage = useMemo(() => {
+    if (!value) {
+      return '?';
+    }
+    const percentage = value / 2_500;
+    let color = '#222';
+    if (percentage < 1) {
+      color = '#922204';
+    }
+    if (percentage >= 1) {
+      color = '#005b00';
+    }
+    return <span style={{ color: color }}>{formatPercentage(percentage)}</span>;
+  }, [value]);
+
+  const valueFormatted = useMemo(() => {
+    if (!value) {
+      return '?';
+    }
+    let color = '#222';
+    if (value < 2500) {
+      color = '#922204';
+    }
+    if (value >= 2500) {
+      color = '#005b00';
+    }
+    const valueFormatted = value.toLocaleString();
+    return <span style={{ color: color }}>{valueFormatted}</span>;
+  }, [value]);
 
   return (
     <tr>
       <td>{region}</td>
-      <td className="text-right text-mono">{value?.toLocaleString() ?? '?'}</td>
+      <td className="text-right text-mono">{valueFormatted}</td>
       <td className="text-right text-mono">{percentage}</td>
     </tr>
   );
