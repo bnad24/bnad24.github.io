@@ -2,6 +2,7 @@ import jquery from 'jquery';
 import { JSDOM } from 'jsdom';
 import { sum, first } from 'lodash-es';
 import fs from 'fs-extra';
+import { DateTime } from 'luxon';
 
 async function main() {
   const html = await (await fetch('https://nadezhdin2024.ru/addresses')).text();
@@ -24,7 +25,8 @@ async function main() {
   const total = sum(regionsAndValues.map(({ value }) => value));
   console.log({ total });
 
-  await fs.writeJson('public/data/sign.json', { regionsAndValues, total });
+  const updatedAt = DateTime.now().toUTC().toISO();
+  await fs.writeJson('public/data/sign.json', { regionsAndValues, total, updatedAt }, { spaces: 2 });
 }
 
 await main();
