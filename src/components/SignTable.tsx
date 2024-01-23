@@ -1,4 +1,5 @@
 import { clamp, sortBy, sum, isFinite } from 'lodash-es';
+import { darken } from 'polished';
 import { useMemo } from 'react';
 import { SignJson, SignRegion } from '../types';
 import { FaTelegram } from 'react-icons/fa';
@@ -15,8 +16,8 @@ function formatPercentage(value?: number): string {
 export function SignTable({ data }: { data: SignJson }) {
   const rows = useMemo(() => {
     const regionsAndValues = sortBy(data.regionsAndValues, ({ value }) => -value);
-    return regionsAndValues.map(({ region, value, tg }) => {
-      return <Region key={region} region={region} value={value} tg={tg} />;
+    return regionsAndValues.map(({ region, value, tg }, i) => {
+      return <Region key={region} i={i} region={region} value={value} tg={tg} />;
     });
   }, [data.regionsAndValues]);
 
@@ -212,7 +213,7 @@ export function SignTable({ data }: { data: SignJson }) {
   );
 }
 
-export function Region({ region, value, tg }: SignRegion) {
+export function Region({ region, value, tg, i }: SignRegion & { i: number }) {
   const { percRequired, percDesired, color, valueFormatted } = useMemo(() => {
     if (!value) {
       return {
@@ -228,13 +229,17 @@ export function Region({ region, value, tg }: SignRegion) {
 
     let color = '#222';
     if (percRequired < 1) {
-      color = '#922204';
+      color = '#e8d2c7';
     }
     if (percRequired >= 1 && percDesired < 1) {
-      color = '#7d4200';
+      color = '#e8e0c5';
     }
     if (percDesired >= 1) {
-      color = '#005b00';
+      color = '#d5ebcd';
+    }
+
+    if (i % 2 === 1) {
+      color = darken(0.05)(color);
     }
 
     return {
@@ -243,28 +248,30 @@ export function Region({ region, value, tg }: SignRegion) {
       percDesired: formatPercentage(percDesired),
       valueFormatted: value,
     };
-  }, [value]);
+  }, [i, value]);
 
   const maxWidth = '160px';
 
   return (
-    <tr>
+    <tr style={{ backgroundColor: color }}>
       <td>
         {tg && (
           <a target="_blank" rel="noreferrer" href={tg}>
-            <FaTelegram color="#229ED9" />
+            <span style={{ backgroundColor: 'white', borderRadius: '30px' }}>
+              <FaTelegram size={20} color="#229ED9" />
+            </span>
           </a>
         )}
       </td>
       <td className="ellipsis" title={region} style={{ maxWidth }}>
-        <span style={{ color }}>{region}</span>
+        <span>{region}</span>
       </td>
-      <td className="text-right text-mono">{<span style={{ color }}>{valueFormatted}</span>}</td>
+      <td className="text-right text-mono">{<span>{valueFormatted}</span>}</td>
       <td style={{ minWidth: '80px' }} className="text-right text-mono">
-        {<span style={{ color }}>{percDesired}</span>}
+        {<span>{percDesired}</span>}
       </td>
       <td style={{ minWidth: '80px' }} className="text-right text-mono">
-        {<span style={{ color }}>{percRequired}</span>}
+        {<span>{percRequired}</span>}
       </td>
     </tr>
   );
