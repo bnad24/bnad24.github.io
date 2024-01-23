@@ -1,6 +1,5 @@
 const TITLE = 'Борис Надеждин 2024: счетчики сбора подписей и статистика';
 const DESCRIPTION = 'Отслеживание сбора подписей за кандидата в презеденты Бориса Надеждина, cтатистика по регионам';
-const KEYWORDS = 'Надеждин,2024,выборы,подписи,статистика,счетчик';
 const IMAGE_URL = 'https://raw.githubusercontent.com/bnad24/bnad24.github.io/main/public/social.png';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -13,7 +12,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <title>{TITLE}</title>
         <meta name="title" content={TITLE} />
         <meta name="description" content={DESCRIPTION} />
-        <meta name="keywords" content={KEYWORDS} />
         <meta name="robots" content="index, nofollow" />
         <meta name="revisit-after" content="1 days" />
         <meta property="og:title" content={TITLE} />
