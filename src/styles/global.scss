@@ -1,0 +1,40 @@
+html body {
+  font-family: sans-serif;
+}
+
+table,
+th,
+td {
+  border: 1px solid #aaa;
+  border-collapse: collapse;
+  font-family: monospace;
+  font-size: 1rem;
+}
+
+td {
+  padding: 0.25rem 0.25rem;
+}
+
+.text-right {
+  text-align: right;
+}
+
+details {
+  border: 1px solid #c59b6e;
+  border-radius: 5px;
+  margin: 0.25rem 0.5rem;
+  padding: 0.25rem 0.5rem;
+  background: #e7e3de;
+}
+
+details summary {
+  //border: 1px solid #c59b6e;
+  //border-radius: 5px;
+  //margin: 0.25rem 0.5rem;
+  //padding: 0.25rem 0.5rem;
+  //background: #e7e3de;
+  cursor: pointer;
+}
+
+details p {
+}

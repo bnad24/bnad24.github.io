@@ -40,26 +40,93 @@ export interface SignJson {
 export function Main() {
   return (
     <div>
-      <h1>{'Борис Надеждин: статистика сбора подписей'}</h1>
-      <p>
-        {
-          'Этот сайт разработан и поддерживается волонтерами и никак не связан с Борисом Надеждиным или его соратниками!'
-        }
-      </p>
-      <p>
-        {
-          'Статистика автоматически считывается с официального сайта и отображается в более компактной форме. "Всего" показывает сумму (результат сложения) по всем перечисленным регионам и может отличаться от цифры на официальном сайте.'
-        }
-      </p>
-      <p>
-        {'Официальный сайт Бориса Надеждина здесь: '}
-        <a href="https://nadezhdin2024.ru/">
-          <b>{'nadezhdin2024.ru'}</b>
-        </a>
-      </p>
+      <h1>{'Борис Надеждин'}</h1>
+      <h2>{'Статистика сбора подписей'}</h2>
 
-      <SignTable />
+      <details>
+        <summary>{'Что это? (нажмите чтобы развернуть)'}</summary>
+        <p>
+          {
+            'Этот сайт разработан и поддерживается волонтерами и никак не связан с Борисом Надеждиным или его соратниками!'
+          }
+        </p>
+        <p>
+          {
+            'Статистика автоматически считывается с официального сайта и отображается в более компактной форме. "Всего" показывает сумму (результат сложения) по всем перечисленным регионам и может отличаться от цифры на официальном сайте.'
+          }
+        </p>
+
+        <div style={{ marginBottom: '1rem' }}>
+          <h3>{'Ссылки на официальный сайт Бориса Надеждина'}</h3>
+
+          <table style={{ border: '#aaa solid 1px' }}>
+            <tbody>
+              <tr>
+                <td>{'Главная страница'}</td>
+                <td>
+                  <a target="_blank" rel="noreferrer" href="https://nadezhdin2024.ru/">
+                    <b>{'nadezhdin2024.ru'}</b>
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>{'Адреса штабов где можно поставить подпись, а также официальная статистика'}</td>
+                <td>
+                  <a target="_blank" rel="noreferrer" href="https://nadezhdin2024.ru/addresses">
+                    <b>{'nadezhdin2024.ru/addresses'}</b>
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>{'Список регионов (города зарубежья внизу страницы)'}</td>
+                <td>
+                  <a target="_blank" rel="noreferrer" href="https://nadezhdin2024.ru/regions">
+                    <b>{'nadezhdin2024.ru/regions'}</b>
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>{'Поддержать'}</td>
+                <td>
+                  <a target="_blank" rel="noreferrer" href="https://nadezhdin2024.ru/#donate">
+                    <b>{'nadezhdin2024.ru/#donate'}</b>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </details>
+
+      <div style={{ marginBottom: '1rem' }}>
+        <UpdatedAt />
+      </div>
+
+      <div style={{ marginBottom: '1rem' }}>
+        <SignTable />
+      </div>
     </div>
+  );
+}
+
+export function UpdatedAt() {
+  const data = useJson<SignJson>('/data/sign.json');
+
+  const updatedAt = useMemo(
+    () => DateTime.fromISO(data.updatedAt).setLocale('ru').toLocaleString(DateTime.DATETIME_MED_WITH_WEEKDAY),
+    [data.updatedAt],
+  );
+
+  return (
+    <p>
+      <b>
+        {'Обновлено: '}
+        {updatedAt}
+      </b>
+    </p>
   );
 }
 
@@ -72,28 +139,14 @@ export function SignTable() {
     });
   }, [data.regionsAndValues]);
 
-  const updatedAt = useMemo(
-    () => DateTime.fromISO(data.updatedAt).setLocale('ru').toLocaleString(DateTime.DATETIME_FULL),
-    [data.updatedAt],
-  );
-
   return (
     <table>
       <tbody>
         <tr>
           <td>
-            <b>{'Обновлено'}</b>
-          </td>
-          <td>
-            <b>{updatedAt}</b>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
             <b>{'Всего (сумма регионов)'}</b>
           </td>
-          <td>
+          <td className="text-right">
             <b>{data.total.toLocaleString()}</b>
           </td>
         </tr>
@@ -108,7 +161,7 @@ export function Region({ region, value }: SignRegion) {
   return (
     <tr>
       <td>{region}</td>
-      <td>{value?.toLocaleString() ?? 'нет данных'}</td>
+      <td className="text-right">{value?.toLocaleString() ?? 'нет данных'}</td>
     </tr>
   );
 }
