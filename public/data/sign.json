@@ -2,36 +2,48 @@
   "regionsAndValues": [
     {
       "region": "Москва",
+      "tg": "https://t.me//center_msk",
+      "pop": 13104177,
       "value": 16444,
-      "tg": "https://t.me//center_msk"
+      "valuePerPop": 1254.8670549855974
     },
     {
       "region": "Московская область",
+      "tg": "https://t.me//center_mo",
+      "pop": 8591736,
       "value": 3167,
-      "tg": "https://t.me//center_mo"
+      "valuePerPop": 368.61002246810193
     },
     {
       "region": "Санкт-Петербург",
+      "tg": "https://t.me/center_spb_2024",
+      "pop": 5600044,
       "value": 8086,
-      "tg": "https://t.me/center_spb_2024"
+      "valuePerPop": 1443.91722636465
     },
     {
       "region": "Австрия"
     },
     {
       "region": "Алтай",
+      "tg": "https://t.me//center_ra_2024",
+      "pop": 210769,
       "value": 432,
-      "tg": "https://t.me//center_ra_2024"
+      "valuePerPop": 2049.63728062476
     },
     {
       "region": "Алтайский край",
+      "tg": "https://t.me/center_ak",
+      "pop": 2130950,
       "value": 1604,
-      "tg": "https://t.me/center_ak"
+      "valuePerPop": 752.7159248222624
     },
     {
       "region": "Амурская область",
+      "tg": "https://t.me/center_ao",
+      "pop": 756198,
       "value": 1,
-      "tg": "https://t.me/center_ao"
+      "valuePerPop": 1.3224049785902634
     },
     {
       "region": "Аргентина"
@@ -42,18 +54,24 @@
     },
     {
       "region": "Архангельская область",
+      "tg": "https://t.me/center_arh",
+      "pop": 964304,
       "value": 1251,
-      "tg": "https://t.me/center_arh"
+      "valuePerPop": 1297.3087325158872
     },
     {
       "region": "Башкортостан",
+      "tg": "https://t.me/center_rb",
+      "pop": 4077600,
       "value": 1870,
-      "tg": "https://t.me/center_rb"
+      "valuePerPop": 458.6030998626643
     },
     {
       "region": "Белгородская область",
+      "tg": "https://t.me//center_bo_2024",
+      "pop": 1514527,
       "value": 728,
-      "tg": "https://t.me//center_bo_2024"
+      "valuePerPop": 480.67812590993753
     },
     {
       "region": "Бельгия"
@@ -63,36 +81,48 @@
     },
     {
       "region": "Брянская область",
-      "value": 21,
-      "tg": "https://t.me/center_bro"
+      "tg": "https://t.me/center_bro",
+      "pop": 1152505,
+      "value": 25,
+      "valuePerPop": 21.691879861692573
     },
     {
       "region": "Бурятия",
+      "tg": "https://t.me/center_ula",
+      "pop": 974628,
       "value": 1500,
-      "tg": "https://t.me/center_ula"
+      "valuePerPop": 1539.0487447518437
     },
     {
       "region": "Венгрия"
     },
     {
       "region": "Владимирская область",
+      "tg": "https://t.me/nadvladimir",
+      "pop": 1325510,
       "value": 716,
-      "tg": "https://t.me/nadvladimir"
+      "valuePerPop": 540.1694442139252
     },
     {
       "region": "Волгоградская область",
+      "tg": "https://t.me//center_wo",
+      "pop": 2470057,
       "value": 1085,
-      "tg": "https://t.me//center_wo"
+      "valuePerPop": 439.26111826569183
     },
     {
       "region": "Вологодская область",
+      "tg": "https://t.me//center_vologda",
+      "pop": 1128782,
       "value": 849,
-      "tg": "https://t.me//center_vologda"
+      "valuePerPop": 752.1381453637638
     },
     {
       "region": "Воронежская область",
+      "tg": "https://t.me/center_vrn",
+      "pop": 2285282,
       "value": 2395,
-      "tg": "https://t.me/center_vrn"
+      "valuePerPop": 1048.0107050245879
     },
     {
       "region": "Германия",
@@ -111,13 +141,17 @@
     },
     {
       "region": "Забайкальский край",
-      "value": 788,
-      "tg": "https://t.me/center_zab_k"
+      "tg": "https://t.me/center_zab_k",
+      "pop": 992429,
+      "value": 798,
+      "valuePerPop": 804.0877483427026
     },
     {
       "region": "Ивановская область",
+      "tg": "https://t.me//centr_io",
+      "pop": 914725,
       "value": 906,
-      "tg": "https://t.me//centr_io"
+      "valuePerPop": 990.4616141463281
     },
     {
       "region": "Израиль",
@@ -125,13 +159,20 @@
     },
     {
       "region": "Ингушетия",
+      "tg": "https://t.me//nad_ing",
+      "pop": 519078,
       "value": 2,
-      "tg": "https://t.me//nad_ing"
+      "valuePerPop": 3.852985485803675
+    },
+    {
+      "region": "Индонезия"
     },
     {
       "region": "Иркутская область",
-      "value": 1680,
-      "tg": "https://t.me/center_io"
+      "tg": "https://t.me/center_io",
+      "pop": 2344360,
+      "value": 2595,
+      "valuePerPop": 1106.9119077274822
     },
     {
       "region": "Ирландия"
@@ -149,65 +190,89 @@
     },
     {
       "region": "Калининградская область",
+      "tg": "https://t.me/center_kalin",
+      "pop": 1032343,
       "value": 390,
-      "tg": "https://t.me/center_kalin"
+      "valuePerPop": 377.7814156728917
     },
     {
       "region": "Калужская область",
+      "tg": "https://t.me/center_ka",
+      "pop": 1070853,
       "value": 591,
-      "tg": "https://t.me/center_ka"
+      "valuePerPop": 551.8964787884051
     },
     {
       "region": "Камчатский край",
-      "value": 10
+      "pop": 288730,
+      "value": 10,
+      "valuePerPop": 34.63443355383923
     },
     {
       "region": "Карелия",
+      "tg": "https://t.me/center_10",
+      "pop": 527880,
       "value": 1005,
-      "tg": "https://t.me/center_10"
+      "valuePerPop": 1903.8417822232325
     },
     {
       "region": "Кемеровская область",
-      "value": 871,
-      "tg": "https://t.me/center_ko"
+      "tg": "https://t.me/center_ko",
+      "pop": 2568238,
+      "value": 1226,
+      "valuePerPop": 477.37008797471265
     },
     {
       "region": "Кипр"
     },
     {
       "region": "Кировская область",
+      "tg": "https://t.me/center_kir",
+      "pop": 1138112,
       "value": 1359,
-      "tg": "https://t.me/center_kir"
+      "valuePerPop": 1194.0828319181242
     },
     {
       "region": "Коми",
+      "tg": "https://t.me//center_rk_2024",
+      "pop": 726434,
       "value": 927,
-      "tg": "https://t.me//center_rk_2024"
+      "valuePerPop": 1276.0966584713822
     },
     {
       "region": "Костромская область",
+      "tg": "https://t.me//center_ko_2024",
+      "pop": 571900,
       "value": 1001,
-      "tg": "https://t.me//center_ko_2024"
+      "valuePerPop": 1750.3059975520196
     },
     {
       "region": "Краснодарский край",
+      "tg": "https://t.me/center_krasnodar",
+      "pop": 5819345,
       "value": 2137,
-      "tg": "https://t.me/center_krasnodar"
+      "valuePerPop": 367.2234589975332
     },
     {
       "region": "Красноярский край",
+      "tg": "https://t.me/center_kk",
+      "pop": 2845545,
       "value": 1826,
-      "tg": "https://t.me/center_kk"
+      "valuePerPop": 641.7048403732853
     },
     {
       "region": "Курганская область",
-      "value": 336,
-      "tg": "https://t.me//nadejdin45"
+      "tg": "https://t.me//nadejdin45",
+      "pop": 761586,
+      "value": 561,
+      "valuePerPop": 736.620683678534
     },
     {
       "region": "Курская область",
+      "tg": "https://t.me//center_k",
+      "pop": 1067034,
       "value": 704,
-      "tg": "https://t.me//center_k"
+      "valuePerPop": 659.7727907451871
     },
     {
       "region": "Кыргызстан",
@@ -218,46 +283,64 @@
     },
     {
       "region": "Ленинградская область",
+      "tg": "https://t.me/nadezhdin_lenoblast",
+      "pop": 2023767,
       "value": 1915,
-      "tg": "https://t.me/nadezhdin_lenoblast"
+      "valuePerPop": 946.2551766087697
     },
     {
       "region": "Липецкая область",
+      "tg": "https://t.me//center_lip",
+      "pop": 1126263,
       "value": 628,
-      "tg": "https://t.me//center_lip"
+      "valuePerPop": 557.5962275241218
     },
     {
       "region": "Литва"
     },
     {
       "region": "Марий Эл",
-      "value": 634
+      "pop": 672321,
+      "value": 634,
+      "valuePerPop": 943.001929138016
     },
     {
       "region": "Молдова"
     },
     {
+      "region": "Мордовия",
+      "pop": 771373
+    },
+    {
       "region": "Мурманская область",
-      "value": 16,
-      "tg": "https://t.me/center_mo2024"
+      "tg": "https://t.me/center_mo2024",
+      "pop": 658698,
+      "value": 18,
+      "valuePerPop": 27.326635271399034
     },
     {
       "region": "Нидерланды"
     },
     {
       "region": "Нижегородская область",
+      "tg": "https://t.me//center_no",
+      "pop": 3081817,
       "value": 3249,
-      "tg": "https://t.me//center_no"
+      "valuePerPop": 1054.2481918945869
     },
     {
       "region": "Новгородская область",
+      "tg": "https://t.me//center_n_o_2024",
+      "pop": 575926,
       "value": 983,
-      "tg": "https://t.me//center_n_o_2024"
+      "valuePerPop": 1706.8165007309967
     },
     {
       "region": "Новосибирская область",
+      "tg": "https://t.me/centr_nso",
+      "pop": 2794266,
       "value": 3547,
-      "tg": "https://t.me/centr_nso"
+      "valuePerPop": 1269.385233904002
     },
     {
       "region": "Норвегия"
@@ -267,28 +350,38 @@
     },
     {
       "region": "Омская область",
+      "tg": "https://t.me/center_o_o_2024",
+      "pop": 1832064,
       "value": 1001,
-      "tg": "https://t.me/center_o_o_2024"
+      "valuePerPop": 546.3782924613987
     },
     {
       "region": "Оренбургская область",
+      "tg": "https://t.me/center_oo2024",
+      "pop": 1841377,
       "value": 33,
-      "tg": "https://t.me/center_oo2024"
+      "valuePerPop": 17.92137080022179
     },
     {
       "region": "Орловская область",
+      "tg": "https://t.me//centeroo_2024",
+      "pop": 700276,
       "value": 838,
-      "tg": "https://t.me//centeroo_2024"
+      "valuePerPop": 1196.6710268522697
     },
     {
       "region": "Пензенская область",
+      "tg": "https://t.me//NadezhdinHeadquartersPenza",
+      "pop": 1246609,
       "value": 1297,
-      "tg": "https://t.me//NadezhdinHeadquartersPenza"
+      "valuePerPop": 1040.4224580441823
     },
     {
       "region": "Пермский край",
+      "tg": "https://t.me/center_pk",
+      "pop": 2508352,
       "value": 2708,
-      "tg": "https://t.me/center_pk"
+      "valuePerPop": 1079.593294720996
     },
     {
       "region": "Польша",
@@ -299,23 +392,31 @@
     },
     {
       "region": "Приморский край",
+      "tg": "https://t.me/center_pk_2024",
+      "pop": 1820076,
       "value": 1033,
-      "tg": "https://t.me/center_pk_2024"
+      "valuePerPop": 567.5587173282873
     },
     {
       "region": "Псковская область",
+      "tg": "https://t.me//center_po_2024",
+      "pop": 587786,
       "value": 553,
-      "tg": "https://t.me//center_po_2024"
+      "valuePerPop": 940.8185972445754
     },
     {
       "region": "Ростовская область",
+      "tg": "https://t.me//center_ro",
+      "pop": 4164547,
       "value": 3314,
-      "tg": "https://t.me//center_ro"
+      "valuePerPop": 795.7648214799833
     },
     {
       "region": "Рязанская область",
+      "tg": "https://t.me//center_rya",
+      "pop": 1088918,
       "value": 629,
-      "tg": "https://t.me//center_rya"
+      "valuePerPop": 577.6376182595935
     },
     {
       "region": "США",
@@ -323,26 +424,35 @@
     },
     {
       "region": "Самарская область",
+      "tg": "https://t.me/centr_smr",
+      "pop": 3142683,
       "value": 2403,
-      "tg": "https://t.me/centr_smr"
+      "valuePerPop": 764.6332767256513
     },
     {
       "region": "Саратовская область",
+      "tg": "https://t.me//center_s_o_2024",
+      "pop": 2404944,
       "value": 1619,
-      "tg": "https://t.me//center_s_o_2024"
+      "valuePerPop": 673.1965484435397
     },
     {
       "region": "Саха (Якутия)",
-      "value": 322,
-      "tg": "https://t.me/center_rs2024"
+      "tg": "https://t.me/center_rs2024",
+      "pop": 997565,
+      "value": 622,
+      "valuePerPop": 623.5182669800965
     },
     {
-      "region": "Сахалинская область"
+      "region": "Сахалинская область",
+      "pop": 460535
     },
     {
       "region": "Свердловская область",
+      "tg": "https://t.me//center_so",
+      "pop": 4239161,
       "value": 3005,
-      "tg": "https://t.me//center_so"
+      "valuePerPop": 708.8666837612443
     },
     {
       "region": "Сербия",
@@ -350,7 +460,9 @@
     },
     {
       "region": "Смоленская область",
-      "value": 15
+      "pop": 873041,
+      "value": 19,
+      "valuePerPop": 21.763009984639897
     },
     {
       "region": "Соединённое Королевство",
@@ -358,36 +470,48 @@
     },
     {
       "region": "Ставропольский край",
-      "value": 43,
-      "tg": "https://t.me/center_sk"
+      "tg": "https://t.me/center_sk",
+      "pop": 2891204,
+      "value": 52,
+      "valuePerPop": 17.98558662757799
     },
     {
       "region": "Тайланд"
     },
     {
       "region": "Тамбовская область",
+      "tg": "https://t.me/center_to_2023",
+      "pop": 966250,
       "value": 957,
-      "tg": "https://t.me/center_to_2023"
+      "valuePerPop": 990.4269081500647
     },
     {
       "region": "Татарстан",
+      "tg": "https://t.me//center_rt",
+      "pop": 4001625,
       "value": 2465,
-      "tg": "https://t.me//center_rt"
+      "valuePerPop": 615.9997501015213
     },
     {
       "region": "Тверская область",
-      "value": 923,
-      "tg": "https://t.me//center_tvr"
+      "tg": "https://t.me//center_tvr",
+      "pop": 1211183,
+      "value": 940,
+      "valuePerPop": 776.1007213608514
     },
     {
       "region": "Томская область",
+      "tg": "https://t.me/center_tmsk",
+      "pop": 1052106,
       "value": 1257,
-      "tg": "https://t.me/center_tmsk"
+      "valuePerPop": 1194.746536945897
     },
     {
       "region": "Тульская область",
-      "value": 1131,
-      "tg": "https://t.me/center_to_2024"
+      "tg": "https://t.me/center_to_2024",
+      "pop": 1481471,
+      "value": 1660,
+      "valuePerPop": 1120.5079275935877
     },
     {
       "region": "Турция",
@@ -395,13 +519,17 @@
     },
     {
       "region": "Тыва",
+      "tg": "https://t.me//center_tu",
+      "pop": 337271,
       "value": 331,
-      "tg": "https://t.me//center_tu"
+      "valuePerPop": 981.4066433224322
     },
     {
       "region": "Тюменская область",
+      "tg": "https://t.me/center_to",
+      "pop": 1608494,
       "value": 1467,
-      "tg": "https://t.me/center_to"
+      "valuePerPop": 912.0332435184713
     },
     {
       "region": "Удмуртия",
@@ -412,25 +540,33 @@
     },
     {
       "region": "Ульяновская область",
-      "value": 708,
-      "tg": "https://t.me/center_ul"
+      "tg": "https://t.me/center_ul",
+      "pop": 1181006,
+      "value": 913,
+      "valuePerPop": 773.0697388497603
     },
     {
       "region": "Франция"
     },
     {
       "region": "Хабаровский край",
-      "value": 1466,
-      "tg": "https://t.me//center_hk"
+      "tg": "https://t.me//center_hk",
+      "pop": 1284090,
+      "value": 1968,
+      "valuePerPop": 1532.6028549400744
     },
     {
       "region": "Ханты-Мансийский автономный округ",
-      "value": 4
+      "pop": 1730353,
+      "value": 4,
+      "valuePerPop": 2.311667041349366
     },
     {
       "region": "Челябинская область",
-      "value": 2246,
-      "tg": "https://t.me/Nadezdinru"
+      "tg": "https://t.me/Nadezdinru",
+      "pop": 3407145,
+      "value": 3035,
+      "valuePerPop": 890.7751211057938
     },
     {
       "region": "Черногория"
@@ -440,11 +576,16 @@
     },
     {
       "region": "Чувашская Республика",
+      "tg": "https://t.me/center_chu",
+      "pop": 1173177,
       "value": 1915,
-      "tg": "https://t.me/center_chu"
+      "valuePerPop": 1632.3197607863094
     },
     {
       "region": "Швейцария"
+    },
+    {
+      "region": "Швеция"
     },
     {
       "region": "Шри-Ланка",
@@ -452,10 +593,12 @@
     },
     {
       "region": "Ярославская область",
+      "tg": "https://t.me//center_yar",
+      "pop": 1194605,
       "value": 2129,
-      "tg": "https://t.me//center_yar"
+      "valuePerPop": 1782.1790466304763
     }
   ],
-  "total": 101466,
-  "updatedAt": "2024-01-23T10:56:03.927Z"
+  "total": 105332,
+  "updatedAt": "2024-01-23T16:20:20.261Z"
 }

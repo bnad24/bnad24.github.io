@@ -1,6 +1,6 @@
 import jquery from 'jquery';
 import { JSDOM } from 'jsdom';
-import { sum, first, uniq } from 'lodash-es';
+import { sum, first, uniq, get } from 'lodash-es';
 import fs from 'fs-extra';
 import { DateTime } from 'luxon';
 
@@ -8,6 +8,8 @@ async function main() {
   const html = await (await fetch('https://nadezhdin2024.ru/addresses')).text();
   const { window } = new JSDOM(html);
   var $ = jquery(window);
+
+  const pops = await fs.readJson('public/data/population.json');
 
   const regionsAndValues = $('.addresses-page__region')
     .toArray()
@@ -24,13 +26,17 @@ async function main() {
 
       const tg = first(uniq(tgs));
 
+      const pop = pops.find((pop) => pop.region === region)?.population;
+
       const valueText = $(e).find('.progressbar__el__text').text();
       const matches = /Собрано подписей: (\d+)/.exec(valueText);
       if (!matches || matches.length < 2 || !matches[1]) {
-        return { region, value: undefined, tg };
+        return { region, tg, pop };
       }
 
-      return { region, value: parseInt(matches[1], 10), tg };
+      const value = parseInt(matches[1], 10);
+      const valuePerPop = pop ? (1_000_000 * value) / pop : undefined;
+      return { region, tg, pop, value, valuePerPop };
     });
 
   console.log({ regionsAndValues });

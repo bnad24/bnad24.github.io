@@ -16,8 +16,8 @@ function formatPercentage(value?: number): string {
 export function SignTable({ data }: { data: SignJson }) {
   const rows = useMemo(() => {
     const regionsAndValues = sortBy(data.regionsAndValues, ({ value }) => -value);
-    return regionsAndValues.map(({ region, value, tg }, i) => {
-      return <Region key={region} i={i} region={region} value={value} tg={tg} />;
+    return regionsAndValues.map((datum, i) => {
+      return <Region key={datum.region} i={i} datum={datum} />;
     });
   }, [data.regionsAndValues]);
 
@@ -205,6 +205,18 @@ export function SignTable({ data }: { data: SignJson }) {
                 <br />
                 <small>{`(из ${N_PER_REGION_MAX})`}</small>
               </th>
+              <th>
+                {'Подписей'}
+                <br />
+                <small>{`на 1 млн.`}</small>
+                <br />
+                <small>{`населения`}</small>
+              </th>
+              <th>
+                {'Население'}
+                <br />
+                <small>{`(млн.)`}</small>
+              </th>
             </tr>
           </thead>
           <tbody>{rows}</tbody>
@@ -214,7 +226,8 @@ export function SignTable({ data }: { data: SignJson }) {
   );
 }
 
-export function Region({ region, value, tg, i }: SignRegion & { i: number }) {
+export function Region({ datum, i }: { datum: SignRegion; i: number }) {
+  const { region, value, tg, pop, valuePerPop } = datum;
   const { percRequired, percDesired, color, valueFormatted } = useMemo(() => {
     if (!value) {
       return {
@@ -274,6 +287,12 @@ export function Region({ region, value, tg, i }: SignRegion & { i: number }) {
       </td>
       <td style={{ minWidth: '80px' }} className="text-right text-mono">
         {<span>{percRequired}</span>}
+      </td>
+      <td style={{ minWidth: '80px' }} className="text-right text-mono">
+        {<span>{valuePerPop?.toFixed(1) ?? '?'}</span>}
+      </td>
+      <td style={{ minWidth: '80px' }} className="text-right text-mono">
+        {<span>{pop ? (pop / 1_000_000).toFixed(2) : '?'}</span>}
       </td>
     </tr>
   );

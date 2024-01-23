@@ -1,6 +1,8 @@
 export interface SignRegion {
   region: string;
   value?: number;
+  valuePerPop?: number;
+  pop?: number;
   tg?: string;
 }
 

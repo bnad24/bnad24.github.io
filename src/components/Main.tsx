@@ -87,6 +87,16 @@ export function Main() {
             }
           </p>
 
+          <p>
+            {
+              'Данные о численности населения регионов ("Численность населения Российской Федерации по муниципальным образованиям на 1 января 2023 года") взяты с '
+            }
+            <a target="_blank" rel="noreferrer" href="https://rosstat.gov.ru/compendium/document/13282">
+              {'с сайта Росстата'}
+            </a>
+            {'.'}
+          </p>
+
           {'Исходный код для этого сайта доступен '}
           <a target="_blank" rel="noreferrer" href="https://github.com/bnad24/bnad24.github.io">
             {'здесь'}
