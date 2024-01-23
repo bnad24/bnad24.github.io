@@ -89,13 +89,13 @@ export function SignTable({ data }: { data: SignJson }) {
                 <span>{`(исключая излишки)`}</span>
               </td>
               <td
-                style={{ color: '#005b00', fontSize: '1.25rem', fontWeight: 'bold' }}
+                style={{ color: '#005b00', fontSize: '1.25rem', fontWeight: 'bold', padding: '0 1rem' }}
                 className="text-right text-mono"
               >
                 {totalDesired.toLocaleString()}
               </td>
               <td
-                style={{ color: '#005b00', fontSize: '1.25rem', fontWeight: 'bold' }}
+                style={{ color: '#005b00', fontSize: '1.25rem', fontWeight: 'bold', padding: '0 1rem' }}
                 className="text-right text-mono"
               >
                 {totalRequired.toLocaleString()}
@@ -109,13 +109,13 @@ export function SignTable({ data }: { data: SignJson }) {
                 <span>{`(исключая излишки)`}</span>
               </td>
               <td
-                style={{ color: '#922204', fontSize: '1.25rem', fontWeight: 'bold' }}
+                style={{ color: '#922204', fontSize: '1.25rem', fontWeight: 'bold', padding: '0 1rem' }}
                 className="text-right text-mono"
               >
                 {remainsDesired.toLocaleString()}
               </td>
               <td
-                style={{ color: '#922204', fontSize: '1.25rem', fontWeight: 'bold' }}
+                style={{ color: '#922204', fontSize: '1.25rem', fontWeight: 'bold', padding: '0 1rem' }}
                 className="text-right text-mono"
               >
                 {remainsRequired.toLocaleString()}
@@ -196,12 +196,12 @@ export function SignTable({ data }: { data: SignJson }) {
               <th>
                 {'% желаем.'}
                 <br />
-                {`(из ${N_PER_REGION_DESIRED})`}
+                <small>{`(из ${N_PER_REGION_DESIRED})`}</small>
               </th>
               <th>
                 {'% необх.'}
                 <br />
-                {`(из ${N_PER_REGION_MAX})`}
+                <small>{`(из ${N_PER_REGION_MAX})`}</small>
               </th>
             </tr>
           </thead>
@@ -260,8 +260,12 @@ export function Region({ region, value, tg }: SignRegion) {
         <span style={{ color }}>{region}</span>
       </td>
       <td className="text-right text-mono">{<span style={{ color }}>{valueFormatted}</span>}</td>
-      <td className="text-right text-mono">{<span style={{ color }}>{percDesired}</span>}</td>
-      <td className="text-right text-mono">{<span style={{ color }}>{percRequired}</span>}</td>
+      <td style={{ minWidth: '80px' }} className="text-right text-mono">
+        {<span style={{ color }}>{percDesired}</span>}
+      </td>
+      <td style={{ minWidth: '80px' }} className="text-right text-mono">
+        {<span style={{ color }}>{percRequired}</span>}
+      </td>
     </tr>
   );
 }
