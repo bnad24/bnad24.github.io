@@ -201,7 +201,7 @@ export function SignTable({ data }: { data: SignJson }) {
                 <small>{`(из ${N_PER_REGION_DESIRED})`}</small>
               </th>
               <th>
-                {'% необх.'}
+                {'% миним.'}
                 <br />
                 <small>{`(из ${N_PER_REGION_MAX})`}</small>
               </th>
