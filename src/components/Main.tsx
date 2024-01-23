@@ -3,6 +3,7 @@
 import { N_PER_REGION_MAX, N_PER_REGION_DESIRED, TOTAL_DESIRED, TOTAL_REQUIRED } from '../constants';
 import type { SignJson } from '../types';
 import { useJson } from '../util/useJson';
+import { CountdownTimer } from './CountdownTimer';
 import { Sharing } from './Sharing';
 import { SignTable } from './SignTable';
 import { UpdatedAt } from './UpdatedAt';
@@ -161,6 +162,8 @@ export function Main() {
           </div>
         </details>
       </div>
+
+      <CountdownTimer />
 
       <div style={{ marginBottom: '1rem' }}>
         <div>{'Поделиться: '}</div>
