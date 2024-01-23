@@ -38,7 +38,29 @@ export interface SignJson {
 }
 
 export function Main() {
-  return <SignTable />;
+  return (
+    <div>
+      <h1>{'Борис Надеждин: статистика сбора подписей'}</h1>
+      <p>
+        {
+          'Этот сайт разработан и поддерживается волонтерами и никак не связан с Борисом Надеждиным или его соратниками!'
+        }
+      </p>
+      <p>
+        {
+          'Статистика автоматически считывается с официального сайта и отображается в более компактной форме. "Всего" показывает сумму (результат сложения) по всем перечисленным регионам и может отличаться от цифры на официальном сайте.'
+        }
+      </p>
+      <p>
+        {'Официальный сайт Бориса Надеждина здесь: '}
+        <a href="https://nadezhdin2024.ru/">
+          <b>{'nadezhdin2024.ru'}</b>
+        </a>
+      </p>
+
+      <SignTable />
+    </div>
+  );
 }
 
 export function SignTable() {
@@ -59,13 +81,21 @@ export function SignTable() {
     <table>
       <tbody>
         <tr>
-          <td>{'Обновлено'}</td>
-          <td>{updatedAt}</td>
+          <td>
+            <b>{'Обновлено'}</b>
+          </td>
+          <td>
+            <b>{updatedAt}</b>
+          </td>
         </tr>
 
         <tr>
-          <td>{'Всего'}</td>
-          <td>{data.total}</td>
+          <td>
+            <b>{'Всего (сумма регионов)'}</b>
+          </td>
+          <td>
+            <b>{data.total.toLocaleString()}</b>
+          </td>
         </tr>
 
         {rows}
@@ -78,7 +108,7 @@ export function Region({ region, value }: SignRegion) {
   return (
     <tr>
       <td>{region}</td>
-      <td>{value}</td>
+      <td>{value?.toLocaleString() ?? 'нет данных'}</td>
     </tr>
   );
 }
