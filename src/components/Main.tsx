@@ -38,6 +38,12 @@ export interface SignJson {
 }
 
 export function Main() {
+  const data = useJson<SignJson>('/data/sign.json');
+
+  if (!data) {
+    return null;
+  }
+
   return (
     <div>
       <h1>{'Борис Надеждин'}</h1>
@@ -102,19 +108,17 @@ export function Main() {
       </details>
 
       <div style={{ marginBottom: '1rem' }}>
-        <UpdatedAt />
+        <UpdatedAt data={data} />
       </div>
 
       <div style={{ marginBottom: '1rem' }}>
-        <SignTable />
+        <SignTable data={data} />
       </div>
     </div>
   );
 }
 
-export function UpdatedAt() {
-  const data = useJson<SignJson>('/data/sign.json');
-
+export function UpdatedAt({ data }: { data: SignJson }) {
   const updatedAt = useMemo(
     () => DateTime.fromISO(data.updatedAt).setLocale('ru').toLocaleString(DateTime.DATETIME_MED_WITH_WEEKDAY),
     [data.updatedAt],
@@ -130,8 +134,7 @@ export function UpdatedAt() {
   );
 }
 
-export function SignTable() {
-  const data = useJson<SignJson>('/data/sign.json');
+export function SignTable({ data }: { data: SignJson }) {
   const rows = useMemo(() => {
     const regionsAndValues = sortBy(data.regionsAndValues, ({ value }) => -value);
     return regionsAndValues.map(({ region, value }) => {

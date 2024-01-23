@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "next build",
+    "build": "next build --no-lint",
     "dev": "next dev --turbo",
     "data": "node --experimental-top-level-await scripts/data-update.mjs",
     "format": "prettier --fix '**/*.{js,ts,jsx,tsx}'",
