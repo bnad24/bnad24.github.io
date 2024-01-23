@@ -1,41 +1,9 @@
 'use client';
 
-import { DateTime } from 'luxon';
-import { useMemo } from 'react';
-import { useSuspenseQuery } from '@tanstack/react-query';
-import { sortBy } from 'lodash-es';
-
-function useJson<T>(url: string) {
-  if (typeof window === 'undefined') {
-    return undefined;
-  }
-
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const queryKey = useMemo(() => [url], [url]);
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const { data, error } = useSuspenseQuery({
-    queryKey,
-    queryFn: async () => {
-      return await (await fetch(`${window.location.href}/${url}`)).json();
-    },
-  });
-
-  if (error) {
-    throw error;
-  }
-  return data as T;
-}
-
-export interface SignRegion {
-  region: string;
-  value?: number;
-}
-
-export interface SignJson {
-  regionsAndValues: SignRegion[];
-  total: number;
-  updatedAt: string;
-}
+import type { SignJson } from '../types';
+import { useJson } from '../util/useJson';
+import { SignTable } from './SignTable';
+import { UpdatedAt } from './UpdatedAt';
 
 export function Main() {
   const data = useJson<SignJson>('/data/sign.json');
@@ -68,7 +36,7 @@ export function Main() {
       </details>
 
       <details>
-        <summary>{'Ссылки на официальныe ресурсы Бориса Надеждина'}</summary>
+        <summary>{'Ссылки на официальныe ресурсы Бориса Надеждина (нажмите чтобы развернуть)'}</summary>
 
         <div style={{ marginBottom: '1rem' }}>
           <table style={{ border: '#aaa solid 1px' }}>
@@ -121,56 +89,5 @@ export function Main() {
         <SignTable data={data} />
       </div>
     </div>
-  );
-}
-
-export function UpdatedAt({ data }: { data: SignJson }) {
-  const updatedAt = useMemo(
-    () => DateTime.fromISO(data.updatedAt).setLocale('ru').toLocaleString(DateTime.DATETIME_MED_WITH_WEEKDAY),
-    [data.updatedAt],
-  );
-
-  return (
-    <p>
-      <b>
-        {'Обновлено: '}
-        {updatedAt}
-      </b>
-    </p>
-  );
-}
-
-export function SignTable({ data }: { data: SignJson }) {
-  const rows = useMemo(() => {
-    const regionsAndValues = sortBy(data.regionsAndValues, ({ value }) => -value);
-    return regionsAndValues.map(({ region, value }) => {
-      return <Region key={region} region={region} value={value} />;
-    });
-  }, [data.regionsAndValues]);
-
-  return (
-    <table>
-      <tbody>
-        <tr>
-          <td>
-            <b>{'Всего (сумма регионов)'}</b>
-          </td>
-          <td className="text-right">
-            <b>{data.total.toLocaleString()}</b>
-          </td>
-        </tr>
-
-        {rows}
-      </tbody>
-    </table>
-  );
-}
-
-export function Region({ region, value }: SignRegion) {
-  return (
-    <tr>
-      <td>{region}</td>
-      <td className="text-right">{value?.toLocaleString() ?? 'нет данных'}</td>
-    </tr>
   );
 }
