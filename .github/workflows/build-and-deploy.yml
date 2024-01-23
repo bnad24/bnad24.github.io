@@ -1,7 +1,12 @@
 on:
   push:
     branches: main
+
   workflow_dispatch:
+
+  schedule:
+    - cron:  '*/15 * * * *' # every 15 minutes
+
 
 concurrency:
   group: pages-${{ github.workflow }}-${{ github.ref_type }}-${{ github.event.pull_request.number || github.ref || github.run_id }}
@@ -34,6 +39,10 @@ jobs:
       - name: 'yarn install'
         run: |
           yarn install
+
+      - name: 'yarn data'
+        run: |
+          yarn data
 
       - name: 'yarn build'
         run: |
