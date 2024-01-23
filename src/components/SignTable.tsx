@@ -199,14 +199,14 @@ export function Region({ region, value, tg }: SignRegion) {
 
   return (
     <tr>
-      <td className="text-right text-mono">
+      <td>
         {tg && (
           <a target="_blank" rel="noreferrer" href={tg}>
             <FaTelegram color="#229ED9" />
           </a>
         )}
       </td>
-      <td title={region} style={{ maxWidth }}>
+      <td className="ellipsis" title={region} style={{ maxWidth }}>
         {region}
       </td>
       <td className="text-right text-mono">{valueFormatted}</td>
