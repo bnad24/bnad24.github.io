@@ -35,8 +35,8 @@
       "region": "Алтайский край",
       "tg": "https://t.me/center_ak",
       "pop": 2130950,
-      "value": 1604,
-      "valuePerPop": 752.7159248222624
+      "value": 2381,
+      "valuePerPop": 1117.3420305497548
     },
     {
       "region": "Амурская область",
@@ -114,8 +114,8 @@
       "region": "Вологодская область",
       "tg": "https://t.me//center_vologda",
       "pop": 1128782,
-      "value": 849,
-      "valuePerPop": 752.1381453637638
+      "value": 1774,
+      "valuePerPop": 1571.6055004420693
     },
     {
       "region": "Воронежская область",
@@ -257,8 +257,8 @@
       "region": "Красноярский край",
       "tg": "https://t.me/center_kk",
       "pop": 2845545,
-      "value": 1826,
-      "valuePerPop": 641.7048403732853
+      "value": 2687,
+      "valuePerPop": 944.2830810969427
     },
     {
       "region": "Курганская область",
@@ -271,8 +271,8 @@
       "region": "Курская область",
       "tg": "https://t.me//center_k",
       "pop": 1067034,
-      "value": 704,
-      "valuePerPop": 659.7727907451871
+      "value": 911,
+      "valuePerPop": 853.768483478502
     },
     {
       "region": "Кыргызстан",
@@ -503,8 +503,8 @@
       "region": "Томская область",
       "tg": "https://t.me/center_tmsk",
       "pop": 1052106,
-      "value": 1257,
-      "valuePerPop": 1194.746536945897
+      "value": 1909,
+      "valuePerPop": 1814.4559578597593
     },
     {
       "region": "Тульская область",
@@ -542,8 +542,8 @@
       "region": "Ульяновская область",
       "tg": "https://t.me/center_ul",
       "pop": 1181006,
-      "value": 913,
-      "valuePerPop": 773.0697388497603
+      "value": 910,
+      "valuePerPop": 770.5295316027184
     },
     {
       "region": "Франция"
@@ -599,6 +599,6 @@
       "valuePerPop": 1782.1790466304763
     }
   ],
-  "total": 105332,
-  "updatedAt": "2024-01-23T16:20:20.261Z"
+  "total": 108751,
+  "updatedAt": "2024-01-23T18:09:52.447Z"
 }
