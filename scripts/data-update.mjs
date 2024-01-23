@@ -3,6 +3,7 @@ import { JSDOM } from 'jsdom';
 import { sum, first, uniq, get } from 'lodash-es';
 import fs from 'fs-extra';
 import { DateTime } from 'luxon';
+import fetch from '@adobe/node-fetch-retry';
 
 async function main() {
   const html = await (await fetch('https://nadezhdin2024.ru/addresses')).text();

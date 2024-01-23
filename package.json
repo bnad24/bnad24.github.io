@@ -36,6 +36,7 @@
     "react-share": "^5.0.3"
   },
   "devDependencies": {
+    "@adobe/node-fetch-retry": "^2.2.0",
     "@types/lodash-es": "^4.17.12",
     "@types/luxon": "^3.4.2",
     "@types/node": "^20.11.5",
