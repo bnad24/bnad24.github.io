@@ -50,7 +50,7 @@ export function Main() {
               rel="noreferrer"
               href="https://www.consultant.ru/document/cons_doc_LAW_40445/709aad55b0103f1e128dde11785bbd41d4328966/"
             >
-              <b>{'consultant.ru'}</b>
+              {'consultant.ru'}
             </a>
 
             {`), кандидатy от непарламентской партии нужно набрать 100 000 подписей, максимум по ${N_PER_REGION_MAX} в каждом регионе России.`}
