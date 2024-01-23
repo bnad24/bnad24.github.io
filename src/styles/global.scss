@@ -19,7 +19,9 @@ th {
 th,
 td {
   padding: 0.25rem 0.25rem;
+}
 
+.ellipsis {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;

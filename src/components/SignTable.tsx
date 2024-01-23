@@ -1,4 +1,4 @@
-import { sortBy } from 'lodash-es';
+import { clamp, sortBy, sum, isFinite } from 'lodash-es';
 import { useMemo } from 'react';
 import { SignJson, SignRegion } from '../types';
 
@@ -26,36 +26,117 @@ export function SignTable({ data }: { data: SignJson }) {
     });
   }, [data.regionsAndValues]);
 
-  const total = useMemo(() => formatPercentage(data.total / 100_000), [data.total]);
+  const totalPerc = useMemo(() => formatPercentage(data.total / 100_000), [data.total]);
+
+  const totalCapped = useMemo(() => {
+    const clamped = data.regionsAndValues
+      .map(({ value }) => value)
+      .filter(isFinite)
+      .map((value) => clamp(value, 0, 2500));
+    return sum(clamped);
+  }, [data]);
+
+  const remainsCapped = 100000 - totalCapped;
+
+  const totalCappedPerc = useMemo(() => formatPercentage(totalCapped / 100_000), [totalCapped]);
 
   const nRegions = useMemo(
     () => data.regionsAndValues.filter(({ value }) => value && value > 0).length,
     [data.regionsAndValues],
   );
 
+  const nRegionsDone = useMemo(
+    () => data.regionsAndValues.filter(({ value }) => value && value > 2500).length,
+    [data.regionsAndValues],
+  );
+
+  const nRegionsRemain = nRegions - nRegionsDone;
+
+  const maxWidth = '250px';
+
   return (
     <div>
       <div style={{ marginBottom: '1rem' }}>
         <table>
           <tbody>
-            <tr style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>
-              <td>{'Всего подписей'}</td>
+            <tr>
+              <td style={{ maxWidth }}>
+                <span style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>{'Всего собрано'}</span>
+                <br />
+                <span>{'(исключая излишки свыше 2500 в каждом регионе)'}</span>
+              </td>
+              <td
+                style={{ color: '#005b00', fontSize: '1.25rem', fontWeight: 'bold' }}
+                className="text-right text-mono"
+              >
+                {totalCapped.toLocaleString()}
+              </td>
+            </tr>
+
+            <tr>
+              <td style={{ maxWidth }}>
+                <span style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>{'Всего осталось'}</span>
+                <br />
+                <span>{'(исключая излишки свыше 2500 в каждом регионе)'}</span>
+              </td>
+              <td
+                style={{ color: '#922204', fontSize: '1.25rem', fontWeight: 'bold' }}
+                className="text-right text-mono"
+              >
+                {remainsCapped.toLocaleString()}
+              </td>
+            </tr>
+
+            <tr>
+              <td style={{ maxWidth }}>{'Всего необходимо'}</td>
+              <td className="text-right text-mono">{Number(100000).toLocaleString()}</td>
+            </tr>
+
+            <tr>
+              <td style={{ maxWidth }}>{'Процент от необходимого'}</td>
+              <td className="text-right text-mono">{totalCappedPerc}</td>
+            </tr>
+
+            <tr>
+              <td style={{ maxWidth }}>
+                {'Всего подписей'}
+                <br />
+                {'(включая излишки)'}
+              </td>
               <td className="text-right text-mono">{data.total.toLocaleString()}</td>
             </tr>
 
             <tr>
-              <td>{'Всего необходимо'}</td>
-              <td className="text-right text-mono">{100000}</td>
+              <td style={{ maxWidth }}>
+                {'Процент от необходимого'}
+                <br />
+                {'(включая излишки)'}
+              </td>
+              <td className="text-right text-mono">{totalPerc}</td>
             </tr>
 
             <tr>
-              <td>{'Процент от необходимого'}</td>
-              <td className="text-right text-mono">{total}</td>
+              <td style={{ maxWidth }}>{'Необходимо регионов'}</td>
+              <td className="text-right text-mono">{'более 40'}</td>
             </tr>
 
             <tr>
-              <td>{'Всего регионов'}</td>
+              <td style={{ maxWidth }}>{'Необходимо в каждом регионе'}</td>
+              <td className="text-right text-mono">{2500}</td>
+            </tr>
+
+            <tr>
+              <td style={{ maxWidth }}>{'Всего регионов участвуют'}</td>
               <td className="text-right text-mono">{nRegions}</td>
+            </tr>
+
+            <tr>
+              <td>{'Всего регионов справились'}</td>
+              <td className="text-right text-mono">{nRegionsDone}</td>
+            </tr>
+            <tr>
+              <td>{'Всего регионов не справились'}</td>
+              <td className="text-right text-mono">{nRegionsRemain}</td>
             </tr>
           </tbody>
         </table>
@@ -112,9 +193,11 @@ export function Region({ region, value }: SignRegion) {
     return <span style={{ color: color }}>{valueFormatted}</span>;
   }, [value]);
 
+  const maxWidth = '160px';
+
   return (
     <tr>
-      <td title={region} style={{ maxWidth: '200px' }}>
+      <td title={region} style={{ maxWidth }}>
         {region}
       </td>
       <td className="text-right text-mono">{valueFormatted}</td>
