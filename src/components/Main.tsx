@@ -110,6 +110,15 @@ export function Main() {
                   </a>
                 </td>
               </tr>
+
+              <tr>
+                <td>{'Telegram'}</td>
+                <td>
+                  <a target="_blank" rel="noreferrer" href="https://t.me/BorisNadezhdin">
+                    <b>{'t.me/BorisNadezhdin'}</b>
+                  </a>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>

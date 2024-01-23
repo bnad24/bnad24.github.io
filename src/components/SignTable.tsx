@@ -1,6 +1,7 @@
 import { clamp, sortBy, sum, isFinite } from 'lodash-es';
 import { useMemo } from 'react';
 import { SignJson, SignRegion } from '../types';
+import { FaTelegram } from 'react-icons/fa';
 
 function formatPercentage(value?: number): string {
   if (!value) {
@@ -21,8 +22,8 @@ function formatPercentage(value?: number): string {
 export function SignTable({ data }: { data: SignJson }) {
   const rows = useMemo(() => {
     const regionsAndValues = sortBy(data.regionsAndValues, ({ value }) => -value);
-    return regionsAndValues.map(({ region, value }) => {
-      return <Region key={region} region={region} value={value} />;
+    return regionsAndValues.map(({ region, value, tg }) => {
+      return <Region key={region} region={region} value={value} tg={tg} />;
     });
   }, [data.regionsAndValues]);
 
@@ -146,6 +147,7 @@ export function SignTable({ data }: { data: SignJson }) {
         <table className="striped">
           <thead>
             <tr>
+              <th>{''}</th>
               <th>{'Регион'}</th>
               <th>{'Подписей'}</th>
               <th>
@@ -162,7 +164,7 @@ export function SignTable({ data }: { data: SignJson }) {
   );
 }
 
-export function Region({ region, value }: SignRegion) {
+export function Region({ region, value, tg }: SignRegion) {
   const percentage = useMemo(() => {
     if (!value) {
       return '?';
@@ -197,6 +199,13 @@ export function Region({ region, value }: SignRegion) {
 
   return (
     <tr>
+      <td className="text-right text-mono">
+        {tg && (
+          <a target="_blank" rel="noreferrer" href={tg}>
+            <FaTelegram color="#229ED9" />
+          </a>
+        )}
+      </td>
       <td title={region} style={{ maxWidth }}>
         {region}
       </td>

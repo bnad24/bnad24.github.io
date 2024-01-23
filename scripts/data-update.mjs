@@ -1,6 +1,6 @@
 import jquery from 'jquery';
 import { JSDOM } from 'jsdom';
-import { sum, first } from 'lodash-es';
+import { sum, first, uniq } from 'lodash-es';
 import fs from 'fs-extra';
 import { DateTime } from 'luxon';
 
@@ -13,12 +13,24 @@ async function main() {
     .toArray()
     .map(function (e) {
       const region = $(e).find('.subheading').text();
+
+      const tgs = $(e)
+        .find('.socials__item')
+        .filter((i, e) => {
+          return $(e).text() === 'Телеграм-канал';
+        })
+        .map((i, e) => $(e).attr('href'))
+        .toArray();
+
+      const tg = first(uniq(tgs));
+
       const valueText = $(e).find('.progressbar__el__text').text();
       const matches = /Собрано подписей: (\d+)/.exec(valueText);
       if (!matches || matches.length < 2 || !matches[1]) {
-        return { region, value: undefined };
+        return { region, value: undefined, tg };
       }
-      return { region, value: parseInt(matches[1], 10) };
+
+      return { region, value: parseInt(matches[1], 10), tg };
     });
 
   console.log({ regionsAndValues });
