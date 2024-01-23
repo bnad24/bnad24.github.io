@@ -81,7 +81,7 @@ export function Main() {
         <details>
           <summary>{'Ссылки на официальныe ресурсы Бориса Надеждина (нажмите чтобы развернуть)'}</summary>
 
-          <div style={{ marginBottom: '1rem' }}>
+          <div style={{ marginBottom: '1rem', marginTop: '1rem' }}>
             <table style={{ border: '#aaa solid 1px' }}>
               <tbody>
                 <tr>
