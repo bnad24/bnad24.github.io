@@ -124,15 +124,11 @@ export function SignTable({ data }: { data: SignJson }) {
 
             <tr>
               <td style={{ maxWidth }}>
-                <span style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>{'Всего собрано'}</span>
+                <span>{'Всего собрано'}</span>
                 <br />
                 <span>{`(включая излишки)`}</span>
               </td>
-              <td
-                colSpan={2}
-                style={{ fontSize: '1.25rem', fontWeight: 'bold', textAlign: 'center' }}
-                className="text-mono"
-              >
+              <td colSpan={2} style={{ textAlign: 'center' }} className="text-mono">
                 {data.total}
               </td>
             </tr>
@@ -144,7 +140,21 @@ export function SignTable({ data }: { data: SignJson }) {
             </tr>
 
             <tr>
-              <td style={{ maxWidth }}>{'Процент собрано'}</td>
+              <td style={{ maxWidth }}>
+                {'Процент собрано'}
+                <br />
+                {`(включая излишки)`}
+              </td>
+              <td className="text-right text-mono">{formatPercentage(data.total / TOTAL_DESIRED)}</td>
+              <td className="text-right text-mono">{formatPercentage(data.total / TOTAL_REQUIRED)}</td>
+            </tr>
+
+            <tr>
+              <td style={{ maxWidth }}>
+                {'Процент собрано'}
+                <br />
+                {`(исключая излишки)`}
+              </td>
               <td className="text-right text-mono">{totalDesiredPerc}</td>
               <td className="text-right text-mono">{totalRequiredPerc}</td>
             </tr>
