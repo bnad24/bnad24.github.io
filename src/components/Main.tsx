@@ -7,6 +7,8 @@ import { Sharing } from './Sharing';
 import { SignTable } from './SignTable';
 import { UpdatedAt } from './UpdatedAt';
 
+const maxWidth = '150px';
+
 export function Main() {
   const data = useJson<SignJson>('/data/sign.json');
 
@@ -85,7 +87,7 @@ export function Main() {
             <table style={{ border: '#aaa solid 1px' }}>
               <tbody>
                 <tr>
-                  <td>{'Главная страница'}</td>
+                  <td style={{ maxWidth }}>{'Главная страница'}</td>
                   <td>
                     <a target="_blank" rel="noreferrer" href="https://nadezhdin2024.ru/">
                       <b>{'nadezhdin2024.ru'}</b>
@@ -94,7 +96,9 @@ export function Main() {
                 </tr>
 
                 <tr>
-                  <td>{'Адреса штабов где можно поставить подпись, а также официальная статистика'}</td>
+                  <td style={{ maxWidth }}>
+                    {'Адреса штабов где можно поставить подпись, а также официальная статистика'}
+                  </td>
                   <td>
                     <a target="_blank" rel="noreferrer" href="https://nadezhdin2024.ru/addresses">
                       <b>{'nadezhdin2024.ru/addresses'}</b>
@@ -103,7 +107,7 @@ export function Main() {
                 </tr>
 
                 <tr>
-                  <td>{'Список регионов (города зарубежья внизу страницы)'}</td>
+                  <td style={{ maxWidth }}>{'Список регионов (города зарубежья внизу страницы)'}</td>
                   <td>
                     <a target="_blank" rel="noreferrer" href="https://nadezhdin2024.ru/regions">
                       <b>{'nadezhdin2024.ru/regions'}</b>
@@ -112,7 +116,7 @@ export function Main() {
                 </tr>
 
                 <tr>
-                  <td>{'Поддержать'}</td>
+                  <td style={{ maxWidth }}>{'Поддержать'}</td>
                   <td>
                     <a target="_blank" rel="noreferrer" href="https://nadezhdin2024.ru/#donate">
                       <b>{'nadezhdin2024.ru/#donate'}</b>
@@ -121,7 +125,7 @@ export function Main() {
                 </tr>
 
                 <tr>
-                  <td>{'Telegram'}</td>
+                  <td style={{ maxWidth }}>{'Telegram'}</td>
                   <td>
                     <a target="_blank" rel="noreferrer" href="https://t.me/BorisNadezhdin">
                       <b>{'t.me/BorisNadezhdin'}</b>
