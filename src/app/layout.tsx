@@ -1,6 +1,4 @@
-const TITLE = 'Борис Надеждин 2024: счетчики сбора подписей и статистика';
-const DESCRIPTION = 'Отслеживание сбора подписей за кандидата в презеденты Бориса Надеждина, cтатистика по регионам';
-const IMAGE_URL = 'https://raw.githubusercontent.com/bnad24/bnad24.github.io/main/public/social.png';
+import { DESCRIPTION, IMAGE_URL, TITLE } from '../constants';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
