@@ -39,12 +39,17 @@ export function SignTable({ data }: { data: SignJson }) {
         <table>
           <tbody>
             <tr style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>
-              <td>{'Всего подписей (сумма регионов)'}</td>
+              <td>{'Всего подписей'}</td>
               <td className="text-right text-mono">{data.total.toLocaleString()}</td>
             </tr>
 
             <tr>
-              <td>{'Процент от необходимого (100 000)'}</td>
+              <td>{'Всего необходимо'}</td>
+              <td className="text-right text-mono">{100000}</td>
+            </tr>
+
+            <tr>
+              <td>{'Процент от необходимого'}</td>
               <td className="text-right text-mono">{total}</td>
             </tr>
 
