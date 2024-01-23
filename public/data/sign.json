@@ -63,11 +63,12 @@
     },
     {
       "region": "Брянская область",
+      "value": 21,
       "tg": "https://t.me/center_bro"
     },
     {
       "region": "Бурятия",
-      "value": 380,
+      "value": 1500,
       "tg": "https://t.me/center_ula"
     },
     {
@@ -110,7 +111,7 @@
     },
     {
       "region": "Забайкальский край",
-      "value": 643,
+      "value": 788,
       "tg": "https://t.me/center_zab_k"
     },
     {
@@ -157,7 +158,8 @@
       "tg": "https://t.me/center_ka"
     },
     {
-      "region": "Камчатский край"
+      "region": "Камчатский край",
+      "value": 10
     },
     {
       "region": "Карелия",
@@ -236,7 +238,7 @@
     },
     {
       "region": "Мурманская область",
-      "value": 1,
+      "value": 16,
       "tg": "https://t.me/center_mo2024"
     },
     {
@@ -270,7 +272,7 @@
     },
     {
       "region": "Оренбургская область",
-      "value": 5,
+      "value": 33,
       "tg": "https://t.me/center_oo2024"
     },
     {
@@ -348,7 +350,7 @@
     },
     {
       "region": "Смоленская область",
-      "value": 2
+      "value": 15
     },
     {
       "region": "Соединённое Королевство",
@@ -356,7 +358,7 @@
     },
     {
       "region": "Ставропольский край",
-      "value": 5,
+      "value": 43,
       "tg": "https://t.me/center_sk"
     },
     {
@@ -374,7 +376,7 @@
     },
     {
       "region": "Тверская область",
-      "value": 506,
+      "value": 923,
       "tg": "https://t.me//center_tvr"
     },
     {
@@ -454,6 +456,6 @@
       "tg": "https://t.me//center_yar"
     }
   ],
-  "total": 99659,
-  "updatedAt": "2024-01-23T09:17:59.611Z"
+  "total": 101466,
+  "updatedAt": "2024-01-23T10:56:03.927Z"
 }
