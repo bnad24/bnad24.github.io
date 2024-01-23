@@ -37,8 +37,8 @@ export function SignTable({ data }: { data: SignJson }) {
     return sum(clamped);
   }, [data]);
 
-  const remainsRequired = TOTAL_REQUIRED - totalRequired;
-  const remainsDesired = TOTAL_DESIRED - totalDesired;
+  const remainsRequired = clamp(TOTAL_REQUIRED - totalRequired, 0, TOTAL_REQUIRED);
+  const remainsDesired = clamp(TOTAL_DESIRED - totalDesired, 0, TOTAL_DESIRED);
 
   const totalRequiredPerc = useMemo(() => formatPercentage(totalRequired / TOTAL_REQUIRED), [totalRequired]);
   const totalDesiredPerc = useMemo(() => formatPercentage(totalDesired / TOTAL_DESIRED), [totalDesired]);
