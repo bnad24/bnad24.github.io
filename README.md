@@ -1,1 +1,3 @@
-### Неофициальная статистика с сайта nadezhdin2024.ru
+### Cтатистика с сайта nadezhdin2024.ru
+
+https://stats.bnad24.github.io
