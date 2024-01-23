@@ -109,7 +109,9 @@ export function Region({ region, value }: SignRegion) {
 
   return (
     <tr>
-      <td>{region}</td>
+      <td title={region} style={{ maxWidth: '200px' }}>
+        {region}
+      </td>
       <td className="text-right text-mono">{valueFormatted}</td>
       <td className="text-right text-mono">{percentage}</td>
     </tr>
