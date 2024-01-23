@@ -192,6 +192,7 @@ export function SignTable({ data }: { data: SignJson }) {
           <thead>
             <tr>
               <th>{''}</th>
+              <th>{'#'}</th>
               <th>{'Регион'}</th>
               <th>{'Подписей'}</th>
               <th>
@@ -263,6 +264,7 @@ export function Region({ region, value, tg, i }: SignRegion & { i: number }) {
           </a>
         )}
       </td>
+      <td className="text-right text-mono">{i + 1}</td>
       <td className="ellipsis" title={region} style={{ maxWidth }}>
         <span>{region}</span>
       </td>
