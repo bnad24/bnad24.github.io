@@ -8,7 +8,7 @@ function formatPercentage(value?: number): string {
   if (!value) {
     return '?';
   }
-  const str = (100 * value).toFixed(1).toLocaleString();
+  const str = (100 * value).toFixed(1);
   return `${str}%`;
 }
 
@@ -83,43 +83,15 @@ export function SignTable({ data }: { data: SignJson }) {
 
           <tbody>
             <tr>
-              <td style={{ maxWidth }}>
-                <span style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>{'Всего собрано'}</span>
-                <br />
-                <span>{`(исключая излишки)`}</span>
-              </td>
-              <td
-                style={{ color: '#005b00', fontSize: '1.25rem', fontWeight: 'bold', padding: '0 1rem' }}
-                className="text-right text-mono"
-              >
-                {totalDesired.toLocaleString()}
-              </td>
-              <td
-                style={{ color: '#005b00', fontSize: '1.25rem', fontWeight: 'bold', padding: '0 1rem' }}
-                className="text-right text-mono"
-              >
-                {totalRequired.toLocaleString()}
-              </td>
+              <td style={{ maxWidth }}>{'Всего нужно собрать'}</td>
+              <td className="text-right text-mono">{Number(TOTAL_DESIRED)}</td>
+              <td className="text-right text-mono">{Number(TOTAL_REQUIRED)}</td>
             </tr>
 
             <tr>
-              <td style={{ maxWidth }}>
-                <span style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>{'Всего осталось'}</span>
-                <br />
-                <span>{`(исключая излишки)`}</span>
-              </td>
-              <td
-                style={{ color: '#922204', fontSize: '1.25rem', fontWeight: 'bold', padding: '0 1rem' }}
-                className="text-right text-mono"
-              >
-                {remainsDesired.toLocaleString()}
-              </td>
-              <td
-                style={{ color: '#922204', fontSize: '1.25rem', fontWeight: 'bold', padding: '0 1rem' }}
-                className="text-right text-mono"
-              >
-                {remainsRequired.toLocaleString()}
-              </td>
+              <td style={{ maxWidth }}>{'Нужно макс. в каждом регионе'}</td>
+              <td className="text-right text-mono">{N_PER_REGION_DESIRED}</td>
+              <td className="text-right text-mono">{N_PER_REGION_MAX}</td>
             </tr>
 
             <tr>
@@ -134,19 +106,43 @@ export function SignTable({ data }: { data: SignJson }) {
             </tr>
 
             <tr>
-              <td style={{ maxWidth }}>{'Всего нужно'}</td>
-              <td className="text-right text-mono">{Number(TOTAL_DESIRED).toLocaleString()}</td>
-              <td className="text-right text-mono">{Number(TOTAL_REQUIRED).toLocaleString()}</td>
+              <td style={{ maxWidth }}>
+                <span style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>{'Всего собрано'}</span>
+                <br />
+                <span>{`(исключая излишки)`}</span>
+              </td>
+              <td
+                style={{ color: '#005b00', fontSize: '1.25rem', fontWeight: 'bold', padding: '0 1rem' }}
+                className="text-right text-mono"
+              >
+                {totalDesired}
+              </td>
+              <td
+                style={{ color: '#005b00', fontSize: '1.25rem', fontWeight: 'bold', padding: '0 1rem' }}
+                className="text-right text-mono"
+              >
+                {totalRequired}
+              </td>
             </tr>
 
             <tr>
               <td style={{ maxWidth }}>
-                {'Процент собрано'}
+                <span style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>{'Всего осталось'}</span>
                 <br />
-                {`(включая излишки)`}
+                <span>{`(исключая излишки)`}</span>
               </td>
-              <td className="text-right text-mono">{formatPercentage(data.total / TOTAL_DESIRED)}</td>
-              <td className="text-right text-mono">{formatPercentage(data.total / TOTAL_REQUIRED)}</td>
+              <td
+                style={{ color: '#922204', fontSize: '1.25rem', fontWeight: 'bold', padding: '0 1rem' }}
+                className="text-right text-mono"
+              >
+                {remainsDesired}
+              </td>
+              <td
+                style={{ color: '#922204', fontSize: '1.25rem', fontWeight: 'bold', padding: '0 1rem' }}
+                className="text-right text-mono"
+              >
+                {remainsRequired}
+              </td>
             </tr>
 
             <tr>
@@ -160,9 +156,13 @@ export function SignTable({ data }: { data: SignJson }) {
             </tr>
 
             <tr>
-              <td style={{ maxWidth }}>{'Нужно собрать в каждом регионе'}</td>
-              <td className="text-right text-mono">{N_PER_REGION_DESIRED}</td>
-              <td className="text-right text-mono">{N_PER_REGION_MAX}</td>
+              <td style={{ maxWidth }}>
+                {'Процент собрано'}
+                <br />
+                {`(включая излишки)`}
+              </td>
+              <td className="text-right text-mono">{formatPercentage(data.total / TOTAL_DESIRED)}</td>
+              <td className="text-right text-mono">{formatPercentage(data.total / TOTAL_REQUIRED)}</td>
             </tr>
 
             <tr>
@@ -241,7 +241,7 @@ export function Region({ region, value, tg }: SignRegion) {
       color,
       percRequired: formatPercentage(percRequired),
       percDesired: formatPercentage(percDesired),
-      valueFormatted: value.toLocaleString(),
+      valueFormatted: value,
     };
   }, [value]);
 
