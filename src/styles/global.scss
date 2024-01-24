@@ -73,3 +73,39 @@ a {
     9.8px 8.7px 13.6px -30px rgba(0, 0, 0, 0.089),
     44px 39px 61px -30px rgba(0, 0, 0, 0.15);
 }
+
+.navigation-wrapper {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 1rem;
+  margin: 0 auto;
+  border-bottom: #0f2439 solid 1px;
+}
+
+.navigation-ul {
+  background-color: white;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: inline-flex;
+
+  & > li {
+    padding: 0 1rem;
+
+    a {
+      color: #0f2439;
+      text-decoration: none;
+    }
+
+    &.active {
+      font-weight: bold;
+
+      a {
+        color: #105da0;
+      }
+    }
+  }
+}

@@ -1,3 +1,4 @@
+import { Navigation } from '../components/Navigation';
 import { DESCRIPTION, IMAGE_URL, TITLE } from '../constants';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -23,7 +24,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>🐘</text></svg>"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <aside className="navigation-wrapper">
+          <Navigation />
+        </aside>
+        <main>{children}</main>
+      </body>
     </html>
   );
 }
