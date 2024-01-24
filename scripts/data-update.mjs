@@ -15,7 +15,7 @@ async function main() {
   const regionsAndValues = $('.addresses-page__region')
     .toArray()
     .map(function (e) {
-      const region = $(e).find('.subheading').text();
+      const region = $(e).find('.subheading').text().toString().trim();
 
       const tgs = $(e)
         .find('.socials__item')
@@ -25,7 +25,7 @@ async function main() {
         .map((i, e) => $(e).attr('href'))
         .toArray();
 
-      const tg = first(uniq(tgs));
+      const tg = first(uniq(tgs))?.toString()?.trim()?.replace(/t\.me\/+/, 't.me/');
 
       const pop = pops.find((pop) => pop.region === region)?.population;
 
