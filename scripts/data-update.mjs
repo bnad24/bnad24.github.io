@@ -10,7 +10,14 @@ async function fetchCached(url, filepath, force = false) {
   if (!force && (await fs.pathExists(filepath))) {
     return fs.readFile(filepath);
   }
-  const html = await (await fetch(url)).text();
+  const html = await (
+    await fetch(url, {
+      headers: {
+        cookie: process.env.COOKIES,
+      },
+    })
+  ).text();
+
   await fs.ensureDir(dirname(filepath));
   await fs.writeFile(filepath, html);
   return html;
@@ -114,6 +121,10 @@ async function main() {
   const html = await fetchCached('https://nadezhdin2024.ru/addresses', 'tmp/addresses.html', force);
   const { window } = new JSDOM(html);
   var $ = jquery(window);
+
+  if ($('head > title').text() !== 'Адреса штабов Бориса Надеждина | Надеждин 2024') {
+    throw new Error(`Web page is not recognized: ${html}`);
+  }
 
   const stats = await processStats($);
   const addresses = await processAddresses($);
