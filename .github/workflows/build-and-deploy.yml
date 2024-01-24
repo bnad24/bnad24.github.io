@@ -40,11 +40,11 @@ jobs:
         run: |
           yarn install
 
-      - name: 'yarn data'
-        env:
-          COOKIES: ${{ secrets.COOKIES }}
-        run: |
-          yarn data
+#      - name: 'yarn data'
+#        env:
+#          COOKIES: ${{ secrets.COOKIES }}
+#        run: |
+#          yarn data
 
       - name: 'yarn build'
         run: |
