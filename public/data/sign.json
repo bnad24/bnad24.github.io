@@ -28,8 +28,8 @@
       "region": "Алтай",
       "tg": "https://t.me/center_ra_2024",
       "pop": 210769,
-      "value": 511,
-      "valuePerPop": 2424.455209257528
+      "value": 558,
+      "valuePerPop": 2647.4481541403147
     },
     {
       "region": "Алтайский край",
@@ -70,8 +70,8 @@
       "region": "Белгородская область",
       "tg": "https://t.me/center_bo_2024",
       "pop": 1514527,
-      "value": 1167,
-      "valuePerPop": 770.5376001880455
+      "value": 1618,
+      "valuePerPop": 1068.3203402778556
     },
     {
       "region": "Бельгия"
@@ -236,8 +236,8 @@
       "region": "Коми",
       "tg": "https://t.me/center_rk_2024",
       "pop": 726434,
-      "value": 1347,
-      "valuePerPop": 1854.26342929984
+      "value": 1994,
+      "valuePerPop": 2744.9155738855834
     },
     {
       "region": "Костромская область",
@@ -250,8 +250,8 @@
       "region": "Краснодарский край",
       "tg": "https://t.me/center_krasnodar",
       "pop": 5819345,
-      "value": 3003,
-      "valuePerPop": 516.0374578238616
+      "value": 3914,
+      "valuePerPop": 672.5842856885096
     },
     {
       "region": "Красноярский край",
@@ -301,8 +301,8 @@
     {
       "region": "Марий Эл",
       "pop": 672321,
-      "value": 836,
-      "valuePerPop": 1243.4536478854595
+      "value": 1111,
+      "valuePerPop": 1652.4844531109395
     },
     {
       "region": "Молдова"
@@ -373,8 +373,8 @@
       "region": "Пензенская область",
       "tg": "https://t.me/NadezhdinHeadquartersPenza",
       "pop": 1246609,
-      "value": 1740,
-      "valuePerPop": 1395.786489588957
+      "value": 2254,
+      "valuePerPop": 1808.1050273181086
     },
     {
       "region": "Пермский край",
@@ -426,8 +426,8 @@
       "region": "Самарская область",
       "tg": "https://t.me/centr_smr",
       "pop": 3142683,
-      "value": 3463,
-      "valuePerPop": 1101.9246930091263
+      "value": 4063,
+      "valuePerPop": 1292.8443626035462
     },
     {
       "region": "Саратовская область",
@@ -489,8 +489,8 @@
       "region": "Татарстан",
       "tg": "https://t.me/center_rt",
       "pop": 4001625,
-      "value": 2465,
-      "valuePerPop": 615.9997501015213
+      "value": 3550,
+      "valuePerPop": 887.1395995376878
     },
     {
       "region": "Тверская область",
@@ -581,8 +581,8 @@
       "region": "Чувашская Республика",
       "tg": "https://t.me/center_chu",
       "pop": 1173177,
-      "value": 2303,
-      "valuePerPop": 1963.045644433875
+      "value": 2666,
+      "valuePerPop": 2272.461870629922
     },
     {
       "region": "Швейцария"
@@ -602,6 +602,6 @@
       "valuePerPop": 2281.9258248542405
     }
   ],
-  "total": 143006,
-  "updatedAt": "2024-01-24T19:25:41.870Z"
+  "total": 147899,
+  "updatedAt": "2024-01-24T20:16:46.132Z"
 }
