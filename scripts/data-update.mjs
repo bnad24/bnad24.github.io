@@ -6,8 +6,8 @@ import { DateTime } from 'luxon';
 import fetch from '@adobe/node-fetch-retry';
 import { dirname } from 'path';
 
-async function fetchCached(url, filepath) {
-  if (await fs.pathExists(filepath)) {
+async function fetchCached(url, filepath, force = false) {
+  if (!force && (await fs.pathExists(filepath))) {
     return fs.readFile(filepath);
   }
   const html = await (await fetch(url)).text();
@@ -109,7 +109,9 @@ async function processAddresses($) {
 }
 
 async function main() {
-  const html = await fetchCached('https://nadezhdin2024.ru/addresses', 'tmp/addresses.html');
+  const force = process.argv.includes('--force');
+
+  const html = await fetchCached('https://nadezhdin2024.ru/addresses', 'tmp/addresses.html', force);
   const { window } = new JSDOM(html);
   var $ = jquery(window);
 
