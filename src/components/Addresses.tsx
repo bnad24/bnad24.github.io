@@ -1,6 +1,7 @@
 import React from 'react';
 import { useJson } from '../util/useJson';
 import { CountdownTimer } from './CountdownTimer';
+import { OfficialLinks } from './OfficialLinks';
 import { Sharing } from './Sharing';
 import { UpdatedAt } from './UpdatedAt';
 
@@ -16,8 +17,6 @@ export interface AddressesJson {
   addresses: Address[];
   updatedAt: string;
 }
-
-const maxWidth = '150px';
 
 export function Addresses() {
   const data = useJson<AddressesJson>('/data/addresses.json');
@@ -75,62 +74,7 @@ export function Addresses() {
           }
         </details>
 
-        <details>
-          <summary>{'Ссылки на официальныe ресурсы Бориса Надеждина (нажмите чтобы развернуть)'}</summary>
-
-          <div style={{ marginBottom: '1rem', marginTop: '1rem' }}>
-            <table style={{ border: '#aaa solid 1px' }}>
-              <tbody>
-                <tr>
-                  <td style={{ maxWidth }}>{'Главная страница'}</td>
-                  <td>
-                    <a target="_blank" rel="noreferrer" href="https://nadezhdin2024.ru/">
-                      <b>{'nadezhdin2024.ru'}</b>
-                    </a>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td style={{ maxWidth }}>
-                    {'Адреса штабов где можно поставить подпись, а также официальная статистика'}
-                  </td>
-                  <td>
-                    <a target="_blank" rel="noreferrer" href="https://nadezhdin2024.ru/addresses">
-                      <b>{'nadezhdin2024.ru/addresses'}</b>
-                    </a>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td style={{ maxWidth }}>{'Список регионов (города зарубежья внизу страницы)'}</td>
-                  <td>
-                    <a target="_blank" rel="noreferrer" href="https://nadezhdin2024.ru/regions">
-                      <b>{'nadezhdin2024.ru/regions'}</b>
-                    </a>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td style={{ maxWidth }}>{'Поддержать'}</td>
-                  <td>
-                    <a target="_blank" rel="noreferrer" href="https://nadezhdin2024.ru/#donate">
-                      <b>{'nadezhdin2024.ru/#donate'}</b>
-                    </a>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td style={{ maxWidth }}>{'Telegram'}</td>
-                  <td>
-                    <a target="_blank" rel="noreferrer" href="https://t.me/BorisNadezhdin">
-                      <b>{'t.me/BorisNadezhdin'}</b>
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </details>
+        <OfficialLinks />
       </div>
 
       <CountdownTimer />
@@ -143,6 +87,14 @@ export function Addresses() {
       <div style={{ marginBottom: '1rem' }}>
         <UpdatedAt data={data} />
       </div>
+
+      <p className="alert">
+        {'Альтернативой этому списку также является официальный Telegram-бот для поиска штабов: '}
+        <br />
+        <a target="_blank" rel="noreferrer" href="https://t.me/nadezhdin2024_bot">
+          <b>{'t.me/nadezhdin2024_bot'}</b>
+        </a>
+      </p>
 
       <div style={{ marginBottom: '1rem' }}>
         {data.addresses.map((address) => {
