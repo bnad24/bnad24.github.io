@@ -11,8 +11,8 @@
       "region": "Московская область",
       "tg": "https://t.me/center_mo",
       "pop": 8591736,
-      "value": 3247,
-      "valuePerPop": 377.9212955332892
+      "value": 3402,
+      "valuePerPop": 395.9618870970896
     },
     {
       "region": "Санкт-Петербург",
@@ -292,8 +292,8 @@
       "region": "Липецкая область",
       "tg": "https://t.me/center_lip",
       "pop": 1126263,
-      "value": 978,
-      "valuePerPop": 868.3584562397948
+      "value": 1294,
+      "valuePerPop": 1148.9323541659453
     },
     {
       "region": "Литва"
@@ -503,15 +503,15 @@
       "region": "Томская область",
       "tg": "https://t.me/center_tmsk",
       "pop": 1052106,
-      "value": 1909,
-      "valuePerPop": 1814.4559578597593
+      "value": 3227,
+      "valuePerPop": 3067.1814436948366
     },
     {
       "region": "Тульская область",
       "tg": "https://t.me/center_to_2024",
       "pop": 1481471,
-      "value": 2785,
-      "valuePerPop": 1879.888300209724
+      "value": 3174,
+      "valuePerPop": 2142.4651579409924
     },
     {
       "region": "Турция",
@@ -544,6 +544,9 @@
       "pop": 1181006,
       "value": 1148,
       "valuePerPop": 972.0526398680447
+    },
+    {
+      "region": "Финляндия"
     },
     {
       "region": "Франция"
@@ -599,6 +602,6 @@
       "valuePerPop": 2281.9258248542405
     }
   ],
-  "total": 140828,
-  "updatedAt": "2024-01-24T18:44:52.972Z"
+  "total": 143006,
+  "updatedAt": "2024-01-24T19:25:41.870Z"
 }
