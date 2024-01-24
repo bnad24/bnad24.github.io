@@ -28,6 +28,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <aside className="navigation-wrapper">
           <Navigation />
         </aside>
+
+        <div className="alert">
+          {
+            'Этот сайт не является официальным. Он сделан волонтёрами, в поддержку кампании Бориса Надеждина. Если официальный сайт недоступен, то здесь можно найти последнюю копию информации с офицального сайта которую удалось скачать нашему роботу.'
+          }
+        </div>
+
         <main>{children}</main>
       </body>
     </html>
