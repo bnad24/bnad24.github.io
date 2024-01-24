@@ -40,9 +40,9 @@ jobs:
         run: |
           yarn install
 
-      - name: 'yarn data'
-        run: |
-          yarn data
+#      - name: 'yarn data'
+#        run: |
+#          yarn data
 
       - name: 'yarn build'
         run: |
