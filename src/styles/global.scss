@@ -62,3 +62,14 @@ a {
 .sharing-button-wrapper > button {
   margin: 0.33em;
 }
+
+.card {
+  padding: 0.5rem;
+  margin: 1rem;
+  border: #aaa solid 1px;
+  border-radius: 5px;
+  box-shadow:
+    2.9px 2.6px 4.1px -30px rgba(0, 0, 0, 0.061),
+    9.8px 8.7px 13.6px -30px rgba(0, 0, 0, 0.089),
+    44px 39px 61px -30px rgba(0, 0, 0, 0.15);
+}

@@ -4,12 +4,19 @@ import { sum, first, uniq, get } from 'lodash-es';
 import fs from 'fs-extra';
 import { DateTime } from 'luxon';
 import fetch from '@adobe/node-fetch-retry';
+import { dirname } from 'path';
 
-async function main() {
-  const html = await (await fetch('https://nadezhdin2024.ru/addresses')).text();
-  const { window } = new JSDOM(html);
-  var $ = jquery(window);
+async function fetchCached(url, filepath) {
+  if (await fs.pathExists(filepath)) {
+    return fs.readFile(filepath);
+  }
+  const html = await (await fetch(url)).text();
+  await fs.ensureDir(dirname(filepath));
+  await fs.writeFile(filepath, html);
+  return html;
+}
 
+async function processStats($) {
   const pops = await fs.readJson('public/data/population.json');
 
   const regionsAndValues = $('.addresses-page__region')
@@ -22,10 +29,16 @@ async function main() {
         .filter((i, e) => {
           return $(e).text() === 'Телеграм-канал';
         })
-        .map((i, e) => $(e).attr('href'))
+        .map((i, e) =>
+          $(e)
+            .attr('href')
+            ?.toString()
+            ?.trim()
+            ?.replace(/t\.me\/+/, 't.me/'),
+        )
         .toArray();
 
-      const tg = first(uniq(tgs))?.toString()?.trim()?.replace(/t\.me\/+/, 't.me/');
+      const tg = first(uniq(tgs));
 
       const pop = pops.find((pop) => pop.region === region)?.population;
 
@@ -40,12 +53,75 @@ async function main() {
       return { region, tg, pop, value, valuePerPop };
     });
 
-  console.log({ regionsAndValues });
   const total = sum(regionsAndValues.map(({ value }) => value));
-  console.log({ total });
+
+  return { regionsAndValues, total };
+}
+
+async function processAddresses($) {
+  const addresses = $('.addresses-page__region')
+    .toArray()
+    .map(function (e) {
+      const region = $(e).find('.subheading').text().toString().trim();
+
+      const html = $(e).find('.text')?.html();
+
+      const texts = $(e)
+        .find('.addresses-page__city')
+        .toArray()
+        .map((e) => {
+          return $(e).text()?.trim();
+        });
+
+      let tgs = $(e)
+        .find('.socials__item')
+        .toArray()
+        .filter((e) => $(e).text() === 'Телеграм-канал')
+        .map((e) =>
+          $(e)
+            .attr('href')
+            ?.toString()
+            ?.trim()
+            ?.replace(/t\.me\/+/, 't.me/'),
+        );
+
+      tgs = uniq(tgs);
+
+      let phones = $(e)
+        .find('.socials__item')
+        .toArray()
+        .filter((e) => $(e).text() === 'Телефон')
+        .map((e) =>
+          $(e)
+            .attr('href')
+            ?.toString()
+            ?.replace(/tel:/, '')
+            ?.replace(/[^+\d]+/g, '')
+            ?.trim(),
+        );
+
+      phones = uniq(phones);
+
+      return { region, tgs, phones, html };
+    });
+
+  return { addresses };
+}
+
+async function main() {
+  const html = await fetchCached('https://nadezhdin2024.ru/addresses', 'tmp/addresses.html');
+  const { window } = new JSDOM(html);
+  var $ = jquery(window);
+
+  const stats = await processStats($);
+  const addresses = await processAddresses($);
 
   const updatedAt = DateTime.now().toUTC().toISO();
-  await fs.writeJson('public/data/sign.json', { regionsAndValues, total, updatedAt }, { spaces: 2 });
+
+  console.log(stats);
+
+  await fs.writeJson('public/data/sign.json', { ...stats, updatedAt }, { spaces: 2 });
+  await fs.writeJson('public/data/addresses.json', { ...addresses, updatedAt }, { spaces: 2 });
 }
 
 await main();

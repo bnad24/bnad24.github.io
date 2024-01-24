@@ -13,6 +13,7 @@
     "build": "next build --no-lint",
     "dev": "next dev --turbo",
     "data": "node --experimental-top-level-await scripts/data-update.mjs",
+    "addresses": "node --experimental-top-level-await scripts/addresses-update.mjs",
     "format": "prettier --fix '**/*.{js,ts,jsx,tsx}'",
     "lint": "eslint '**/*.{js,ts,jsx,tsx}'",
     "prettier:format": "prettier --write '**/*.js,ts,jsx,tsx,json'",
@@ -38,6 +39,7 @@
   },
   "devDependencies": {
     "@adobe/node-fetch-retry": "^2.2.0",
+    "@types/fs-extra": "^11.0.4",
     "@types/lodash-es": "^4.17.12",
     "@types/luxon": "^3.4.2",
     "@types/node": "^20.11.5",

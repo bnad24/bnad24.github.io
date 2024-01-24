@@ -12,7 +12,8 @@ export function useJson<T>(url: string) {
   const { data, error } = useSuspenseQuery({
     queryKey,
     queryFn: async () => {
-      return await (await fetch(`${window.location.href}/${url}`)).json();
+      const { protocol, host }: Location = window.location;
+      return await (await fetch(`${protocol}//${host}/${url}`)).json();
     },
   });
 
