@@ -24,7 +24,7 @@ function has_changed() {
 if has_changed "public/data/sign.json" || has_changed "public/data/addresses.json" ; then
   git add -A
   git commit -m "update data"
-#  git push
+  git push
 else
   echo 'unchanged'
 fi
