@@ -13,7 +13,9 @@ async function fetchCached(url, filepath, force = false) {
   const html = await (
     await fetch(url, {
       headers: {
-        cookie: process.env.COOKIES,
+        'referer': process.env.REFERRER,
+        'user-agent': process.env.USER_AGENT,
+        'cookie': process.env.COOKIES,
       },
     })
   ).text();
