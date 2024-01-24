@@ -219,8 +219,8 @@
       "region": "Кемеровская область",
       "tg": "https://t.me/center_ko",
       "pop": 2568238,
-      "value": 1226,
-      "valuePerPop": 477.37008797471265
+      "value": 2626,
+      "valuePerPop": 1022.4909062166357
     },
     {
       "region": "Кипр"
@@ -264,8 +264,8 @@
       "region": "Курганская область",
       "tg": "https://t.me/nadejdin45",
       "pop": 761586,
-      "value": 561,
-      "valuePerPop": 736.620683678534
+      "value": 863,
+      "valuePerPop": 1133.161586478743
     },
     {
       "region": "Курская область",
@@ -599,6 +599,6 @@
       "valuePerPop": 2281.9258248542405
     }
   ],
-  "total": 137621,
-  "updatedAt": "2024-01-24T16:23:26.193Z"
+  "total": 139323,
+  "updatedAt": "2024-01-24T17:22:48.306Z"
 }
