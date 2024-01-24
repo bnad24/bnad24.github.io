@@ -4,6 +4,12 @@ set -euxo pipefail
 
 git pull
 
+if [ -f "stop" ]; then
+  echo "stop"
+  exit 0
+fi
+
+
 yarn data --force
 
 function has_changed() {
