@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+set -euxo pipefail
+
+git pull
+
+yarn data --force
+
+function has_changed() {
+  local filepath=$1
+  if ! diff -q <(git show HEAD:$filepath | jq 'del(.updatedAt)') <(jq 'del(.updatedAt)' $filepath) &>/dev/null; then
+    true
+  else
+    false
+  fi
+}
+
+if has_changed "public/data/sign.json" || has_changed "public/data/addresses.json" ; then
+  git add -A
+  git commit -m "update data"
+#  git push
+else
+  echo 'unchanged'
+fi
