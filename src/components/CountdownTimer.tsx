@@ -13,7 +13,7 @@ export function CountdownTimer() {
   return (
     <div>
       <p>
-        <b>{'Окончание сбора подписей: пт, 25 янв. 2024 г., 23:59:59 мск.'}</b>
+        <b>{'Окончание сбора подписей: чт, 25 янв. 2024 г., 23:59:59 мск.'}</b>
         <br />
         <Countdown date={DateTime.fromISO('2024-01-25T22:59:59.999Z').toJSDate()} renderer={renderer} />
       </p>
