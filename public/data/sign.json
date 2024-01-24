@@ -257,8 +257,8 @@
       "region": "Красноярский край",
       "tg": "https://t.me/center_kk",
       "pop": 2845545,
-      "value": 2687,
-      "valuePerPop": 944.2830810969427
+      "value": 3650,
+      "valuePerPop": 1282.706827690302
     },
     {
       "region": "Курганская область",
@@ -271,8 +271,8 @@
       "region": "Курская область",
       "tg": "https://t.me/center_k",
       "pop": 1067034,
-      "value": 911,
-      "valuePerPop": 853.768483478502
+      "value": 1215,
+      "valuePerPop": 1138.6703703911965
     },
     {
       "region": "Кыргызстан",
@@ -542,8 +542,8 @@
       "region": "Ульяновская область",
       "tg": "https://t.me/center_ul",
       "pop": 1181006,
-      "value": 910,
-      "valuePerPop": 770.5295316027184
+      "value": 1148,
+      "valuePerPop": 972.0526398680447
     },
     {
       "region": "Франция"
@@ -599,6 +599,6 @@
       "valuePerPop": 2281.9258248542405
     }
   ],
-  "total": 139323,
-  "updatedAt": "2024-01-24T17:22:48.306Z"
+  "total": 140828,
+  "updatedAt": "2024-01-24T18:44:52.972Z"
 }
