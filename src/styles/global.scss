@@ -40,6 +40,10 @@ table.striped tr:nth-child(even) {
   font-size: 0.9em;
 }
 
+.strike {
+  text-decoration: line-through;
+}
+
 details {
   border: 1px solid #c59b6e;
   border-radius: 5px;
