@@ -28,15 +28,15 @@
       "region": "Алтай",
       "tg": "https://t.me/center_ra_2024",
       "pop": 210769,
-      "value": 558,
-      "valuePerPop": 2647.4481541403147
+      "value": 660,
+      "valuePerPop": 3131.390289843383
     },
     {
       "region": "Алтайский край",
       "tg": "https://t.me/center_ak",
       "pop": 2130950,
-      "value": 4005,
-      "valuePerPop": 1879.4434407189283
+      "value": 4045,
+      "valuePerPop": 1898.2144114127502
     },
     {
       "region": "Амурская область",
@@ -70,8 +70,8 @@
       "region": "Белгородская область",
       "tg": "https://t.me/center_bo_2024",
       "pop": 1514527,
-      "value": 1618,
-      "valuePerPop": 1068.3203402778556
+      "value": 2045,
+      "valuePerPop": 1350.2565487442614
     },
     {
       "region": "Бельгия"
@@ -147,8 +147,8 @@
       "region": "Ивановская область",
       "tg": "https://t.me/centr_io",
       "pop": 914725,
-      "value": 1590,
-      "valuePerPop": 1738.2273360846157
+      "value": 2037,
+      "valuePerPop": 2226.8987947197247
     },
     {
       "region": "Израиль",
@@ -247,8 +247,8 @@
       "region": "Краснодарский край",
       "tg": "https://t.me/center_krasnodar",
       "pop": 5819345,
-      "value": 3914,
-      "valuePerPop": 672.5842856885096
+      "value": 4534,
+      "valuePerPop": 779.1254857720241
     },
     {
       "region": "Красноярский край",
@@ -289,8 +289,8 @@
       "region": "Липецкая область",
       "tg": "https://t.me/center_lip",
       "pop": 1126263,
-      "value": 1294,
-      "valuePerPop": 1148.9323541659453
+      "value": 1565,
+      "valuePerPop": 1389.5511084000807
     },
     {
       "region": "Литва"
@@ -329,8 +329,8 @@
       "region": "Новгородская область",
       "tg": "https://t.me/center_n_o_2024",
       "pop": 575926,
-      "value": 1621,
-      "valuePerPop": 2814.5977087334136
+      "value": 1823,
+      "valuePerPop": 3165.3372134614515
     },
     {
       "region": "Новосибирская область",
@@ -349,8 +349,8 @@
       "region": "Омская область",
       "tg": "https://t.me/center_o_o_2024",
       "pop": 1832064,
-      "value": 2238,
-      "valuePerPop": 1221.5730454831273
+      "value": 2391,
+      "valuePerPop": 1305.085411863341
     },
     {
       "region": "Оренбургская область",
@@ -394,8 +394,8 @@
       "region": "Псковская область",
       "tg": "https://t.me/center_po_2024",
       "pop": 587786,
-      "value": 1242,
-      "valuePerPop": 2113.0139200321205
+      "value": 1542,
+      "valuePerPop": 2623.4037557886713
     },
     {
       "region": "Ростовская область",
@@ -408,8 +408,8 @@
       "region": "Рязанская область",
       "tg": "https://t.me/center_rya",
       "pop": 1088918,
-      "value": 1152,
-      "valuePerPop": 1057.9309002147086
+      "value": 1397,
+      "valuePerPop": 1282.9248850693991
     },
     {
       "region": "США",
@@ -475,8 +475,8 @@
       "region": "Тамбовская область",
       "tg": "https://t.me/center_to_2023",
       "pop": 966250,
-      "value": 1399,
-      "valuePerPop": 1447.8654592496766
+      "value": 1602,
+      "valuePerPop": 1657.9560155239328
     },
     {
       "region": "Татарстан",
@@ -521,8 +521,8 @@
       "region": "Тюменская область",
       "tg": "https://t.me/center_to",
       "pop": 1608494,
-      "value": 2890,
-      "valuePerPop": 1796.7117067269135
+      "value": 3347,
+      "valuePerPop": 2080.8284022197163
     },
     {
       "region": "Удмуртия",
@@ -596,6 +596,6 @@
       "valuePerPop": 2338.0113091775106
     }
   ],
-  "total": 170786,
-  "updatedAt": "2024-01-25T19:04:32.500Z"
+  "total": 174253,
+  "updatedAt": "2024-01-25T20:10:17.567Z"
 }
