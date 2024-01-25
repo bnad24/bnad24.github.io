@@ -97,15 +97,15 @@
       "region": "Владимирская область",
       "tg": "https://t.me/nadvladimir",
       "pop": 1325510,
-      "value": 1761,
-      "valuePerPop": 1328.545239190953
+      "value": 2111,
+      "valuePerPop": 1592.5945485134023
     },
     {
       "region": "Волгоградская область",
       "tg": "https://t.me/center_wo",
       "pop": 2470057,
-      "value": 2053,
-      "valuePerPop": 831.1549085709358
+      "value": 2323,
+      "valuePerPop": 940.4641269412001
     },
     {
       "region": "Вологодская область",
@@ -268,8 +268,8 @@
       "region": "Курская область",
       "tg": "https://t.me/center_k",
       "pop": 1067034,
-      "value": 1215,
-      "valuePerPop": 1138.6703703911965
+      "value": 1417,
+      "valuePerPop": 1327.9801768266054
     },
     {
       "region": "Кыргызстан",
@@ -363,8 +363,8 @@
       "region": "Орловская область",
       "tg": "https://t.me/centeroo_2024",
       "pop": 700276,
-      "value": 1175,
-      "valuePerPop": 1677.909852686655
+      "value": 1700,
+      "valuePerPop": 2427.614254950905
     },
     {
       "region": "Пензенская область",
@@ -535,8 +535,8 @@
       "region": "Ульяновская область",
       "tg": "https://t.me/center_ul",
       "pop": 1181006,
-      "value": 1148,
-      "valuePerPop": 972.0526398680447
+      "value": 1705,
+      "valuePerPop": 1443.6844520688294
     },
     {
       "region": "Финляндия"
@@ -596,6 +596,6 @@
       "valuePerPop": 2338.0113091775106
     }
   ],
-  "total": 168882,
-  "updatedAt": "2024-01-25T18:09:44.735Z"
+  "total": 170786,
+  "updatedAt": "2024-01-25T19:04:32.500Z"
 }
