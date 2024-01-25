@@ -94,9 +94,6 @@
       "valuePerPop": 1539.0487447518437
     },
     {
-      "region": "Венгрия"
-    },
-    {
       "region": "Владимирская область",
       "tg": "https://t.me/nadvladimir",
       "pop": 1325510,
@@ -150,8 +147,8 @@
       "region": "Ивановская область",
       "tg": "https://t.me/centr_io",
       "pop": 914725,
-      "value": 1259,
-      "valuePerPop": 1376.3699472519063
+      "value": 1590,
+      "valuePerPop": 1738.2273360846157
     },
     {
       "region": "Израиль",
@@ -384,10 +381,6 @@
       "valuePerPop": 1515.7362284081341
     },
     {
-      "region": "Польша",
-      "tg": "https://t.me/center_poland"
-    },
-    {
       "region": "Португалия"
     },
     {
@@ -602,6 +595,6 @@
       "valuePerPop": 2338.0113091775106
     }
   ],
-  "total": 164692,
-  "updatedAt": "2024-01-25T09:12:43.683Z"
+  "total": 165023,
+  "updatedAt": "2024-01-25T10:07:33.936Z"
 }
