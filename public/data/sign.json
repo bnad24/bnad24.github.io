@@ -11,8 +11,8 @@
       "region": "Московская область",
       "tg": "https://t.me/center_mo",
       "pop": 8591736,
-      "value": 3402,
-      "valuePerPop": 395.9618870970896
+      "value": 3480,
+      "valuePerPop": 405.0403783356472
     },
     {
       "region": "Санкт-Петербург",
@@ -35,8 +35,8 @@
       "region": "Алтайский край",
       "tg": "https://t.me/center_ak",
       "pop": 2130950,
-      "value": 3238,
-      "valuePerPop": 1519.5100776648912
+      "value": 4005,
+      "valuePerPop": 1879.4434407189283
     },
     {
       "region": "Амурская область",
@@ -140,8 +140,8 @@
       "region": "Забайкальский край",
       "tg": "https://t.me/center_zab_k",
       "pop": 992429,
-      "value": 1048,
-      "valuePerPop": 1055.994937673123
+      "value": 1620,
+      "valuePerPop": 1632.3585868611256
     },
     {
       "region": "Ивановская область",
@@ -168,8 +168,8 @@
       "region": "Иркутская область",
       "tg": "https://t.me/center_io",
       "pop": 2344360,
-      "value": 3304,
-      "valuePerPop": 1409.3398624784588
+      "value": 4057,
+      "valuePerPop": 1730.536265761231
     },
     {
       "region": "Ирландия"
@@ -216,8 +216,8 @@
       "region": "Кемеровская область",
       "tg": "https://t.me/center_ko",
       "pop": 2568238,
-      "value": 2626,
-      "valuePerPop": 1022.4909062166357
+      "value": 3036,
+      "valuePerPop": 1182.1334315589131
     },
     {
       "region": "Кипр"
@@ -254,15 +254,15 @@
       "region": "Красноярский край",
       "tg": "https://t.me/center_kk",
       "pop": 2845545,
-      "value": 3650,
-      "valuePerPop": 1282.706827690302
+      "value": 3961,
+      "valuePerPop": 1392.0004779400783
     },
     {
       "region": "Курганская область",
       "tg": "https://t.me/nadejdin45",
       "pop": 761586,
-      "value": 863,
-      "valuePerPop": 1133.161586478743
+      "value": 1100,
+      "valuePerPop": 1444.3542817226157
     },
     {
       "region": "Курская область",
@@ -433,8 +433,8 @@
       "region": "Саха (Якутия)",
       "tg": "https://t.me/center_rs2024",
       "pop": 997565,
-      "value": 1042,
-      "valuePerPop": 1044.5434633332163
+      "value": 1292,
+      "valuePerPop": 1295.1536992576926
     },
     {
       "region": "Сахалинская область",
@@ -496,8 +496,8 @@
       "region": "Томская область",
       "tg": "https://t.me/center_tmsk",
       "pop": 1052106,
-      "value": 3227,
-      "valuePerPop": 3067.1814436948366
+      "value": 3417,
+      "valuePerPop": 3247.7716123660543
     },
     {
       "region": "Тульская область",
@@ -514,8 +514,8 @@
       "region": "Тыва",
       "tg": "https://t.me/center_tu",
       "pop": 337271,
-      "value": 517,
-      "valuePerPop": 1532.8919474250677
+      "value": 576,
+      "valuePerPop": 1707.8254578662263
     },
     {
       "region": "Тюменская область",
@@ -596,6 +596,6 @@
       "valuePerPop": 2338.0113091775106
     }
   ],
-  "total": 165255,
-  "updatedAt": "2024-01-25T17:03:59.532Z"
+  "total": 168882,
+  "updatedAt": "2024-01-25T18:09:44.735Z"
 }
