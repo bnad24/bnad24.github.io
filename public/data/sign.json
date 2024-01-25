@@ -226,8 +226,8 @@
       "region": "Кировская область",
       "tg": "https://t.me/center_kir",
       "pop": 1138112,
-      "value": 2110,
-      "valuePerPop": 1853.9475903953214
+      "value": 2816,
+      "valuePerPop": 2474.2731822527135
     },
     {
       "region": "Коми",
@@ -312,8 +312,8 @@
       "region": "Мурманская область",
       "tg": "https://t.me/center_mo2024",
       "pop": 658698,
-      "value": 1668,
-      "valuePerPop": 2532.2682018163105
+      "value": 2018,
+      "valuePerPop": 3063.619443204625
     },
     {
       "region": "Нидерланды"
@@ -349,8 +349,8 @@
       "region": "Омская область",
       "tg": "https://t.me/center_o_o_2024",
       "pop": 1832064,
-      "value": 2391,
-      "valuePerPop": 1305.085411863341
+      "value": 2401,
+      "valuePerPop": 1310.543736463355
     },
     {
       "region": "Оренбургская область",
@@ -596,6 +596,6 @@
       "valuePerPop": 2338.0113091775106
     }
   ],
-  "total": 174615,
-  "updatedAt": "2024-01-25T21:05:05.334Z"
+  "total": 175681,
+  "updatedAt": "2024-01-25T23:05:36.426Z"
 }
