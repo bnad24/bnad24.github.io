@@ -32,13 +32,6 @@
       "valuePerPop": 2647.4481541403147
     },
     {
-      "region": "Алтайский край",
-      "tg": "https://t.me/center_ak",
-      "pop": 2130950,
-      "value": 3238,
-      "valuePerPop": 1519.5100776648912
-    },
-    {
       "region": "Амурская область",
       "tg": "https://t.me/center_ao",
       "pop": 756198,
@@ -581,6 +574,9 @@
       "tg": "https://t.me/center_sl"
     },
     {
+      "region": "Япония"
+    },
+    {
       "region": "Ярославская область",
       "tg": "https://t.me/center_yar",
       "pop": 1194605,
@@ -588,6 +584,6 @@
       "valuePerPop": 2338.0113091775106
     }
   ],
-  "total": 163131,
-  "updatedAt": "2024-01-25T11:13:18.738Z"
+  "total": 159893,
+  "updatedAt": "2024-01-25T12:08:06.433Z"
 }
