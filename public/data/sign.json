@@ -76,8 +76,8 @@
       "region": "Брянская область",
       "tg": "https://t.me/center_bro",
       "pop": 1152505,
-      "value": 30,
-      "valuePerPop": 26.030255834031088
+      "value": 116,
+      "valuePerPop": 100.65032255825355
     },
     {
       "region": "Бурятия",
@@ -104,8 +104,8 @@
       "region": "Вологодская область",
       "tg": "https://t.me/center_vologda",
       "pop": 1128782,
-      "value": 1774,
-      "valuePerPop": 1571.6055004420693
+      "value": 2640,
+      "valuePerPop": 2338.804126926191
     },
     {
       "region": "Воронежская область",
@@ -447,8 +447,8 @@
     {
       "region": "Смоленская область",
       "pop": 873041,
-      "value": 28,
-      "valuePerPop": 32.07180418789037
+      "value": 200,
+      "valuePerPop": 229.08431562778838
     },
     {
       "region": "Соединённое Королевство",
@@ -458,8 +458,8 @@
       "region": "Ставропольский край",
       "tg": "https://t.me/center_sk",
       "pop": 2891204,
-      "value": 61,
-      "valuePerPop": 21.098476620812644
+      "value": 270,
+      "valuePerPop": 93.38669979703957
     },
     {
       "region": "Тайланд"
@@ -482,8 +482,8 @@
       "region": "Тверская область",
       "tg": "https://t.me/center_tvr",
       "pop": 1211183,
-      "value": 1099,
-      "valuePerPop": 907.377332739974
+      "value": 1890,
+      "valuePerPop": 1560.4578333744778
     },
     {
       "region": "Томская область",
@@ -584,6 +584,6 @@
       "valuePerPop": 2338.0113091775106
     }
   ],
-  "total": 159893,
-  "updatedAt": "2024-01-25T14:08:38.087Z"
+  "total": 162017,
+  "updatedAt": "2024-01-25T15:14:23.452Z"
 }
