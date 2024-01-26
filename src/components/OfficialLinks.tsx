@@ -14,7 +14,7 @@ export function OfficialLinks() {
               <td style={{ maxWidth }}>{'Главная страница'}</td>
               <td>
                 <a target="_blank" rel="noreferrer" href="https://nadezhdin2024.ru/">
-                  <b>{'nadezhdin2024.ru'}</b>
+                  {'nadezhdin2024.ru'}
                 </a>
               </td>
             </tr>
@@ -25,7 +25,7 @@ export function OfficialLinks() {
               </td>
               <td>
                 <a target="_blank" rel="noreferrer" href="https://nadezhdin2024.ru/addresses">
-                  <b>{'nadezhdin2024.ru/addresses'}</b>
+                  {'nadezhdin2024.ru/addresses'}
                 </a>
               </td>
             </tr>
@@ -34,7 +34,7 @@ export function OfficialLinks() {
               <td style={{ maxWidth }}>{'Список регионов (города зарубежья внизу страницы)'}</td>
               <td>
                 <a target="_blank" rel="noreferrer" href="https://nadezhdin2024.ru/regions">
-                  <b>{'nadezhdin2024.ru/regions'}</b>
+                  {'nadezhdin2024.ru/regions'}
                 </a>
               </td>
             </tr>
@@ -43,7 +43,7 @@ export function OfficialLinks() {
               <td style={{ maxWidth }}>{'Поддержать'}</td>
               <td>
                 <a target="_blank" rel="noreferrer" href="https://nadezhdin2024.ru/#donate">
-                  <b>{'nadezhdin2024.ru/#donate'}</b>
+                  {'nadezhdin2024.ru/#donate'}
                 </a>
               </td>
             </tr>
@@ -52,7 +52,7 @@ export function OfficialLinks() {
               <td style={{ maxWidth }}>{'Telegram'}</td>
               <td>
                 <a target="_blank" rel="noreferrer" href="https://t.me/BorisNadezhdin">
-                  <b>{'t.me/BorisNadezhdin'}</b>
+                  {'t.me/BorisNadezhdin'}
                 </a>
               </td>
             </tr>
@@ -61,7 +61,7 @@ export function OfficialLinks() {
               <td style={{ maxWidth }}>{'Telegram бот для поиска штабов'}</td>
               <td>
                 <a target="_blank" rel="noreferrer" href="https://t.me/nadezhdin2024_bot">
-                  <b>{'t.me/nadezhdin2024_bot'}</b>
+                  {'t.me/nadezhdin2024_bot'}
                 </a>
               </td>
             </tr>

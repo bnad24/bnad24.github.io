@@ -130,7 +130,10 @@ export function Main() {
         <OfficialLinks />
       </div>
 
-      <CountdownTimer />
+      <div style={{ marginBottom: '1rem' }}>
+        <h3>{'Основные даты'}</h3>
+        <CountdownTimer />
+      </div>
 
       <div style={{ marginBottom: '1rem' }}>
         <div>{'Поделиться: '}</div>

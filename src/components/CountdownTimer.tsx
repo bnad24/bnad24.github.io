@@ -1,32 +1,115 @@
 import { DateTime } from 'luxon';
-import Countdown from 'react-countdown';
-
-const renderer = ({ days, hours, minutes, seconds, completed }) => {
-  if (completed) {
-    return <span>{'Что, всё? Может и нет. Уточняйте в официальных источниках!'}</span>;
-  } else {
-    return <span>{`Осталось: ${days} д. ${hours} ч. ${minutes} мин. ${seconds} с.`}</span>;
-  }
-};
+import Link from 'next/link';
+import { ReactNode, useCallback, useMemo } from 'react';
+import Countdown, { CountdownRendererFn } from 'react-countdown';
+import { formatDateMsk } from '../util/datetime';
 
 export function CountdownTimer() {
-  const d1 = DateTime.fromISO('2024-01-25T20:59:59.999Z');
-  const d2 = DateTime.fromISO('2024-01-31T20:59:59.999Z');
-  const now = DateTime.utc();
+  return (
+    <table>
+      <tbody>
+        <Event
+          name={'Окончание сбора подписей'}
+          date={DateTime.fromISO('2024-01-25T23:59:59.999', { zone: 'Europe/Moscow' })}
+          endText={
+            <span>
+              {
+                'Сбор продолжается в некоторых регионах. Уточняйте в официльных источниках (см. выше) и на нашей странице '
+              }
+              <Link href="/addresses">{'Aдресов штабов'}</Link>
+              {''}
+            </span>
+          }
+        />
+
+        <Event
+          name={'Срок подачи подписей в ЦИК'}
+          note={'Последний срок'}
+          date={DateTime.fromISO('2024-01-31T18:00:00.000', { zone: 'Europe/Moscow' })}
+          endText={<span>{'Завершено'}</span>}
+        />
+
+        <Event
+          name={'Решение ЦИК о регистрации кандидата'}
+          note={'Последний срок'}
+          date={DateTime.fromISO('2024-01-31T18:00:00.000', { zone: 'Europe/Moscow' }).plus({ day: 10 })}
+          endText={<span>{'Завершено'}</span>}
+        />
+
+        <Event
+          name={'Агитация: начало'}
+          date={DateTime.fromISO('2024-02-17T00:00:00.000', { zone: 'Europe/Moscow' })}
+          endText={<span>{'Начато'}</span>}
+        />
+
+        <Event
+          name={'Агитация: окончание'}
+          date={DateTime.fromISO('2024-03-14T23:59:59.000', { zone: 'Europe/Moscow' })}
+          endText={<span>{'Окончено'}</span>}
+        />
+
+        <Event
+          name={'Выборы: начало голосования'}
+          note={'Участки работают с 8:00 до 20:00 по местному времени; Счётчик показывает московское время'}
+          date={DateTime.fromISO('2024-03-15T08:00:00.000', { zone: 'Europe/Moscow' })}
+          endText={<span>{'Начато'}</span>}
+        />
+
+        <Event
+          name={'Выборы: окончание голосования'}
+          note={'Участки работают с 8:00 до 20:00 по местному времени; Счётчик показывает московское время'}
+          date={DateTime.fromISO('2024-03-17T20:00:00.000', { zone: 'Europe/Moscow' })}
+          endText={<span>{'Окончено'}</span>}
+        />
+
+        <Event
+          name={'Инаугурация президента'}
+          date={DateTime.fromISO('2024-05-07T12:00:00.000', { zone: 'Europe/Moscow' })}
+          endText={<span>{'Окончено'}</span>}
+        />
+      </tbody>
+    </table>
+  );
+}
+
+function Event({
+  name,
+  note,
+  date,
+  endText,
+}: {
+  name: ReactNode;
+  note?: ReactNode;
+  date: DateTime;
+  endText: ReactNode;
+}) {
+  const now = useMemo(() => DateTime.utc(), []);
+
+  const renderer: CountdownRendererFn = useCallback(
+    ({ days, hours, minutes, seconds, completed }) => {
+      if (completed) {
+        return endText;
+      } else {
+        return <span className="text-mono">{`Осталось: ${days} д. ${hours} ч. ${minutes} мин. ${seconds} с.`}</span>;
+      }
+    },
+    [endText],
+  );
 
   return (
-    <div>
-      <p>
-        <b className={now > d1 && 'strike'}>{'Окончание сбора подписей: чт, 25 янв. 2024 г., 23:59:59 мск.'}</b>
+    <tr>
+      <td>
+        <b className={now > date && 'strike'}>{name}</b>
         <br />
-        <Countdown date={d1.toJSDate()} renderer={renderer} />
-      </p>
+        {!!note && <small>{note}</small>}
+        {!!note && <br />}
+      </td>
 
-      <p>
-        <b className={now > d2 && 'strike'}>{'Срок подачи подписей в ЦИК: ср, 31 янв. 2024 г., 23:59:59 мск.'}</b>
+      <td>
+        <span className="text-mono">{formatDateMsk(date)}</span>
         <br />
-        <Countdown date={d2.toJSDate()} renderer={renderer} />
-      </p>
-    </div>
+        <Countdown date={date.toJSDate()} renderer={renderer} />
+      </td>
+    </tr>
   );
 }
