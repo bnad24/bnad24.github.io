@@ -1,21 +1,24 @@
 import { DateTime } from 'luxon';
 import Link from 'next/link';
-import { ReactNode, useCallback, useMemo } from 'react';
+import React, { ReactNode, useCallback, useMemo } from 'react';
 import Countdown, { CountdownRendererFn } from 'react-countdown';
+import { FaCheck, FaRegClock } from 'react-icons/fa';
+import { MdTimer } from 'react-icons/md';
 import { formatDateMsk } from '../util/datetime';
 
 export function CountdownTimer() {
   return (
-    <table>
+    <table className="striped">
       <tbody>
         <Event
           name={'Окончание сбора подписей'}
           date={DateTime.fromISO('2024-01-25T23:59:59.999', { zone: 'Europe/Moscow' })}
-          endText={
+          note={
             <span>
-              {
-                'Сбор продолжается в некоторых регионах. Уточняйте в официльных источниках (см. выше) и на нашей странице '
-              }
+              <a target="_blank" rel="noreferrer" href="https://t.me/BorisNadezhdin/699">
+                {'Сбор продолжается в некоторых регионах'}
+              </a>
+              {'. Уточняйте в официльных источниках (см. выше) и на нашей странице '}
               <Link href="/addresses">{'Aдресов штабов'}</Link>
               {''}
             </span>
@@ -44,19 +47,19 @@ export function CountdownTimer() {
 
         <Event
           name={'Агитация: окончание'}
-          date={DateTime.fromISO('2024-03-14T23:59:59.000', { zone: 'Europe/Moscow' })}
+          date={DateTime.fromISO('2024-03-14T23:59:59.999', { zone: 'Europe/Moscow' })}
           endText={<span>{'Окончено'}</span>}
         />
 
         <Event
-          name={'Выборы: начало голосования'}
+          name={'Голосование: начало'}
           note={'Участки работают с 8:00 до 20:00 по местному времени; Счётчик показывает московское время'}
           date={DateTime.fromISO('2024-03-15T08:00:00.000', { zone: 'Europe/Moscow' })}
           endText={<span>{'Начато'}</span>}
         />
 
         <Event
-          name={'Выборы: окончание голосования'}
+          name={'Голосование: окончание'}
           note={'Участки работают с 8:00 до 20:00 по местному времени; Счётчик показывает московское время'}
           date={DateTime.fromISO('2024-03-17T20:00:00.000', { zone: 'Europe/Moscow' })}
           endText={<span>{'Окончено'}</span>}
@@ -81,7 +84,7 @@ function Event({
   name: ReactNode;
   note?: ReactNode;
   date: DateTime;
-  endText: ReactNode;
+  endText?: ReactNode;
 }) {
   const now = useMemo(() => DateTime.utc(), []);
 
@@ -90,25 +93,44 @@ function Event({
       if (completed) {
         return endText;
       } else {
-        return <span className="text-mono">{`Осталось: ${days} д. ${hours} ч. ${minutes} мин. ${seconds} с.`}</span>;
+        return (
+          <span className="text-mono">
+            <MdTimer color="grey" size={12} />
+            {` ${days} д. ${hours} ч. ${minutes} мин. ${seconds} с.`}
+          </span>
+        );
       }
     },
     [endText],
   );
 
+  const icon = useMemo(() => {
+    if (now > date) {
+      return <FaCheck color="#3c8e21" size={18} />;
+    }
+    return <FaRegClock color="grey" size={18} />;
+  }, [date, now]);
+
   return (
     <tr>
-      <td>
-        <b className={now > date && 'strike'}>{name}</b>
+      <td>{icon}</td>
+      <td style={{ maxWidth: '300px', minWidth: '150px' }}>
+        <b>{name}</b>
         <br />
         {!!note && <small>{note}</small>}
         {!!note && <br />}
       </td>
 
-      <td>
-        <span className="text-mono">{formatDateMsk(date)}</span>
-        <br />
-        <Countdown date={date.toJSDate()} renderer={renderer} />
+      <td style={{ minWidth: '270px' }}>
+        <div style={{ paddingBottom: '2px' }} className="text-mono">
+          <FaRegClock color="grey" size={11} />{' '}
+          <span className={now > date && 'strike'}>
+            <b>{formatDateMsk(date)}</b>
+          </span>
+        </div>
+        <div>
+          <Countdown date={date.toJSDate()} renderer={renderer} />
+        </div>
       </td>
     </tr>
   );
