@@ -18,8 +18,8 @@
       "region": "Санкт-Петербург",
       "tg": "https://t.me/center_spb_2024",
       "pop": 5600044,
-      "value": 13804,
-      "valuePerPop": 2464.980632295032
+      "value": 15470,
+      "valuePerPop": 2762.478294813398
     },
     {
       "region": "Австрия"
@@ -56,8 +56,8 @@
       "region": "Архангельская область",
       "tg": "https://t.me/center_arh",
       "pop": 964304,
-      "value": 2807,
-      "valuePerPop": 2910.9077635268545
+      "value": 3350,
+      "valuePerPop": 3474.008196585309
     },
     {
       "region": "Башкортостан",
@@ -118,8 +118,8 @@
       "region": "Воронежская область",
       "tg": "https://t.me/center_vrn",
       "pop": 2285282,
-      "value": 2395,
-      "valuePerPop": 1048.0107050245879
+      "value": 4096,
+      "valuePerPop": 1792.3389761088565
     },
     {
       "region": "Германия",
@@ -196,21 +196,21 @@
       "region": "Калужская область",
       "tg": "https://t.me/center_ka",
       "pop": 1070853,
-      "value": 1152,
-      "valuePerPop": 1075.7779078921196
+      "value": 2068,
+      "valuePerPop": 1931.1707582646732
     },
     {
       "region": "Камчатский край",
       "pop": 288730,
-      "value": 410,
-      "valuePerPop": 1420.0117757074083
+      "value": 360,
+      "valuePerPop": 1246.839607938212
     },
     {
       "region": "Карелия",
       "tg": "https://t.me/center_10",
       "pop": 527880,
-      "value": 1813,
-      "valuePerPop": 3434.4926877320604
+      "value": 2156,
+      "valuePerPop": 4084.261574600288
     },
     {
       "region": "Кемеровская область",
@@ -482,8 +482,8 @@
       "region": "Татарстан",
       "tg": "https://t.me/center_rt",
       "pop": 4001625,
-      "value": 4635,
-      "valuePerPop": 1158.2794489738544
+      "value": 5235,
+      "valuePerPop": 1308.2185362196608
     },
     {
       "region": "Тверская область",
@@ -521,8 +521,8 @@
       "region": "Тюменская область",
       "tg": "https://t.me/center_to",
       "pop": 1608494,
-      "value": 3347,
-      "valuePerPop": 2080.8284022197163
+      "value": 3357,
+      "valuePerPop": 2087.045397744723
     },
     {
       "region": "Удмуртия",
@@ -596,6 +596,6 @@
       "valuePerPop": 2338.0113091775106
     }
   ],
-  "total": 175681,
-  "updatedAt": "2024-01-25T23:05:36.426Z"
+  "total": 181410,
+  "updatedAt": "2024-01-26T07:09:01.809Z"
 }
