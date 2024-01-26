@@ -66,8 +66,14 @@ export function CountdownTimer() {
         />
 
         <Event
-          name={'Инаугурация президента'}
+          name={'Инаугурация избранного президента'}
           date={DateTime.fromISO('2024-05-07T12:00:00.000', { zone: 'Europe/Moscow' })}
+          endText={<span>{'Окончено'}</span>}
+        />
+
+        <Event
+          name={'Окончание срока избранного президента'}
+          date={DateTime.fromISO('2030-05-07T12:00:00.000', { zone: 'Europe/Moscow' })}
           endText={<span>{'Окончено'}</span>}
         />
       </tbody>
@@ -90,13 +96,21 @@ function Event({
 
   const renderer: CountdownRendererFn = useCallback(
     ({ days, hours, minutes, seconds, completed }) => {
+      let text = `${days} д. ${hours} ч. ${minutes} мин. ${seconds} с.`;
+      if (days >= 365) {
+        const years = Math.floor(days / 365); // FIXME: naive date interval calculation is inexact
+        days = days % 365; // FIXME: naive date interval calculation is inexact
+        text = `${years} лет ${days} д. ${hours} ч. ${minutes} мин. ${seconds} с.`;
+      }
+
       if (completed) {
         return endText;
       } else {
         return (
           <span className="text-mono">
             <MdTimer color="grey" size={12} />
-            {` ${days} д. ${hours} ч. ${minutes} мин. ${seconds} с.`}
+            <span> </span>
+            <span>{text}</span>
           </span>
         );
       }
