@@ -21,9 +21,18 @@ function has_changed() {
   fi
 }
 
-if has_changed "public/data/sign.json" || has_changed "public/data/addresses.json" ; then
-  git add -A
-  git commit -m "update data"
+if has_changed "public/data/sign.json"; then
+  git add "public/data/sign.json"
+  git commit -m "update signatures data"
+  git push
+else
+  echo 'unchanged'
+fi
+
+
+if has_changed "public/data/addresses.json"; then
+  git add "public/data/addresses.json"
+  git commit -m "update addresses data"
   git push
 else
   echo 'unchanged'

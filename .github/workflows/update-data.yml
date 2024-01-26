@@ -1,0 +1,36 @@
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '*/15 * * * *' # every 15 minutes
+
+concurrency:
+  group: data-${{ github.workflow }}-${{ github.ref_type }}-${{ github.event.pull_request.number || github.ref || github.run_id }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash -euxo pipefail {0}
+
+jobs:
+  update-data:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_TOKEN_FOR_CI }}
+          show-progress: false
+
+      - name: 'yarn install'
+        run: |
+          yarn install
+
+      - name: 'update data, commit, push'
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN_FOR_CI }}
+        run: |
+          git config --global user.email "157440852+z-x-y-a@users.noreply.github.com"
+          git config --global user.name "z-x-y-a"
+          ./scripts/update-and-push
