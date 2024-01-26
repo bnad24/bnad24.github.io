@@ -60,6 +60,11 @@
       "valuePerPop": 3474.008196585309
     },
     {
+      "region": "Астраханская область",
+      "tg": "https://t.me/center_ast_o",
+      "pop": 950557
+    },
+    {
       "region": "Башкортостан",
       "tg": "https://t.me/center_rb",
       "pop": 4077600,
@@ -426,8 +431,8 @@
       "region": "Саратовская область",
       "tg": "https://t.me/center_s_o_2024",
       "pop": 2404944,
-      "value": 1619,
-      "valuePerPop": 673.1965484435397
+      "value": 4449,
+      "valuePerPop": 1849.9391254016725
     },
     {
       "region": "Саха (Якутия)",
@@ -596,6 +601,6 @@
       "valuePerPop": 2338.0113091775106
     }
   ],
-  "total": 185910,
-  "updatedAt": "2024-01-26T08:04:42.426Z"
+  "total": 188740,
+  "updatedAt": "2024-01-26T09:08:51.018Z"
 }
