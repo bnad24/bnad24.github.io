@@ -348,7 +348,8 @@
       "region": "Норвегия"
     },
     {
-      "region": "ОАЭ"
+      "region": "ОАЭ",
+      "tg": "https://t.me/nadezhdin_dubai"
     },
     {
       "region": "Омская область",
@@ -602,5 +603,5 @@
     }
   ],
   "total": 188740,
-  "updatedAt": "2024-01-26T09:08:51.018Z"
+  "updatedAt": "2024-01-26T10:08:12.625Z"
 }
