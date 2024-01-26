@@ -28,8 +28,8 @@
       "region": "Алтай",
       "tg": "https://t.me/center_ra_2024",
       "pop": 210769,
-      "value": 660,
-      "valuePerPop": 3131.390289843383
+      "value": 761,
+      "valuePerPop": 3610.5878948042646
     },
     {
       "region": "Алтайский край",
@@ -75,8 +75,8 @@
       "region": "Белгородская область",
       "tg": "https://t.me/center_bo_2024",
       "pop": 1514527,
-      "value": 2045,
-      "valuePerPop": 1350.2565487442614
+      "value": 2285,
+      "valuePerPop": 1508.7218649783067
     },
     {
       "region": "Бельгия"
@@ -109,8 +109,8 @@
       "region": "Волгоградская область",
       "tg": "https://t.me/center_wo",
       "pop": 2470057,
-      "value": 2323,
-      "valuePerPop": 940.4641269412001
+      "value": 2433,
+      "valuePerPop": 984.9975122031597
     },
     {
       "region": "Вологодская область",
@@ -145,15 +145,15 @@
       "region": "Забайкальский край",
       "tg": "https://t.me/center_zab_k",
       "pop": 992429,
-      "value": 1620,
-      "valuePerPop": 1632.3585868611256
+      "value": 1798,
+      "valuePerPop": 1811.716505664385
     },
     {
       "region": "Ивановская область",
       "tg": "https://t.me/centr_io",
       "pop": 914725,
-      "value": 2037,
-      "valuePerPop": 2226.8987947197247
+      "value": 2223,
+      "valuePerPop": 2430.2385962994344
     },
     {
       "region": "Израиль",
@@ -414,8 +414,8 @@
       "region": "Рязанская область",
       "tg": "https://t.me/center_rya",
       "pop": 1088918,
-      "value": 1397,
-      "valuePerPop": 1282.9248850693991
+      "value": 1697,
+      "valuePerPop": 1558.4277236669795
     },
     {
       "region": "США",
@@ -481,8 +481,8 @@
       "region": "Тамбовская область",
       "tg": "https://t.me/center_to_2023",
       "pop": 966250,
-      "value": 1602,
-      "valuePerPop": 1657.9560155239328
+      "value": 1616,
+      "valuePerPop": 1672.445019404916
     },
     {
       "region": "Татарстан",
@@ -527,8 +527,8 @@
       "region": "Тюменская область",
       "tg": "https://t.me/center_to",
       "pop": 1608494,
-      "value": 3357,
-      "valuePerPop": 2087.045397744723
+      "value": 3160,
+      "valuePerPop": 1964.5705859020923
     },
     {
       "region": "Удмуртия",
@@ -602,6 +602,6 @@
       "valuePerPop": 2338.0113091775106
     }
   ],
-  "total": 190163,
-  "updatedAt": "2024-01-26T18:44:43.734Z"
+  "total": 191095,
+  "updatedAt": "2024-01-26T22:35:42.860Z"
 }
