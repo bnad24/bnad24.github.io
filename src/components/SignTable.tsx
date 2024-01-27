@@ -66,7 +66,7 @@ export function SignTable({ data }: { data: SignJson }) {
 
   return (
     <div>
-      <div style={{ marginBottom: '1rem' }}>
+      <div className="table-wrapper" style={{ marginBottom: '1rem' }}>
         <table>
           <thead>
             <tr>
@@ -187,7 +187,7 @@ export function SignTable({ data }: { data: SignJson }) {
         </table>
       </div>
 
-      <div style={{ marginBottom: '1rem' }}>
+      <div className="table-wrapper" style={{ marginBottom: '1rem' }}>
         <table className="striped">
           <thead>
             <tr>

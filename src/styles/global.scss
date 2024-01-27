@@ -6,6 +6,10 @@ body {
   font-size: 14px;
 }
 
+.table-wrapper {
+  overflow-x: auto;
+}
+
 table,
 th,
 td {
@@ -50,7 +54,7 @@ table.striped tr:nth-child(even) {
 details {
   border: 1px solid #c59b6e;
   border-radius: 5px;
-  margin: 0.25rem 0.5rem;
+  margin: 0.25rem 0rem;
   padding: 0.25rem 0.5rem;
   background: #e7e3de;
   padding: 0.5rem;
@@ -84,8 +88,11 @@ a {
     44px 39px 61px -30px rgba(0, 0, 0, 0.15);
 }
 
+.main {
+  overflow-x: auto;
+}
+
 .navigation-wrapper {
-  width: 100%;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
