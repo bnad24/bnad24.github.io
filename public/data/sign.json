@@ -181,7 +181,7 @@
     },
     {
       "region": "Испания",
-      "tg": "https://t.me/nadezhdin_barcelona"
+      "tg": "https://t.me/valencia_nadezhdin2024"
     },
     {
       "region": "Италия"
@@ -563,9 +563,6 @@
       "region": "Черногория"
     },
     {
-      "region": "Чехия"
-    },
-    {
       "region": "Чувашская Республика",
       "tg": "https://t.me/center_chu",
       "pop": 1173177,
@@ -587,5 +584,5 @@
     }
   ],
   "total": 192379,
-  "updatedAt": "2024-01-27T08:48:25.760Z"
+  "updatedAt": "2024-01-27T09:48:43.463Z"
 }
