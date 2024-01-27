@@ -4,15 +4,12 @@ import React from 'react';
 import { N_PER_REGION_MAX, N_PER_REGION_DESIRED, TOTAL_DESIRED, TOTAL_REQUIRED } from '../constants';
 import type { SignJson } from '../types';
 import { useJson } from '../util/useJson';
-import { CountdownTimer } from './CountdownTimer';
 import { OfficialLinks } from './OfficialLinks';
 import { Sharing } from './Sharing';
 import { SignTable } from './SignTable';
 import { UpdatedAt } from './UpdatedAt';
 
-const maxWidth = '150px';
-
-export function Main() {
+export function SigsPage() {
   const data = useJson<SignJson>('/data/sign.json');
 
   if (!data) {
@@ -131,21 +128,16 @@ export function Main() {
       </div>
 
       <div style={{ marginBottom: '1rem' }}>
-        <h3>{'Основные даты'}</h3>
-        <CountdownTimer />
-      </div>
-
-      <div style={{ marginBottom: '1rem' }}>
-        <div>{'Поделиться: '}</div>
-        <Sharing />
-      </div>
-
-      <div style={{ marginBottom: '1rem' }}>
         <UpdatedAt data={data} />
       </div>
 
       <div style={{ marginBottom: '1rem' }}>
         <SignTable data={data} />
+      </div>
+
+      <div style={{ marginBottom: '1rem' }}>
+        <div>{'Поделиться: '}</div>
+        <Sharing />
       </div>
     </div>
   );

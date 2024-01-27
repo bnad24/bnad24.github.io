@@ -4,11 +4,11 @@ import { QueryClient, QueryClientProvider, useQueryErrorResetBoundary } from '@t
 import { Suspense, useMemo } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import PlausibleProvider from 'next-plausible';
-import { MainPage } from '../components/MainPage';
-import { ErrorFallback } from '../components/ErrorFallback';
-import { SUSPENSE_FALLBACK } from '../components/SuspenseFallback';
+import { SigsPage } from '../../components/SigsPage';
+import { ErrorFallback } from '../../components/ErrorFallback';
+import { SUSPENSE_FALLBACK } from '../../components/SuspenseFallback';
 
-import '../styles/global.scss';
+import '../../styles/global.scss';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -34,7 +34,7 @@ export default function Page() {
       <QueryClientProvider client={queryClient}>
         <ErrorBoundary onReset={reset} FallbackComponent={ErrorFallback}>
           <Suspense fallback={SUSPENSE_FALLBACK}></Suspense>
-          <MainPage />
+          <SigsPage />
         </ErrorBoundary>
       </QueryClientProvider>
     </PlausibleProvider>

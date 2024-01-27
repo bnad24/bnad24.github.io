@@ -4,7 +4,7 @@ import { QueryClient, QueryClientProvider, useQueryErrorResetBoundary } from '@t
 import { Suspense, useMemo } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import PlausibleProvider from 'next-plausible';
-import { Addresses } from '../../components/Addresses';
+import { AddressesPage } from '../../components/AddressesPage';
 import { ErrorFallback } from '../../components/ErrorFallback';
 import { SUSPENSE_FALLBACK } from '../../components/SuspenseFallback';
 
@@ -34,7 +34,7 @@ export default function Page() {
       <QueryClientProvider client={queryClient}>
         <ErrorBoundary onReset={reset} FallbackComponent={ErrorFallback}>
           <Suspense fallback={SUSPENSE_FALLBACK}></Suspense>
-          <Addresses />
+          <AddressesPage />
         </ErrorBoundary>
       </QueryClientProvider>
     </PlausibleProvider>

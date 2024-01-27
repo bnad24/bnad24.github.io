@@ -8,8 +8,9 @@ import { usePathname } from 'next/navigation';
 export function Navigation() {
   return (
     <ul className="navigation-ul">
-      <NavLink href="/">{'Статистика'}</NavLink>
-      <NavLink href="/addresses">{'Адреса Штабов'}</NavLink>
+      <NavLink href="/">{'Главная'}</NavLink>
+      <NavLink href="/sigs">{'Подписи'}</NavLink>
+      <NavLink href="/addresses">{'Штабы'}</NavLink>
     </ul>
   );
 }

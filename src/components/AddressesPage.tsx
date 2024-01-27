@@ -2,7 +2,6 @@ import React, { useMemo } from 'react';
 import DOMPurify from 'isomorphic-dompurify';
 const { sanitize } = DOMPurify;
 import { useJson } from '../util/useJson';
-import { CountdownTimer } from './CountdownTimer';
 import { OfficialLinks } from './OfficialLinks';
 import { Sharing } from './Sharing';
 import { UpdatedAt } from './UpdatedAt';
@@ -20,7 +19,7 @@ export interface AddressesJson {
   updatedAt: string;
 }
 
-export function Addresses() {
+export function AddressesPage() {
   const data = useJson<AddressesJson>('/data/addresses.json');
 
   if (!data) {
@@ -80,16 +79,6 @@ export function Addresses() {
       </div>
 
       <div style={{ marginBottom: '1rem' }}>
-        <h3>{'Основные даты'}</h3>
-        <CountdownTimer />
-      </div>
-
-      <div style={{ marginBottom: '1rem' }}>
-        <div>{'Поделиться: '}</div>
-        <Sharing />
-      </div>
-
-      <div style={{ marginBottom: '1rem' }}>
         <UpdatedAt data={data} />
       </div>
 
@@ -106,6 +95,11 @@ export function Addresses() {
           return <RegionAddress key={address.region} address={address} />;
         }, [])}
       </div>
+
+      <div style={{ marginBottom: '1rem' }}>
+        <div>{'Поделиться: '}</div>
+        <Sharing />
+      </div>
     </div>
   );
 }
@@ -119,42 +113,3 @@ export function RegionAddress({ address }: { address: Address }) {
     </details>
   );
 }
-
-// export function RegionAddress({ address }: { address: Address }) {
-//   return (
-//     <details className="card">
-//       <summary style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>{address.region}</summary>
-//
-//       <div style={{ marginBottom: '1rem', marginTop: '1rem' }}>
-//         <p>
-//           {address.texts.map((text) => {
-//             const chunks = text.split('\n');
-//             return chunks.map((chunk) => (
-//               <p style={{ margin: 0 }} key={chunk}>
-//                 {chunk}
-//               </p>
-//             ));
-//           })}
-//         </p>
-//         <div>
-//           {address.tgs.map((tg) => {
-//             return (
-//               <a key={tg} target="_blank" rel="noreferrer" href={tg}>
-//                 {tg}
-//               </a>
-//             );
-//           })}
-//         </div>
-//         <div>
-//           {address.phones.map((phone) => {
-//             return (
-//               <a key={phone} target="_blank" rel="noreferrer" href={`tel:${phone}`}>
-//                 {phone}
-//               </a>
-//             );
-//           })}
-//         </div>
-//       </div>
-//     </details>
-//   );
-// }
