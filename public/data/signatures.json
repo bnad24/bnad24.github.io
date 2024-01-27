@@ -65,9 +65,9 @@
       "region": "Брянская область",
       "valueSorted": 105,
       "tg": "https://t.me/center_bro",
-      "value": 116,
+      "value": 117,
       "pop": 1152505,
-      "valuePerPop": 100.65032255825355,
+      "valuePerPop": 101.51799775272124,
       "valueSortedPerPop": 91.1058954191088
     },
     {
@@ -178,9 +178,9 @@
     {
       "region": "Карелия",
       "tg": "https://t.me/center_10",
-      "value": 2273,
+      "value": 2430,
       "pop": 527880,
-      "valuePerPop": 4305.9028567098585,
+      "valuePerPop": 4603.318936121846,
       "valueSortedPerPop": null
     },
     {
@@ -555,9 +555,9 @@
       "region": "Ульяновская область",
       "valueSorted": 1765,
       "tg": "https://t.me/center_ul",
-      "value": 1765,
+      "value": 2018,
       "pop": 1181006,
-      "valuePerPop": 1494.488597009668,
+      "valuePerPop": 1708.712741510204,
       "valueSortedPerPop": 1494.488597009668
     },
     {
@@ -595,8 +595,8 @@
       "valueSortedPerPop": 116.35645255126171
     }
   ],
-  "total": 198770,
+  "total": 199181,
   "totalSorted": 96272,
-  "percSorted": 0.484338682899834,
-  "updatedAt": "2024-01-27T11:02:27.938Z"
+  "percSorted": 0.4833392743283747,
+  "updatedAt": "2024-01-27T18:36:39.732Z"
 }
