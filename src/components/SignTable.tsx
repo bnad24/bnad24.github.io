@@ -253,7 +253,7 @@ export function Region({ datum, i }: { datum: SignRegion; i: number }) {
     }
 
     if (i % 2 === 1) {
-      color = darken(0.05)(color);
+      color = darken(0.033)(color);
     }
 
     return {
