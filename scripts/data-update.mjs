@@ -5,6 +5,8 @@ import fs from 'fs-extra';
 import { DateTime } from 'luxon';
 import fetch from '@adobe/node-fetch-retry';
 import { dirname } from 'path';
+import DOMPurify from 'isomorphic-dompurify';
+const { sanitize } = DOMPurify;
 
 async function fetchCached(url, filepath, force = false) {
   if (!force && (await fs.pathExists(filepath))) {
@@ -73,14 +75,12 @@ async function processAddresses($) {
     .map(function (e) {
       const region = $(e).find('.subheading').text().toString().trim();
 
-      const html = $(e).find('.text')?.html();
-
-      const texts = $(e)
-        .find('.addresses-page__city')
-        .toArray()
-        .map((e) => {
-          return $(e).text()?.trim();
+      let html = $(e).find('.text')?.html();
+      if (html) {
+        html = sanitize(html, {
+          ALLOW_DATA_ATTR: false,
         });
+      }
 
       let tgs = $(e)
         .find('.socials__item')

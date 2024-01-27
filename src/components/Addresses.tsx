@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useMemo } from 'react';
+import DOMPurify from 'isomorphic-dompurify';
+const { sanitize } = DOMPurify;
 import { useJson } from '../util/useJson';
 import { CountdownTimer } from './CountdownTimer';
 import { OfficialLinks } from './OfficialLinks';
@@ -109,10 +111,11 @@ export function Addresses() {
 }
 
 export function RegionAddress({ address }: { address: Address }) {
+  const html = useMemo(() => sanitize(address.html, { ALLOW_DATA_ATTR: false }), [address.html]);
   return (
     <details className="card">
       <summary style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>{address.region}</summary>
-      <div style={{ marginBottom: '1rem', marginTop: '1rem' }} dangerouslySetInnerHTML={{ __html: address.html }} />
+      <div style={{ marginBottom: '1rem', marginTop: '1rem' }} dangerouslySetInnerHTML={{ __html: html }} />
     </details>
   );
 }
