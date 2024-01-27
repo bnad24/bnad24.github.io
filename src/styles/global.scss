@@ -1,4 +1,7 @@
-html body {
+html {
+}
+
+body {
   font-family: sans-serif;
   font-size: 14px;
 }
@@ -50,13 +53,16 @@ details {
   margin: 0.25rem 0.5rem;
   padding: 0.25rem 0.5rem;
   background: #e7e3de;
+  padding: 0.5rem;
 }
 
 details summary {
   cursor: pointer;
+  font-weight: bold;
 }
 
 a {
+  color: #164b74;
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-word;
@@ -79,13 +85,14 @@ a {
 }
 
 .navigation-wrapper {
+  width: 100%;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   background-color: white;
   padding: 1rem;
   margin: 0 auto;
-  border-bottom: #0f2439 solid 1px;
+  border-bottom: #9d9d9d solid 1px;
 }
 
 .navigation-ul {
@@ -94,19 +101,20 @@ a {
   padding: 0;
   margin: 0;
 
+  font-size: 1rem;
+  font-weight: bold;
+
   display: inline-flex;
 
   & > li {
-    padding: 0 1rem;
+    padding-right: 1rem;
 
     a {
-      color: #0f2439;
+      color: #8b8b8b;
       text-decoration: none;
     }
 
     &.active {
-      font-weight: bold;
-
       a {
         color: #105da0;
       }
@@ -115,10 +123,14 @@ a {
 }
 
 .alert {
-  background: #a66018;
+  background: #654132;
   border: 1px solid #a46b32;
   color: #ead4be;
   border-radius: 5px;
   margin: 0.5rem 0;
   padding: 0.25rem 0.5rem;
+
+  a {
+    color: #8db0e6;
+  }
 }

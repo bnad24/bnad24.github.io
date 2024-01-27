@@ -31,6 +31,12 @@ export function AddressesPage() {
       <h1>{'Борис Надеждин 2024'}</h1>
       <h2>{'Адреса штабов и контакты волонтёров по сбору подписей (неофициальная копия)'}</h2>
 
+      <p>
+        {
+          'Здесь перечислены адреса штабов для сбора подписей  для выдвижения Бориса Надеждина в президенты России в 2024 году.'
+        }
+      </p>
+
       <div style={{ marginBottom: '1rem' }}>
         <details>
           <summary>{'Что это такое и почему? (нажмите чтобы развернуть)'}</summary>
@@ -81,14 +87,6 @@ export function AddressesPage() {
       <div style={{ marginBottom: '1rem' }}>
         <UpdatedAt data={data} />
       </div>
-
-      <p className="alert">
-        {'Альтернативой этому списку также является официальный Telegram-бот для поиска штабов: '}
-        <br />
-        <a target="_blank" rel="noreferrer" href="https://t.me/nadezhdin2024_bot">
-          <b>{'t.me/nadezhdin2024_bot'}</b>
-        </a>
-      </p>
 
       <div style={{ marginBottom: '1rem' }}>
         {data.addresses.map((address) => {
