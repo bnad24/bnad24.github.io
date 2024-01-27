@@ -1,6 +1,8 @@
 import { Navigation } from '../components/Navigation';
 import { DESCRIPTION, IMAGE_URL, TITLE } from '../constants';
 
+import '../styles/global.scss';
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ru">

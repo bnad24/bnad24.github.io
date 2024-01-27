@@ -8,8 +8,6 @@ import { SigsPage } from '../../components/SigsPage';
 import { ErrorFallback } from '../../components/ErrorFallback';
 import { SUSPENSE_FALLBACK } from '../../components/SuspenseFallback';
 
-import '../../styles/global.scss';
-
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
