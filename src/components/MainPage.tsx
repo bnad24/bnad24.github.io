@@ -1,13 +1,13 @@
-'use client';
-
-import React from 'react';
 import { CountdownTimer } from './CountdownTimer';
+import { DisclaimerMain } from './DisclaimerMain';
 import { OfficialLinks } from './OfficialLinks';
 import { Sharing } from './Sharing';
 
 export function MainPage() {
   return (
     <div>
+      <DisclaimerMain />
+
       <h1>{'Борис Надеждин 2024'}</h1>
       <h2>{'Основные даты'}</h2>
 

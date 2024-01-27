@@ -1,3 +1,5 @@
+'use client';
+
 import { clamp, sortBy, sum, isFinite } from 'lodash-es';
 import { darken } from 'polished';
 import { useMemo } from 'react';

@@ -11,6 +11,7 @@ export function Navigation() {
       <NavLink href="/">{'Главная'}</NavLink>
       <NavLink href="/sigs">{'Подписи'}</NavLink>
       <NavLink href="/addresses">{'Штабы'}</NavLink>
+      <NavLink href="/memes">{'Мемы'}</NavLink>
     </ul>
   );
 }

@@ -14,6 +14,7 @@
     "dev": "next dev --turbo",
     "data": "node --experimental-top-level-await scripts/data-update.mjs",
     "addresses": "node --experimental-top-level-await scripts/addresses-update.mjs",
+    "memes": "node --experimental-top-level-await scripts/memes-update.mjs",
     "format": "prettier --fix '**/*.{js,ts,jsx,tsx}'",
     "lint": "eslint '**/*.{js,ts,jsx,tsx}'",
     "prettier:format": "prettier --write '**/*.js,ts,jsx,tsx,json'",

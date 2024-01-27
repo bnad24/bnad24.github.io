@@ -153,3 +153,35 @@ a {
     color: #8db0e6;
   }
 }
+
+.meme-preview-wrapper {
+  display: block;
+}
+
+.meme-preview-link {
+  display: inline-flex;
+  margin: 1rem;
+  border: white solid 1px;
+  background-color: #111;
+}
+
+.meme-preview-img {
+  margin: auto;
+  height: 200px;
+  width: 200px;
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: contain;
+}
+
+.meme-img-wrapper {
+  display: flex;
+}
+
+.meme-img {
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+}

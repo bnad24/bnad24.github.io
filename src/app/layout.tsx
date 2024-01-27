@@ -1,5 +1,6 @@
 import { Navigation } from '../components/Navigation';
 import { DESCRIPTION, IMAGE_URL, TITLE } from '../constants';
+import Providers from '../providers';
 
 import '../styles/global.scss';
 
@@ -27,21 +28,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
-        <aside className="navigation-wrapper">
-          <Navigation />
-        </aside>
+        <Providers>
+          <aside className="navigation-wrapper">
+            <Navigation />
+          </aside>
 
-        <div className="alert">
-          {'Этот сайт не является официальным. Он сделан волонтёрами, в поддержку кампании Бориса Надеждина. Если '}{' '}
-          <a target="_blank" rel="noreferrer" href="https://nadezhdin2024.ru/">
-            {'официальный сайт'}
-          </a>
-          {
-            ' недоступен, то здесь можно найти последнюю копию информации с официального сайта, которую удалось скачать нашему роботу.'
-          }
-        </div>
-
-        <main className="main">{children}</main>
+          <main className="main">{children}</main>
+        </Providers>
       </body>
     </html>
   );

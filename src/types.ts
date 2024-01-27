@@ -15,3 +15,13 @@ export interface SignJson {
   percSorted: number;
   updatedAt: string;
 }
+
+export interface Meme {
+  id: string;
+  url: string;
+}
+
+export interface MemesJson {
+  memes: Meme[];
+  updatedAt: string;
+}

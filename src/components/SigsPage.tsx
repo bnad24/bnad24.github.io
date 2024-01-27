@@ -1,9 +1,9 @@
 'use client';
 
-import React from 'react';
 import { N_PER_REGION_MAX, N_PER_REGION_DESIRED, TOTAL_DESIRED, TOTAL_REQUIRED } from '../constants';
 import type { SignJson } from '../types';
 import { useJson } from '../util/useJson';
+import { DisclaimerMain } from './DisclaimerMain';
 import { OfficialLinks } from './OfficialLinks';
 import { Sharing } from './Sharing';
 import { SignTable } from './SignTable';
@@ -18,6 +18,8 @@ export function SigsPage() {
 
   return (
     <div>
+      <DisclaimerMain />
+
       <h1>{'Борис Надеждин 2024'}</h1>
       <h2>{'Счетчики сбора подписей и статистика по регионам (неофициальные)'}</h2>
 

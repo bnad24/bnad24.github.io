@@ -1,7 +1,10 @@
-import React, { useMemo } from 'react';
+'use client';
+
+import { useMemo } from 'react';
 import DOMPurify from 'isomorphic-dompurify';
 const { sanitize } = DOMPurify;
 import { useJson } from '../util/useJson';
+import { DisclaimerMain } from './DisclaimerMain';
 import { OfficialLinks } from './OfficialLinks';
 import { Sharing } from './Sharing';
 import { UpdatedAt } from './UpdatedAt';
@@ -28,6 +31,8 @@ export function AddressesPage() {
 
   return (
     <div>
+      <DisclaimerMain />
+
       <h1>{'Борис Надеждин 2024'}</h1>
       <h2>{'Адреса штабов и контакты волонтёров по сбору подписей (неофициальная копия)'}</h2>
 
