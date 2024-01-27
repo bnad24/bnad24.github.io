@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo } from 'react';
+import { useCallback, useMemo } from 'react';
 import {
   FacebookIcon,
   FacebookShareButton,
@@ -19,6 +19,7 @@ import {
   WhatsappIcon,
   WhatsappShareButton,
 } from 'react-share';
+import { usePlausible } from 'next-plausible';
 import { HASHTAG, TITLE } from '../constants';
 
 const ICON_SIZE = 24;
@@ -31,37 +32,48 @@ export function Sharing() {
     return undefined;
   }, []);
 
+  const plausible = usePlausible();
+
+  const sendEvent = useCallback(
+    (via: string) => {
+      return () => {
+        plausible('share', { props: { via, url } });
+      };
+    },
+    [plausible, url],
+  );
+
   return (
     <div className="sharing-button-wrapper">
-      <TelegramShareButton url={url} title={TITLE}>
+      <TelegramShareButton url={url} title={TITLE} onClick={sendEvent('telegram')}>
         <TelegramIcon size={ICON_SIZE} />
       </TelegramShareButton>
 
-      <WhatsappShareButton url={url} title={TITLE}>
+      <WhatsappShareButton url={url} title={TITLE} onClick={sendEvent('whatsapp')}>
         <WhatsappIcon size={ICON_SIZE} />
       </WhatsappShareButton>
 
-      <VKShareButton url={url} title={TITLE}>
+      <VKShareButton url={url} title={TITLE} onClick={sendEvent('vk')}>
         <VKIcon size={ICON_SIZE} />
       </VKShareButton>
 
-      <FacebookShareButton url={url} title={TITLE} hashtag={HASHTAG}>
+      <FacebookShareButton url={url} title={TITLE} hashtag={HASHTAG} onClick={sendEvent('facebook')}>
         <FacebookIcon size={ICON_SIZE} />
       </FacebookShareButton>
 
-      <TwitterShareButton url={url} title={TITLE} hashtags={[HASHTAG]}>
+      <TwitterShareButton url={url} title={TITLE} hashtags={[HASHTAG]} onClick={sendEvent('twitter')}>
         <TwitterIcon size={ICON_SIZE} />
       </TwitterShareButton>
 
-      <OKShareButton url={url} title={TITLE}>
+      <OKShareButton url={url} title={TITLE} onClick={sendEvent('ok')}>
         <OKIcon size={ICON_SIZE} />
       </OKShareButton>
 
-      <MailruShareButton url={url}>
+      <MailruShareButton url={url} onClick={sendEvent('mailru')}>
         <MailruIcon size={ICON_SIZE} />
       </MailruShareButton>
 
-      <ViberShareButton url={url} title={TITLE}>
+      <ViberShareButton url={url} title={TITLE} onClick={sendEvent('viber')}>
         <ViberIcon size={ICON_SIZE} />
       </ViberShareButton>
     </div>
