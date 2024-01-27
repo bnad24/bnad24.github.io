@@ -10,7 +10,7 @@ import { SignTable } from './SignTable';
 import { UpdatedAt } from './UpdatedAt';
 
 export function SigsPage() {
-  const data = useJson<SignJson>('/data/sign.json');
+  const data = useJson<SignJson>('/data/signatures.json');
 
   if (!data) {
     return null;

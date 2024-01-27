@@ -1,6 +1,6 @@
 import jquery from 'jquery';
 import { JSDOM } from 'jsdom';
-import { sum, first, uniq, get } from 'lodash-es';
+import { sum, first, uniq, get, sortBy } from 'lodash-es';
 import fs from 'fs-extra';
 import { DateTime } from 'luxon';
 import fetch from '@adobe/node-fetch-retry';
@@ -27,13 +27,36 @@ async function fetchCached(url, filepath, force = false) {
   return html;
 }
 
-async function processStats($) {
-  const pops = await fs.readJson('public/data/population.json');
+async function processSortedSigs($, force) {
+  const html = await fetchCached('https://nadezhdin2024.ru/signatures', 'tmp/signatures.html', force);
+  const { window } = new JSDOM(html);
+  var $ = jquery(window);
 
+  const sigs = $('.addresses-page__region')
+    .toArray()
+    .map(function (e) {
+      const region = $(e).find('.subheading').text().toString().trim();
+
+      const valueText = $(e).find('.progressbar__el__text').text();
+      const matches = /Отсортировано подписей: (\d+)/.exec(valueText);
+      if (!matches || matches.length < 2 || !matches[1]) {
+        return { region };
+      }
+
+      const valueSorted = parseInt(matches[1], 10);
+      return { region, valueSorted };
+    });
+
+  return sigs;
+}
+
+async function processGatheredSigs($, sigs) {
   const regionsAndValues = $('.addresses-page__region')
     .toArray()
     .map(function (e) {
       const region = $(e).find('.subheading').text().toString().trim();
+
+      const sig = sigs.find((sig) => sig.region === region) ?? {};
 
       const tgs = $(e)
         .find('.socials__item')
@@ -51,22 +74,53 @@ async function processStats($) {
 
       const tg = first(uniq(tgs));
 
-      const pop = pops.find((pop) => pop.region === region)?.population;
-
       const valueText = $(e).find('.progressbar__el__text').text();
       const matches = /Собрано подписей: (\d+)/.exec(valueText);
       if (!matches || matches.length < 2 || !matches[1]) {
-        return { region, tg, pop };
+        return { region, tg };
       }
 
-      const value = parseInt(matches[1], 10);
-      const valuePerPop = pop ? (1_000_000 * value) / pop : undefined;
-      return { region, tg, pop, value, valuePerPop };
+      let value = parseInt(matches[1], 10);
+      return { ...sig, region, tg, value };
     });
 
-  const total = sum(regionsAndValues.map(({ value }) => value));
+  return regionsAndValues;
+}
 
-  return { regionsAndValues, total };
+function fixRegion(region) {
+  return region.replace(/(?:Республика|АО|— .*)/giu, '').trim();
+}
+
+async function mergeSortedAndGathered(sorteds, gathereds, pops) {
+  const regionsSorteds = sorteds.map((x) => fixRegion(x.region));
+  const regionsGathereds = gathereds.map((x) => fixRegion(x.region));
+  const regions = uniq([...regionsSorteds, ...regionsGathereds].map((x) => fixRegion(x))).sort();
+
+  let stats = regions
+    .map((region) => {
+      const sorted = sorteds.find((x) => x.region === region);
+      const gathered = gathereds.find((x) => x.region === region);
+      return { ...sorted, ...gathered };
+    })
+    .map((d) => {
+      let value = d.value;
+      if ((d.value && d.valueSorted && d.valueSorted > d.value) || (!d.value && d.valueSorted)) {
+        value = d.valueSorted;
+      }
+      return { ...d, value };
+    })
+    .filter((d) => !!d.value)
+    .map((d) => {
+      const pop = pops.find((pop) => pop.region === d.region)?.population;
+      const valuePerPop = pop ? (1_000_000 * d.value) / pop : undefined;
+      const valueSortedPerPop = pop ? (1_000_000 * d.valueSorted) / pop : undefined;
+      return { ...d, pop, valuePerPop, valueSortedPerPop };
+    });
+  stats = sortBy(stats, stats.region);
+  const total = sum(stats.map(({ value }) => value));
+  const totalSorted = sum(stats.map(({ valueSorted }) => valueSorted));
+  const percSorted = totalSorted / total;
+  return { stats, total, totalSorted, percSorted };
 }
 
 async function processAddresses($) {
@@ -120,6 +174,9 @@ async function processAddresses($) {
 async function main() {
   const force = process.argv.includes('--force');
 
+  const pops = await fs.readJson('public/data/population.json');
+  const sorted = await processSortedSigs($, force);
+
   const html = await fetchCached('https://nadezhdin2024.ru/addresses', 'tmp/addresses.html', force);
   const { window } = new JSDOM(html);
   var $ = jquery(window);
@@ -127,16 +184,18 @@ async function main() {
   if ($('head > title').text() !== 'Адреса штабов Бориса Надеждина | Надеждин 2024') {
     throw new Error(`Web page is not recognized: ${html}`);
   }
+  const gathered = await processGatheredSigs($, sorted);
 
-  const stats = await processStats($);
+  const stats = await mergeSortedAndGathered(sorted, gathered, pops);
+
   const addresses = await processAddresses($);
 
   const updatedAt = DateTime.now().toUTC().toISO();
 
-  console.log(stats);
+  // console.log(stats);
 
-  await fs.writeJson('public/data/sign.json', { ...stats, updatedAt }, { spaces: 2 });
-  await fs.writeJson('public/data/addresses.json', { ...addresses, updatedAt }, { spaces: 2 });
+  await fs.writeJson('public/data/signatures.json', { ...stats, updatedAt }, { spaces: 2 });
+  await fs.writeJson('public/data/addresses.json', { addresses, updatedAt }, { spaces: 2 });
 }
 
 await main();

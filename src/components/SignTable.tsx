@@ -15,14 +15,14 @@ function formatPercentage(value?: number): string {
 
 export function SignTable({ data }: { data: SignJson }) {
   const rows = useMemo(() => {
-    const regionsAndValues = sortBy(data.regionsAndValues, ({ value }) => -value);
+    const regionsAndValues = sortBy(data.stats, (d) => -d.value);
     return regionsAndValues.map((datum, i) => {
       return <Region key={datum.region} i={i} datum={datum} />;
     });
-  }, [data.regionsAndValues]);
+  }, [data.stats]);
 
   const totalRequired = useMemo(() => {
-    const clamped = data.regionsAndValues
+    const clamped = data.stats
       .map(({ value }) => value)
       .filter(isFinite)
       .map((value) => clamp(value, 0, N_PER_REGION_MAX));
@@ -30,7 +30,7 @@ export function SignTable({ data }: { data: SignJson }) {
   }, [data]);
 
   const totalDesired = useMemo(() => {
-    const clamped = data.regionsAndValues
+    const clamped = data.stats
       .map(({ value }) => value)
       .filter(isFinite)
       .map((value) => clamp(value, 0, N_PER_REGION_DESIRED));
@@ -43,21 +43,18 @@ export function SignTable({ data }: { data: SignJson }) {
   const totalRequiredPerc = useMemo(() => formatPercentage(totalRequired / TOTAL_REQUIRED), [totalRequired]);
   const totalDesiredPerc = useMemo(() => formatPercentage(totalDesired / TOTAL_DESIRED), [totalDesired]);
 
-  const nRegions = useMemo(
-    () => data.regionsAndValues.filter(({ value }) => value && value > 0).length,
-    [data.regionsAndValues],
-  );
+  const nRegions = useMemo(() => data.stats.filter(({ value }) => value && value > 0).length, [data.stats]);
 
   const nRegionsDesiredDone = useMemo(
-    () => data.regionsAndValues.filter(({ value }) => value && value > N_PER_REGION_DESIRED).length,
-    [data.regionsAndValues],
+    () => data.stats.filter(({ value }) => value && value > N_PER_REGION_DESIRED).length,
+    [data.stats],
   );
 
   const nRegionsDesiredRemain = nRegions - nRegionsDesiredDone;
 
   const nRegionsRequiredDone = useMemo(
-    () => data.regionsAndValues.filter(({ value }) => value && value > N_PER_REGION_MAX).length,
-    [data.regionsAndValues],
+    () => data.stats.filter(({ value }) => value && value > N_PER_REGION_MAX).length,
+    [data.stats],
   );
 
   const nRegionsRequiredRemain = nRegions - nRegionsRequiredDone;
@@ -97,58 +94,100 @@ export function SignTable({ data }: { data: SignJson }) {
 
             <tr>
               <td style={{ maxWidth }}>
-                <span>{'Всего собрано'}</span>
+                <span style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>{'Всего собрано'}</span>
                 <br />
                 <span>{`(включая излишки)`}</span>
               </td>
-              <td colSpan={2} style={{ textAlign: 'center' }} className="text-mono">
+              <td
+                colSpan={2}
+                className="text-mono"
+                style={{ fontSize: '1.25rem', fontWeight: 'bold', padding: '0 1rem', textAlign: 'center' }}
+              >
                 {data.total}
               </td>
             </tr>
 
             <tr>
               <td style={{ maxWidth }}>
-                <span style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>{'Всего собрано'}</span>
+                <span style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>{'Всего отсортировано'}</span>
+                <br />
+                <span>{`(включая излишки)`}</span>
+              </td>
+              <td
+                colSpan={2}
+                style={{ fontSize: '1.25rem', fontWeight: 'bold', padding: '0 1rem', textAlign: 'center' }}
+                className="text-mono"
+              >
+                {data.totalSorted}
+              </td>
+            </tr>
+
+            <tr>
+              <td style={{ maxWidth }}>
+                {'% отсортировано'}
+                <br />
+                {`(от цели, включая излишки)`}
+              </td>
+              <td
+                className=" text-mono"
+                style={{ fontSize: '1.25rem', fontWeight: 'bold', padding: '0 1rem', textAlign: 'center' }}
+              >
+                {formatPercentage(data.totalSorted / TOTAL_DESIRED)}
+              </td>
+              <td
+                className=" text-mono"
+                style={{ fontSize: '1.25rem', fontWeight: 'bold', padding: '0 1rem', textAlign: 'center' }}
+              >
+                {formatPercentage(data.totalSorted / TOTAL_REQUIRED)}
+              </td>
+            </tr>
+
+            <tr>
+              <td style={{ maxWidth }}>
+                {'% отсортировано'}
+                <br />
+                {`(от собранного)`}
+              </td>
+              <td
+                colSpan={2}
+                className=" text-mono"
+                style={{ fontWeight: 'bold', padding: '0 1rem', textAlign: 'center' }}
+              >
+                {formatPercentage(data.totalSorted / data.total)}
+              </td>
+            </tr>
+
+            <tr>
+              <td style={{ maxWidth }}>
+                <span style={{ fontWeight: 'bold' }}>{'Всего собрано'}</span>
                 <br />
                 <span>{`(исключая излишки)`}</span>
               </td>
-              <td
-                style={{ color: '#005b00', fontSize: '1.25rem', fontWeight: 'bold', padding: '0 1rem' }}
-                className="text-right text-mono"
-              >
+              <td style={{ color: '#005b00', fontWeight: 'bold', padding: '0 1rem' }} className="text-right text-mono">
                 {totalDesired}
               </td>
-              <td
-                style={{ color: '#005b00', fontSize: '1.25rem', fontWeight: 'bold', padding: '0 1rem' }}
-                className="text-right text-mono"
-              >
+              <td style={{ color: '#005b00', fontWeight: 'bold', padding: '0 1rem' }} className="text-right text-mono">
                 {totalRequired}
               </td>
             </tr>
 
             <tr>
               <td style={{ maxWidth }}>
-                <span style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>{'Всего осталось'}</span>
+                <span style={{ fontWeight: 'bold' }}>{'Всего осталось'}</span>
                 <br />
                 <span>{`(исключая излишки)`}</span>
               </td>
-              <td
-                style={{ color: '#922204', fontSize: '1.25rem', fontWeight: 'bold', padding: '0 1rem' }}
-                className="text-right text-mono"
-              >
+              <td style={{ color: '#922204', fontWeight: 'bold', padding: '0 1rem' }} className="text-right text-mono">
                 {remainsDesired}
               </td>
-              <td
-                style={{ color: '#922204', fontSize: '1.25rem', fontWeight: 'bold', padding: '0 1rem' }}
-                className="text-right text-mono"
-              >
+              <td style={{ color: '#922204', fontWeight: 'bold', padding: '0 1rem' }} className="text-right text-mono">
                 {remainsRequired}
               </td>
             </tr>
 
             <tr>
               <td style={{ maxWidth }}>
-                {'Процент собрано'}
+                {'% собрано'}
                 <br />
                 {`(исключая излишки)`}
               </td>
@@ -158,7 +197,7 @@ export function SignTable({ data }: { data: SignJson }) {
 
             <tr>
               <td style={{ maxWidth }}>
-                {'Процент собрано'}
+                {'% собрано'}
                 <br />
                 {`(включая излишки)`}
               </td>
@@ -194,19 +233,45 @@ export function SignTable({ data }: { data: SignJson }) {
               <th>{''}</th>
               <th>{'#'}</th>
               <th>{'Регион'}</th>
-              <th>{'Подписей'}</th>
+              <th>
+                {'Подписей'}
+                <br />
+                {'собрано'}
+              </th>
+              <th>
+                {'Подписей'}
+                <br />
+                {'отcорти-'}
+                <br />
+                {'ровано'}
+              </th>
+              <th>
+                {'%'}
+                <br />
+                {'отcорти-'}
+                <br />
+                {'ровано'}
+                <br />
+                {'(от собр.)'}
+              </th>
               <th>
                 {'% желаем.'}
+                <br />
+                {'собрано'}
                 <br />
                 <small>{`(из ${N_PER_REGION_DESIRED})`}</small>
               </th>
               <th>
                 {'% миним.'}
                 <br />
+                {'собрано'}
+                <br />
                 <small>{`(из ${N_PER_REGION_MAX})`}</small>
               </th>
               <th>
                 {'Подписей'}
+                <br />
+                {'собрано'}
                 <br />
                 <small>{`на 1 млн.`}</small>
                 <br />
@@ -227,42 +292,47 @@ export function SignTable({ data }: { data: SignJson }) {
 }
 
 export function Region({ datum, i }: { datum: SignRegion; i: number }) {
-  const { region, value, tg, pop, valuePerPop } = datum;
-  const { percRequired, percDesired, color, valueFormatted } = useMemo(() => {
-    if (!value) {
+  const { region, value, tg, pop, valuePerPop, valueSorted } = datum;
+  const { percRequired, percDesired, color, valueFormatted, valueSortedFormatted, percSortedFormatted } =
+    useMemo(() => {
+      if (!value) {
+        return {
+          color: undefined,
+          percRequired: '?',
+          percDesired: '?',
+          valueFormatted: '?',
+        };
+      }
+
+      const percRequired = value / N_PER_REGION_MAX;
+      const percDesired = value / N_PER_REGION_DESIRED;
+
+      let color = '#222';
+      if (percRequired < 1) {
+        color = '#e8d2c7';
+      }
+      if (percRequired >= 1 && percDesired < 1) {
+        color = '#e8e0c5';
+      }
+      if (percDesired >= 1) {
+        color = '#d5ebcd';
+      }
+
+      if (i % 2 === 1) {
+        color = darken(0.033)(color);
+      }
+
+      const percSorted = valueSorted ? valueSorted / value : undefined;
+
       return {
-        color: undefined,
-        percRequired: '?',
-        percDesired: '?',
-        valueFormatted: '?',
+        color,
+        percRequired: formatPercentage(percRequired),
+        percDesired: formatPercentage(percDesired),
+        valueFormatted: value,
+        valueSortedFormatted: valueSorted ?? '?',
+        percSortedFormatted: formatPercentage(percSorted),
       };
-    }
-
-    const percRequired = value / N_PER_REGION_MAX;
-    const percDesired = value / N_PER_REGION_DESIRED;
-
-    let color = '#222';
-    if (percRequired < 1) {
-      color = '#e8d2c7';
-    }
-    if (percRequired >= 1 && percDesired < 1) {
-      color = '#e8e0c5';
-    }
-    if (percDesired >= 1) {
-      color = '#d5ebcd';
-    }
-
-    if (i % 2 === 1) {
-      color = darken(0.033)(color);
-    }
-
-    return {
-      color,
-      percRequired: formatPercentage(percRequired),
-      percDesired: formatPercentage(percDesired),
-      valueFormatted: value,
-    };
-  }, [i, value]);
+    }, [i, value, valueSorted]);
 
   const maxWidth = '160px';
 
@@ -282,6 +352,9 @@ export function Region({ datum, i }: { datum: SignRegion; i: number }) {
         <span>{region}</span>
       </td>
       <td className="text-right text-mono">{<span>{valueFormatted}</span>}</td>
+      <td className="text-right text-mono">{<span>{valueSortedFormatted}</span>}</td>
+      <td className="text-right text-mono">{<span>{percSortedFormatted}</span>}</td>
+
       <td style={{ minWidth: '80px' }} className="text-right text-mono">
         {<span>{percDesired}</span>}
       </td>
