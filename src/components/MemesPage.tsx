@@ -59,7 +59,7 @@ export function MemeImage({ meme }: { meme: Meme }) {
   const href = useMemo(() => `/memes/${meme.id}`, [meme.id]);
   return (
     <Link className="meme-preview-link" href={href}>
-      <img className="meme-preview-img" src={meme.url} />
+      <img className="meme-preview-img" src={meme.url} loading="lazy" />
     </Link>
   );
 }
