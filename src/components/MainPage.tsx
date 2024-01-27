@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { CountdownTimer } from './CountdownTimer';
+import { OfficialLinks } from './OfficialLinks';
 import { Sharing } from './Sharing';
 
 export function MainPage() {
@@ -15,6 +16,8 @@ export function MainPage() {
           'Здесь показаны основные даты связанные с выборами президента России в 2024 году: Когда cбор подписей и решение ЦИК, когда проходит голосование на выборах, когда будет проходить предвыборная агитация, инаугурация и т.д., а также обратный отсчёт времени до этих событий.'
         }
       </p>
+
+      <OfficialLinks />
 
       <div style={{ marginBottom: '1rem' }}>
         <CountdownTimer />
