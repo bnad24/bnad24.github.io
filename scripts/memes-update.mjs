@@ -13,7 +13,7 @@ async function main() {
       const url = item.path.replace(/^public/, '') + item.name;
       return { url, id };
     });
-  memes = sortBy(memes, (x) => x.url);
+  memes = sortBy(memes, (x) => -x.id);
 
   console.log({ memes });
 
