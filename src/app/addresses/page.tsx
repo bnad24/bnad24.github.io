@@ -33,8 +33,9 @@ export default function Page() {
     <PlausibleProvider domain={domain} trackFileDownloads trackOutboundLinks>
       <QueryClientProvider client={queryClient}>
         <ErrorBoundary onReset={reset} FallbackComponent={ErrorFallback}>
-          <Suspense fallback={SUSPENSE_FALLBACK}></Suspense>
-          <AddressesPage />
+          <Suspense fallback={SUSPENSE_FALLBACK}>
+            <AddressesPage />
+          </Suspense>
         </ErrorBoundary>
       </QueryClientProvider>
     </PlausibleProvider>
