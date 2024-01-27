@@ -18,10 +18,19 @@ module.exports = {
   },
   rules: {
     'react/react-in-jsx-scope': 'off',
+    'react/jsx-uses-react': 'warn',
+    'react/jsx-uses-vars': 'warn',
   },
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
+    componentWrapperFunctions: [{ property: 'styled' }],
+    linkComponents: [{ name: 'Link', linkAttribute: ['to', 'href'] }],
   },
 };
