@@ -16,8 +16,7 @@ export function MemesPage() {
 
   return (
     <div>
-      <h1>{'Борис Надеждин 2024'}</h1>
-      <h2>{'Мемы'}</h2>
+      <h1>{'Борис Надеждин 2024: Мемы'}</h1>
 
       <p>
         {'Мемы о Борисе Надеждине, кандидате в президенты России в 2024 году. Добавляйте ещё на GitHub: '}
@@ -39,17 +38,18 @@ export function MemesPage() {
         <UpdatedAt data={data} />
       </div>
 
-      <div style={{ marginBottom: '1rem' }}>
-        <div className="meme-preview-wrapper">
+      <div style={{ marginBottom: '1rem', display: 'flex' }}>
+        <span style={{ margin: '0 auto' }}>
+          <Sharing />
+        </span>
+      </div>
+
+      <div style={{ marginBottom: '1rem', display: 'flex' }}>
+        <div style={{ margin: '0 auto' }} className="meme-preview-wrapper">
           {data.memes.map((meme) => {
             return <MemeImage key={meme.id} meme={meme} />;
           }, [])}
         </div>
-      </div>
-
-      <div style={{ marginBottom: '1rem' }}>
-        <div>{'Поделиться: '}</div>
-        <Sharing />
       </div>
     </div>
   );

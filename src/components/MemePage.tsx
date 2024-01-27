@@ -6,6 +6,7 @@ import { MemesJson } from '../types';
 import { useJson } from '../util/useJson';
 import { Sharing } from './Sharing';
 import Link from 'next/link';
+import { UpdatedAt } from './UpdatedAt';
 
 export interface Address {
   region: string;
@@ -56,7 +57,7 @@ export function MemePage({ id }: { id: string }) {
 
   return (
     <div>
-      <h2>{'Мемы'}</h2>
+      <h1>{'Борис Надеждин 2024: Мемы'}</h1>
 
       <p>
         {'Мемы о Борисе Надеждине, кандидате в президенты России в 2024 году. Добавляйте ещё на GitHub: '}
@@ -75,12 +76,22 @@ export function MemePage({ id }: { id: string }) {
       </p>
 
       <div style={{ marginBottom: '1rem' }}>
-        <Sharing />
+        <UpdatedAt data={data} />
       </div>
 
-      <p>{'Мемы о Борисе Надеждине, кандидате в президенты России в 2024 году.'}</p>
+      <div style={{ marginBottom: '1rem', display: 'flex' }}>
+        <span style={{ margin: '0 auto' }}>
+          <Sharing />
+        </span>
+      </div>
 
-      <span style={{ display: 'flex', marginBottom: '1rem' }}>
+      <div style={{ display: 'flex', marginBottom: '0.25rem' }}>
+        <div style={{ margin: 'auto' }}>
+          <Link href="/memes">{'К списку'}</Link>
+        </div>
+      </div>
+
+      <div style={{ display: 'flex', marginBottom: '1rem' }}>
         <div style={{ marginRight: 'auto' }}>
           {!!prevUrl && (
             <Link style={{ padding: '2rem' }} href={prevUrl}>
@@ -102,7 +113,7 @@ export function MemePage({ id }: { id: string }) {
             </Link>
           )}
         </div>
-      </span>
+      </div>
 
       <div style={{ flex: '1' }} className="meme-img-wrapper">
         <img className="meme-img" src={meme.url} />
