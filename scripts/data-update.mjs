@@ -195,7 +195,7 @@ async function main() {
   // console.log(stats);
 
   await fs.writeJson('public/data/signatures.json', { ...stats, updatedAt }, { spaces: 2 });
-  await fs.writeJson('public/data/addresses.json', { addresses, updatedAt }, { spaces: 2 });
+  await fs.writeJson('public/data/addresses.json', { ...addresses, updatedAt }, { spaces: 2 });
 }
 
 await main();
