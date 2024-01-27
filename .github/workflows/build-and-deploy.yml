@@ -1,11 +1,10 @@
+name: build-and-deploy
+
 on:
   push:
     branches: main
 
   workflow_dispatch:
-
-#  schedule:
-#    - cron:  '*/15 * * * *' # every 15 minutes
 
 
 concurrency:
@@ -39,12 +38,6 @@ jobs:
       - name: 'yarn install'
         run: |
           yarn install
-
-#      - name: 'yarn data'
-#        env:
-#          COOKIES: ${{ secrets.COOKIES }}
-#        run: |
-#          yarn data
 
       - name: 'yarn build'
         run: |
