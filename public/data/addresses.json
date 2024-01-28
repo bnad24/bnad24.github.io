@@ -107,10 +107,8 @@
       "tgs": [
         "https://t.me/center_bo_2024"
       ],
-      "phones": [
-        "+79526305255"
-      ],
-      "html": "\n                                                <div class=\"addresses-page__city\">\n                            <div class=\"region-card--addresses-page__location\">\n                                                                    <h2 class=\"addresses-page__city__heading\">Белгород</h2>\n                                                                                                   Белгород, ул. Князя Трубецкого, д. 40, оф. 216                                </div>\n                             Время работы: <strong>10:00 – 20:00</strong>                                                            <div class=\"socials__list addresses-page__socials\">\n                                                                            <a href=\"https://t.me//center_bo_2024\" class=\"socials__item\">Телеграм-канал</a>\n                                                                                                                                                            <a href=\"tel:+7 952 630 52 55\" class=\"socials__item\">Телефон</a>\n                                                                        </div>\n                                                    </div>\n                                            "
+      "phones": [],
+      "html": "\n                                                <div class=\"addresses-page__city\">\n                            <div class=\"region-card--addresses-page__location\">\n                                                                    <h2 class=\"addresses-page__city__heading\">Белгород</h2>\n                                                                                                \n                                    <div class=\"region-card__value\">СБОР ЗАКРЫТ</div> </div>\n                                                                                        <div class=\"socials__list addresses-page__socials\">\n                                                                            <a href=\"https://t.me//center_bo_2024\" class=\"socials__item\">Телеграм-канал</a>\n                                                                                                                                                </div>\n                                                    </div>\n                                            "
     },
     {
       "region": "Бельгия",
@@ -864,5 +862,5 @@
       "html": "\n                                                <div class=\"addresses-page__city\">\n                            <div class=\"region-card--addresses-page__location\">\n                                                                    <h2 class=\"addresses-page__city__heading\">Ярославль</h2>\n                                                                                                \n                                    <div class=\"region-card__value\">СБОР ЗАКРЫТ</div> </div>\n                                                                                        <div class=\"socials__list addresses-page__socials\">\n                                                                            <a href=\"https://t.me//center_yar\" class=\"socials__item\">Телеграм-канал</a>\n                                                                                                                                                </div>\n                                                    </div>\n                                            "
     }
   ],
-  "updatedAt": "2024-01-28T13:22:05.976Z"
+  "updatedAt": "2024-01-28T22:48:48.177Z"
 }
