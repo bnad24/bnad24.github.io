@@ -3,9 +3,9 @@
     {
       "region": "Алтай",
       "tg": "https://t.me/center_ra_2024",
-      "value": 761,
+      "value": 813,
       "pop": 210769,
-      "valuePerPop": 3610.5878948042646,
+      "valuePerPop": 3857.3034933979857,
       "valueSortedPerPop": null
     },
     {
@@ -56,9 +56,9 @@
       "region": "Белгородская область",
       "valueSorted": 183,
       "tg": "https://t.me/center_bo_2024",
-      "value": 2285,
+      "value": 2448,
       "pop": 1514527,
-      "valuePerPop": 1508.7218649783067,
+      "valuePerPop": 1616.3462255872626,
       "valueSortedPerPop": 120.82980362845957
     },
     {
@@ -82,9 +82,9 @@
       "region": "Владимирская область",
       "valueSorted": 1327,
       "tg": "https://t.me/nadvladimir",
-      "value": 2111,
+      "value": 2313,
       "pop": 1325510,
-      "valuePerPop": 1592.5945485134023,
+      "valuePerPop": 1744.988721322359,
       "valueSortedPerPop": 1001.1240956311156
     },
     {
@@ -127,9 +127,9 @@
       "region": "Ивановская область",
       "valueSorted": 429,
       "tg": "https://t.me/centr_io",
-      "value": 2223,
+      "value": 2559,
       "pop": 914725,
-      "valuePerPop": 2430.2385962994344,
+      "valuePerPop": 2797.562108830523,
       "valueSortedPerPop": 468.99341332094343
     },
     {
@@ -162,9 +162,9 @@
       "region": "Калужская область",
       "valueSorted": 558,
       "tg": "https://t.me/center_ka",
-      "value": 2068,
+      "value": 2237,
       "pop": 1070853,
-      "valuePerPop": 1931.1707582646732,
+      "valuePerPop": 2088.98887148843,
       "valueSortedPerPop": 521.0799241352455
     },
     {
@@ -416,9 +416,9 @@
       "region": "Рязанская область",
       "valueSorted": 100,
       "tg": "https://t.me/center_rya",
-      "value": 1697,
+      "value": 2153,
       "pop": 1088918,
-      "valuePerPop": 1558.4277236669795,
+      "valuePerPop": 1977.1920383353017,
       "valueSortedPerPop": 91.83427953252678
     },
     {
@@ -494,9 +494,9 @@
       "region": "Тамбовская область",
       "valueSorted": 58,
       "tg": "https://t.me/center_to_2023",
-      "value": 1616,
+      "value": 1626,
       "pop": 966250,
-      "valuePerPop": 1672.445019404916,
+      "valuePerPop": 1682.7943078913324,
       "valueSortedPerPop": 60.02587322121604
     },
     {
@@ -546,9 +546,9 @@
       "region": "Тюменская область",
       "valueSorted": 275,
       "tg": "https://t.me/center_to",
-      "value": 3160,
+      "value": 3170,
       "pop": 1608494,
-      "valuePerPop": 1964.5705859020923,
+      "valuePerPop": 1970.787581427099,
       "valueSortedPerPop": 170.96737693768208
     },
     {
@@ -595,8 +595,8 @@
       "valueSortedPerPop": 116.35645255126171
     }
   ],
-  "total": 199181,
+  "total": 200579,
   "totalSorted": 96272,
-  "percSorted": 0.4833392743283747,
-  "updatedAt": "2024-01-28T05:25:12.735Z"
+  "percSorted": 0.4799704854446378,
+  "updatedAt": "2024-01-28T08:28:51.897Z"
 }
