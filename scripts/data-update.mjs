@@ -88,19 +88,19 @@ async function processGatheredSigs($, sigs) {
 }
 
 function fixRegion(region) {
-  return region.replace(/(?:Республика|АО|— .*)/giu, '').trim();
+  return region.replace(/(?:Республика|Область|автономный округ|АО|— .*)/giu, '').trim();
 }
 
-async function mergeSortedAndGathered(sorteds, gathereds, pops) {
-  const regionsSorteds = sorteds.map((x) => fixRegion(x.region));
-  const regionsGathereds = gathereds.map((x) => fixRegion(x.region));
-  const regions = uniq([...regionsSorteds, ...regionsGathereds].map((x) => fixRegion(x))).sort();
+async function mergeSortedAndGathered(sorteds_, gathereds_, pops) {
+  const sorteds = sorteds_.map((x) => ({ ...x, regionFixed: fixRegion(x.region) }));
+  const gathereds = gathereds_.map((x) => ({ ...x, regionFixed: fixRegion(x.region) }));
+  const regionsFixed = uniq([...sorteds.map((x) => x.regionFixed), ...gathereds.map((x) => x.regionFixed)]).sort();
 
-  let stats = regions
-    .map((region) => {
-      const sorted = sorteds.find((x) => x.region === region);
-      const gathered = gathereds.find((x) => x.region === region);
-      return { ...sorted, ...gathered };
+  let stats = regionsFixed
+    .map((regionFixed) => {
+      const sorted = sorteds.find((x) => x.regionFixed === regionFixed);
+      const gathered = gathereds.find((x) => x.regionFixed === regionFixed);
+      return { ...sorted, ...gathered, region: sorted?.region ?? gathered?.region, regionFixed: undefined };
     })
     .map((d) => {
       let value = d.value;
@@ -116,6 +116,7 @@ async function mergeSortedAndGathered(sorteds, gathereds, pops) {
       const valueSortedPerPop = pop ? (1_000_000 * d.valueSorted) / pop : undefined;
       return { ...d, pop, valuePerPop, valueSortedPerPop };
     });
+
   stats = sortBy(stats, stats.region);
   const total = sum(stats.map(({ value }) => value));
   const totalSorted = sum(stats.map(({ valueSorted }) => valueSorted));
@@ -192,7 +193,7 @@ async function main() {
 
   const updatedAt = DateTime.now().toUTC().toISO();
 
-  // console.log(stats);
+  console.log(stats);
 
   await fs.writeJson('public/data/signatures.json', { ...stats, updatedAt }, { spaces: 2 });
   await fs.writeJson('public/data/addresses.json', { ...addresses, updatedAt }, { spaces: 2 });
