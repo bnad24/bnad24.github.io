@@ -290,9 +290,9 @@
       "region": "Москва",
       "valueSorted": 7667,
       "tg": "https://t.me/center_msk",
-      "value": 28590,
+      "value": 29468,
       "pop": 13104177,
-      "valuePerPop": 2181.7470872073845,
+      "valuePerPop": 2248.7486241982233,
       "valueSortedPerPop": 585.0806197138515
     },
     {
@@ -595,8 +595,8 @@
       "valueSortedPerPop": 256.1516149689646
     }
   ],
-  "total": 218362,
+  "total": 219240,
   "totalSorted": 133445,
-  "percSorted": 0.6111182348577133,
-  "updatedAt": "2024-01-29T15:21:07.238Z"
+  "percSorted": 0.6086708629812078,
+  "updatedAt": "2024-01-29T16:31:33.271Z"
 }
