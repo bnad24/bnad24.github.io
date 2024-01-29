@@ -80,9 +80,7 @@ export function MemePage({ id }: { id: string }) {
       </div>
 
       <div style={{ marginBottom: '1rem', display: 'flex' }}>
-        <span style={{ margin: '0 auto' }}>
-          <Sharing />
-        </span>
+        <Sharing />
       </div>
 
       <div style={{ display: 'flex', marginBottom: '0.25rem' }}>
@@ -117,6 +115,10 @@ export function MemePage({ id }: { id: string }) {
 
       <div style={{ flex: '1' }} className="meme-img-wrapper">
         <img className="meme-img" src={meme.url} />
+      </div>
+
+      <div style={{ marginBottom: '1rem', display: 'flex' }}>
+        <Sharing />
       </div>
     </div>
   );

@@ -34,14 +34,12 @@ export function MemesPage() {
         {'.'}
       </p>
 
-      <div style={{ marginBottom: '1rem' }}>
-        <UpdatedAt data={data} />
+      <div style={{ marginBottom: '1rem', display: 'flex' }}>
+        <Sharing />
       </div>
 
-      <div style={{ marginBottom: '1rem', display: 'flex' }}>
-        <span style={{ margin: '0 auto' }}>
-          <Sharing />
-        </span>
+      <div style={{ marginBottom: '1rem' }}>
+        <UpdatedAt data={data} />
       </div>
 
       <div style={{ marginBottom: '1rem', display: 'flex' }}>
@@ -50,6 +48,10 @@ export function MemesPage() {
             return <MemeImage key={meme.id} meme={meme} />;
           }, [])}
         </div>
+      </div>
+
+      <div style={{ marginBottom: '1rem', display: 'flex' }}>
+        <Sharing />
       </div>
     </div>
   );

@@ -44,38 +44,42 @@ export function Sharing() {
   );
 
   return (
-    <div className="sharing-button-wrapper">
-      <TelegramShareButton url={url} title={TITLE} onClick={sendEvent('telegram')}>
-        <TelegramIcon size={ICON_SIZE} />
-      </TelegramShareButton>
+    <span style={{ margin: '0 auto', display: 'flex' }}>
+      <span style={{ margin: 'auto', marginRight: '0.5rem', verticalAlign: 'middle' }}>{'Поделиться'}</span>
 
-      <WhatsappShareButton url={url} title={TITLE} onClick={sendEvent('whatsapp')}>
-        <WhatsappIcon size={ICON_SIZE} />
-      </WhatsappShareButton>
+      <span className="sharing-button-wrapper">
+        <TelegramShareButton url={url} title={TITLE} onClick={sendEvent('telegram')}>
+          <TelegramIcon size={ICON_SIZE} />
+        </TelegramShareButton>
 
-      <VKShareButton url={url} title={TITLE} onClick={sendEvent('vk')}>
-        <VKIcon size={ICON_SIZE} />
-      </VKShareButton>
+        <WhatsappShareButton url={url} title={TITLE} onClick={sendEvent('whatsapp')}>
+          <WhatsappIcon size={ICON_SIZE} />
+        </WhatsappShareButton>
 
-      <FacebookShareButton url={url} title={TITLE} hashtag={HASHTAG} onClick={sendEvent('facebook')}>
-        <FacebookIcon size={ICON_SIZE} />
-      </FacebookShareButton>
+        <VKShareButton url={url} title={TITLE} onClick={sendEvent('vk')}>
+          <VKIcon size={ICON_SIZE} />
+        </VKShareButton>
 
-      <TwitterShareButton url={url} title={TITLE} hashtags={[HASHTAG]} onClick={sendEvent('twitter')}>
-        <TwitterIcon size={ICON_SIZE} />
-      </TwitterShareButton>
+        <FacebookShareButton url={url} title={TITLE} hashtag={HASHTAG} onClick={sendEvent('facebook')}>
+          <FacebookIcon size={ICON_SIZE} />
+        </FacebookShareButton>
 
-      <OKShareButton url={url} title={TITLE} onClick={sendEvent('ok')}>
-        <OKIcon size={ICON_SIZE} />
-      </OKShareButton>
+        <TwitterShareButton url={url} title={TITLE} hashtags={[HASHTAG]} onClick={sendEvent('twitter')}>
+          <TwitterIcon size={ICON_SIZE} />
+        </TwitterShareButton>
 
-      <MailruShareButton url={url} onClick={sendEvent('mailru')}>
-        <MailruIcon size={ICON_SIZE} />
-      </MailruShareButton>
+        <OKShareButton url={url} title={TITLE} onClick={sendEvent('ok')}>
+          <OKIcon size={ICON_SIZE} />
+        </OKShareButton>
 
-      <ViberShareButton url={url} title={TITLE} onClick={sendEvent('viber')}>
-        <ViberIcon size={ICON_SIZE} />
-      </ViberShareButton>
-    </div>
+        <MailruShareButton url={url} onClick={sendEvent('mailru')}>
+          <MailruIcon size={ICON_SIZE} />
+        </MailruShareButton>
+
+        <ViberShareButton url={url} title={TITLE} onClick={sendEvent('viber')}>
+          <ViberIcon size={ICON_SIZE} />
+        </ViberShareButton>
+      </span>
+    </span>
   );
 }

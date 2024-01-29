@@ -19,12 +19,15 @@ export function MainPage() {
 
       <OfficialLinks />
 
+      <div style={{ marginBottom: '1rem', display: 'flex' }}>
+        <Sharing />
+      </div>
+
       <div style={{ marginBottom: '1rem' }}>
         <CountdownTimer />
       </div>
 
-      <div style={{ marginBottom: '1rem' }}>
-        <div>{'Поделиться: '}</div>
+      <div style={{ marginBottom: '1rem', display: 'flex' }}>
         <Sharing />
       </div>
     </div>

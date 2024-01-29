@@ -89,6 +89,10 @@ export function AddressesPage() {
         <OfficialLinks />
       </div>
 
+      <div style={{ marginBottom: '1rem', display: 'flex' }}>
+        <Sharing />
+      </div>
+
       <div style={{ marginBottom: '1rem' }}>
         <UpdatedAt data={data} />
       </div>
@@ -99,8 +103,7 @@ export function AddressesPage() {
         }, [])}
       </div>
 
-      <div style={{ marginBottom: '1rem' }}>
-        <div>{'Поделиться: '}</div>
+      <div style={{ marginBottom: '1rem', display: 'flex' }}>
         <Sharing />
       </div>
     </div>

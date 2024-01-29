@@ -135,6 +135,10 @@ export function SigsPage() {
         <OfficialLinks />
       </div>
 
+      <div style={{ marginBottom: '1rem', display: 'flex' }}>
+        <Sharing />
+      </div>
+
       <div style={{ marginBottom: '1rem' }}>
         <UpdatedAt data={data} />
       </div>
@@ -143,8 +147,7 @@ export function SigsPage() {
         <SignTable data={data} />
       </div>
 
-      <div style={{ marginBottom: '1rem' }}>
-        <div>{'Поделиться: '}</div>
+      <div style={{ marginBottom: '1rem', display: 'flex' }}>
         <Sharing />
       </div>
     </div>
