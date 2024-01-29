@@ -122,6 +122,15 @@ export function CountdownTimer() {
           />
         </tbody>
       </table>
+
+      <p>
+        {
+          'Источник: страница "Сроки осуществления избирательных действий", на сайте центральной избирательной комиссии, в версии на 29.01.2024 20:30 мск. '
+        }
+        <a target="_blank" rel="noreferrer" href="http://www.cikrf.ru/analog/prezidentskiye-vybory-2024/plan/">
+          {'http://www.cikrf.ru/analog/prezidentskiye-vybory-2024/plan/'}
+        </a>
+      </p>
     </div>
   );
 }
