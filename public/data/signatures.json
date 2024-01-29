@@ -65,9 +65,9 @@
       "region": "Брянская область",
       "valueSorted": 105,
       "tg": "https://t.me/center_bro",
-      "value": 117,
+      "value": 1014,
       "pop": 1152505,
-      "valuePerPop": 101.51799775272124,
+      "valuePerPop": 879.8226471902508,
       "valueSortedPerPop": 91.1058954191088
     },
     {
@@ -290,9 +290,9 @@
       "region": "Москва",
       "valueSorted": 6686,
       "tg": "https://t.me/center_msk",
-      "value": 29460,
+      "value": 29468,
       "pop": 13104177,
-      "valuePerPop": 2248.138131833842,
+      "valuePerPop": 2248.7486241982233,
       "valueSortedPerPop": 510.21899353160444
     },
     {
@@ -476,18 +476,18 @@
     {
       "region": "Смоленская область",
       "valueSorted": 372,
-      "value": 1300,
+      "value": 1295,
       "pop": 873041,
-      "valuePerPop": 1489.0480515806246,
+      "valuePerPop": 1483.32094368993,
       "valueSortedPerPop": 426.0968270676864
     },
     {
       "region": "Ставропольский край",
       "valueSorted": 563,
       "tg": "https://t.me/center_sk",
-      "value": 563,
+      "value": 1720,
       "pop": 2891204,
-      "valuePerPop": 194.72856291012326,
+      "valuePerPop": 594.9078653737336,
       "valueSortedPerPop": 194.72856291012326
     },
     {
@@ -555,9 +555,9 @@
       "region": "Ульяновская область",
       "valueSorted": 1765,
       "tg": "https://t.me/center_ul",
-      "value": 2018,
+      "value": 2318,
       "pop": 1181006,
-      "valuePerPop": 1708.712741510204,
+      "valuePerPop": 1962.733466214397,
       "valueSortedPerPop": 1494.488597009668
     },
     {
@@ -595,8 +595,8 @@
       "valueSortedPerPop": 116.35645255126171
     }
   ],
-  "total": 201449,
+  "total": 203806,
   "totalSorted": 96272,
-  "percSorted": 0.4778976316586332,
-  "updatedAt": "2024-01-29T07:18:44.151Z"
+  "percSorted": 0.47237078398084453,
+  "updatedAt": "2024-01-29T08:26:51.027Z"
 }
