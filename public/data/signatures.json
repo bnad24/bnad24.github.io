@@ -10,39 +10,39 @@
     },
     {
       "region": "Алтайский край",
-      "valueSorted": 3947,
+      "valueSorted": 4182,
       "tg": "https://t.me/center_ak",
-      "value": 4045,
+      "value": 4182,
       "pop": 2130950,
-      "valuePerPop": 1898.2144114127502,
-      "valueSortedPerPop": 1852.2255332128864
+      "valuePerPop": 1962.5049860390905,
+      "valueSortedPerPop": 1962.5049860390905
     },
     {
       "region": "Амурская область",
-      "valueSorted": 1076,
+      "valueSorted": 1182,
       "tg": "https://t.me/center_ao",
-      "value": 1076,
+      "value": 1182,
       "pop": 756198,
-      "valuePerPop": 1422.9077569631233,
-      "valueSortedPerPop": 1422.9077569631233
+      "valuePerPop": 1563.0826846936914,
+      "valueSortedPerPop": 1563.0826846936914
     },
     {
       "region": "Архангельская область",
-      "valueSorted": 2885,
+      "valueSorted": 4163,
       "tg": "https://t.me/center_arh",
-      "value": 3350,
+      "value": 4163,
       "pop": 964304,
-      "valuePerPop": 3474.008196585309,
-      "valueSortedPerPop": 2991.795118551826
+      "valuePerPop": 4317.103320114818,
+      "valueSortedPerPop": 4317.103320114818
     },
     {
       "region": "Астраханская область",
-      "valueSorted": 46,
+      "valueSorted": 135,
       "tg": "https://t.me/center_ast_o",
-      "value": 46,
+      "value": 135,
       "pop": 950557,
-      "valuePerPop": 48.39267923964581,
-      "valueSortedPerPop": 48.39267923964581
+      "valuePerPop": 142.02199342069966,
+      "valueSortedPerPop": 142.02199342069966
     },
     {
       "region": "Башкортостан",
@@ -54,21 +54,21 @@
     },
     {
       "region": "Белгородская область",
-      "valueSorted": 183,
+      "valueSorted": 590,
       "tg": "https://t.me/center_bo_2024",
       "value": 2448,
       "pop": 1514527,
       "valuePerPop": 1616.3462255872626,
-      "valueSortedPerPop": 120.82980362845957
+      "valueSortedPerPop": 389.56056907536146
     },
     {
       "region": "Брянская область",
-      "valueSorted": 105,
+      "valueSorted": 341,
       "tg": "https://t.me/center_bro",
       "value": 1014,
       "pop": 1152505,
       "valuePerPop": 879.8226471902508,
-      "valueSortedPerPop": 91.1058954191088
+      "valueSortedPerPop": 295.8772413134867
     },
     {
       "region": "Бурятия",
@@ -80,57 +80,57 @@
     },
     {
       "region": "Владимирская область",
-      "valueSorted": 1327,
+      "valueSorted": 2655,
       "tg": "https://t.me/nadvladimir",
-      "value": 2313,
+      "value": 2655,
       "pop": 1325510,
-      "valuePerPop": 1744.988721322359,
-      "valueSortedPerPop": 1001.1240956311156
+      "valuePerPop": 2003.0026178602952,
+      "valueSortedPerPop": 2003.0026178602952
     },
     {
       "region": "Волгоградская область",
-      "valueSorted": 2264,
+      "valueSorted": 3683,
       "tg": "https://t.me/center_wo",
-      "value": 2433,
+      "value": 3683,
       "pop": 2470057,
-      "valuePerPop": 984.9975122031597,
-      "valueSortedPerPop": 916.5780384825127
+      "valuePerPop": 1491.0587083617909,
+      "valueSortedPerPop": 1491.0587083617909
     },
     {
       "region": "Вологодская область",
-      "valueSorted": 3802,
+      "valueSorted": 3983,
       "tg": "https://t.me/center_vologda",
-      "value": 3802,
+      "value": 3983,
       "pop": 1128782,
-      "valuePerPop": 3368.232307035371,
-      "valueSortedPerPop": 3368.232307035371
+      "valuePerPop": 3528.582135434477,
+      "valueSortedPerPop": 3528.582135434477
     },
     {
       "region": "Воронежская область",
-      "valueSorted": 3685,
+      "valueSorted": 4469,
       "tg": "https://t.me/center_vrn",
-      "value": 4096,
+      "value": 4469,
       "pop": 2285282,
-      "valuePerPop": 1792.3389761088565,
-      "valueSortedPerPop": 1612.4924626369962
+      "valuePerPop": 1955.5573447828322,
+      "valueSortedPerPop": 1955.5573447828322
     },
     {
       "region": "Забайкальский край",
-      "valueSorted": 1393,
+      "valueSorted": 1535,
       "tg": "https://t.me/center_zab_k",
       "value": 1798,
       "pop": 992429,
       "valuePerPop": 1811.716505664385,
-      "valueSortedPerPop": 1403.6268589491037
+      "valueSortedPerPop": 1546.7101424887826
     },
     {
       "region": "Ивановская область",
-      "valueSorted": 429,
+      "valueSorted": 542,
       "tg": "https://t.me/centr_io",
       "value": 2559,
       "pop": 914725,
       "valuePerPop": 2797.562108830523,
-      "valueSortedPerPop": 468.99341332094343
+      "valueSortedPerPop": 592.5278089043155
     },
     {
       "region": "Ингушетия",
@@ -142,38 +142,38 @@
     },
     {
       "region": "Иркутская область",
-      "valueSorted": 2409,
+      "valueSorted": 2615,
       "tg": "https://t.me/center_io",
       "value": 4057,
       "pop": 2344360,
       "valuePerPop": 1730.536265761231,
-      "valueSortedPerPop": 1027.5725571158014
+      "valueSortedPerPop": 1115.44302069648
     },
     {
       "region": "Калининградская область",
-      "valueSorted": 118,
+      "valueSorted": 227,
       "tg": "https://t.me/center_kalin",
       "value": 2300,
       "pop": 1032343,
       "valuePerPop": 2227.9416821734635,
-      "valueSortedPerPop": 114.30309499846466
+      "valueSortedPerPop": 219.8881573275549
     },
     {
       "region": "Калужская область",
-      "valueSorted": 558,
+      "valueSorted": 1655,
       "tg": "https://t.me/center_ka",
       "value": 2237,
       "pop": 1070853,
       "valuePerPop": 2088.98887148843,
-      "valueSortedPerPop": 521.0799241352455
+      "valueSortedPerPop": 1545.4969076054324
     },
     {
       "region": "Камчатский край",
-      "valueSorted": 456,
-      "value": 456,
+      "valueSorted": 479,
+      "value": 479,
       "pop": 288730,
-      "valuePerPop": 1579.3301700550687,
-      "valueSortedPerPop": 1579.3301700550687
+      "valuePerPop": 1658.989367228899,
+      "valueSortedPerPop": 1658.989367228899
     },
     {
       "region": "Карелия",
@@ -193,12 +193,12 @@
     },
     {
       "region": "Кировская область",
-      "valueSorted": 853,
+      "valueSorted": 3304,
       "tg": "https://t.me/center_kir",
-      "value": 2816,
+      "value": 3304,
       "pop": 1138112,
-      "valuePerPop": 2474.2731822527135,
-      "valueSortedPerPop": 749.4868694820897
+      "valuePerPop": 2903.0534780408257,
+      "valueSortedPerPop": 2903.0534780408257
     },
     {
       "region": "Коми",
@@ -210,74 +210,74 @@
     },
     {
       "region": "Костромская область",
-      "valueSorted": 122,
+      "valueSorted": 220,
       "tg": "https://t.me/center_ko_2024",
       "value": 1395,
       "pop": 571900,
       "valuePerPop": 2439.237628956111,
-      "valueSortedPerPop": 213.32400769365273
+      "valueSortedPerPop": 384.6826368246197
     },
     {
       "region": "Краснодарский край",
-      "valueSorted": 1662,
+      "valueSorted": 2195,
       "tg": "https://t.me/center_krasnodar",
       "value": 4534,
       "pop": 5819345,
       "valuePerPop": 779.1254857720241,
-      "valueSortedPerPop": 285.5991524819374
+      "valueSortedPerPop": 377.19021642470074
     },
     {
       "region": "Красноярский край",
-      "valueSorted": 4116,
+      "valueSorted": 4365,
       "tg": "https://t.me/center_kk",
-      "value": 4116,
+      "value": 4365,
       "pop": 2845545,
-      "valuePerPop": 1446.4715898008992,
-      "valueSortedPerPop": 1446.4715898008992
+      "valuePerPop": 1533.9767953063472,
+      "valueSortedPerPop": 1533.9767953063472
     },
     {
       "region": "Курганская область",
-      "valueSorted": 710,
+      "valueSorted": 1277,
       "tg": "https://t.me/nadejdin45",
-      "value": 1100,
+      "value": 1277,
       "pop": 761586,
-      "valuePerPop": 1444.3542817226157,
-      "valueSortedPerPop": 932.2650363845974
+      "valuePerPop": 1676.7640161452548,
+      "valueSortedPerPop": 1676.7640161452548
     },
     {
       "region": "Курская область",
-      "valueSorted": 93,
+      "valueSorted": 220,
       "tg": "https://t.me/center_k",
       "value": 1417,
       "pop": 1067034,
       "valuePerPop": 1327.9801768266054,
-      "valueSortedPerPop": 87.15748514105455
+      "valueSortedPerPop": 206.17899710787097
     },
     {
       "region": "Ленинградская область",
-      "valueSorted": 1801,
+      "valueSorted": 3359,
       "tg": "https://t.me/nadezhdin_lenoblast",
-      "value": 2735,
+      "value": 3359,
       "pop": 2023767,
-      "valuePerPop": 1351.4401608485562,
-      "valueSortedPerPop": 889.9245812388482
+      "valuePerPop": 1659.7760512944426,
+      "valueSortedPerPop": 1659.7760512944426
     },
     {
       "region": "Липецкая область",
-      "valueSorted": 1306,
+      "valueSorted": 1588,
       "tg": "https://t.me/center_lip",
-      "value": 1565,
+      "value": 1588,
       "pop": 1126263,
-      "valuePerPop": 1389.5511084000807,
-      "valueSortedPerPop": 1159.5870591504827
+      "valuePerPop": 1409.9726262871106,
+      "valueSortedPerPop": 1409.9726262871106
     },
     {
       "region": "Магаданская область",
-      "valueSorted": 84,
-      "value": 84,
+      "valueSorted": 97,
+      "value": 97,
       "pop": 134315,
-      "valuePerPop": 625.3955254439192,
-      "valueSortedPerPop": 625.3955254439192
+      "valuePerPop": 722.1829281911923,
+      "valueSortedPerPop": 722.1829281911923
     },
     {
       "region": "Марий Эл",
@@ -288,165 +288,165 @@
     },
     {
       "region": "Москва",
-      "valueSorted": 6686,
+      "valueSorted": 7667,
       "tg": "https://t.me/center_msk",
       "value": 28590,
       "pop": 13104177,
       "valuePerPop": 2181.7470872073845,
-      "valueSortedPerPop": 510.21899353160444
+      "valueSortedPerPop": 585.0806197138515
     },
     {
       "region": "Московская область",
-      "valueSorted": 2512,
+      "valueSorted": 3481,
       "tg": "https://t.me/center_mo",
-      "value": 3480,
+      "value": 3481,
       "pop": 8591736,
-      "valuePerPop": 405.0403783356472,
-      "valueSortedPerPop": 292.37397424688095
+      "valuePerPop": 405.156769248962,
+      "valueSortedPerPop": 405.156769248962
     },
     {
       "region": "Мурманская область",
-      "valueSorted": 735,
+      "valueSorted": 2223,
       "tg": "https://t.me/center_mo2024",
-      "value": 2018,
+      "value": 2223,
       "pop": 658698,
-      "valuePerPop": 3063.619443204625,
-      "valueSortedPerPop": 1115.8376069154606
+      "valuePerPop": 3374.8394560177803,
+      "valueSortedPerPop": 3374.8394560177803
     },
     {
       "region": "Нижегородская область",
-      "valueSorted": 2797,
+      "valueSorted": 3757,
       "tg": "https://t.me/center_no",
-      "value": 3249,
+      "value": 3757,
       "pop": 3081817,
-      "valuePerPop": 1054.2481918945869,
-      "valueSortedPerPop": 907.5814689840441
+      "valuePerPop": 1219.0860132188252,
+      "valueSortedPerPop": 1219.0860132188252
     },
     {
       "region": "Новгородская область",
-      "valueSorted": 1668,
+      "valueSorted": 2648,
       "tg": "https://t.me/center_n_o_2024",
-      "value": 1978,
+      "value": 2648,
       "pop": 575926,
-      "valuePerPop": 3434.469011643857,
-      "valueSortedPerPop": 2896.205415279046
+      "valuePerPop": 4597.812913464577,
+      "valueSortedPerPop": 4597.812913464577
     },
     {
       "region": "Новосибирская область",
-      "valueSorted": 3980,
+      "valueSorted": 4204,
       "tg": "https://t.me/centr_nso",
       "value": 4631,
       "pop": 2794266,
       "valuePerPop": 1657.3225312121322,
-      "valueSortedPerPop": 1424.3454273859397
+      "valueSortedPerPop": 1504.5095921433392
     },
     {
       "region": "Омская область",
-      "valueSorted": 3076,
+      "valueSorted": 3546,
       "tg": "https://t.me/center_o_o_2024",
-      "value": 3076,
+      "value": 3546,
       "pop": 1832064,
-      "valuePerPop": 1678.980646964298,
-      "valueSortedPerPop": 1678.980646964298
+      "valuePerPop": 1935.521903164955,
+      "valueSortedPerPop": 1935.521903164955
     },
     {
       "region": "Оренбургская область",
-      "valueSorted": 116,
+      "valueSorted": 365,
       "tg": "https://t.me/center_oo2024",
       "value": 1800,
       "pop": 1841377,
       "valuePerPop": 977.5293163757341,
-      "valueSortedPerPop": 62.996333721991746
+      "valueSortedPerPop": 198.22122248730162
     },
     {
       "region": "Орловская область",
-      "valueSorted": 309,
+      "valueSorted": 381,
       "tg": "https://t.me/centeroo_2024",
       "value": 1700,
       "pop": 700276,
       "valuePerPop": 2427.614254950905,
-      "valueSortedPerPop": 441.25459104695864
+      "valueSortedPerPop": 544.0711947860558
     },
     {
       "region": "Пензенская область",
-      "valueSorted": 2371,
+      "valueSorted": 2896,
       "tg": "https://t.me/NadezhdinHeadquartersPenza",
-      "value": 2371,
+      "value": 2896,
       "pop": 1246609,
-      "valuePerPop": 1901.9596361008144,
-      "valueSortedPerPop": 1901.9596361008144
+      "valuePerPop": 2323.102111407827,
+      "valueSortedPerPop": 2323.102111407827
     },
     {
       "region": "Пермский край",
-      "valueSorted": 746,
+      "valueSorted": 841,
       "tg": "https://t.me/center_pk",
       "value": 3802,
       "pop": 2508352,
       "valuePerPop": 1515.7362284081341,
-      "valueSortedPerPop": 297.4064246166407
+      "valueSortedPerPop": 335.27989692036846
     },
     {
       "region": "Приморский край",
-      "valueSorted": 2385,
+      "valueSorted": 3002,
       "tg": "https://t.me/center_pk_2024",
-      "value": 2385,
+      "value": 3002,
       "pop": 1820076,
-      "valuePerPop": 1310.3848410725707,
-      "valueSortedPerPop": 1310.3848410725707
+      "valuePerPop": 1649.3816741718479,
+      "valueSortedPerPop": 1649.3816741718479
     },
     {
       "region": "Псковская область",
-      "valueSorted": 1304,
+      "valueSorted": 2014,
       "tg": "https://t.me/center_po_2024",
-      "value": 1542,
+      "value": 2014,
       "pop": 587786,
-      "valuePerPop": 2623.4037557886713,
-      "valueSortedPerPop": 2218.4944860884743
+      "valuePerPop": 3426.4170973789783,
+      "valueSortedPerPop": 3426.4170973789783
     },
     {
       "region": "Ростовская область",
-      "valueSorted": 2385,
+      "valueSorted": 5078,
       "tg": "https://t.me/center_ro",
-      "value": 3314,
+      "value": 5078,
       "pop": 4164547,
-      "valuePerPop": 795.7648214799833,
-      "valueSortedPerPop": 572.6913395382498
+      "valuePerPop": 1219.3403027988397,
+      "valueSortedPerPop": 1219.3403027988397
     },
     {
       "region": "Рязанская область",
-      "valueSorted": 100,
+      "valueSorted": 172,
       "tg": "https://t.me/center_rya",
       "value": 2153,
       "pop": 1088918,
       "valuePerPop": 1977.1920383353017,
-      "valueSortedPerPop": 91.83427953252678
+      "valueSortedPerPop": 157.95496079594608
     },
     {
       "region": "Самарская область",
-      "valueSorted": 2747,
+      "valueSorted": 5144,
       "tg": "https://t.me/centr_smr",
-      "value": 4063,
+      "value": 5144,
       "pop": 3142683,
-      "valuePerPop": 1292.8443626035462,
-      "valueSortedPerPop": 874.0938872931187
+      "valuePerPop": 1636.8179673228258,
+      "valueSortedPerPop": 1636.8179673228258
     },
     {
       "region": "Санкт-Петербург",
-      "valueSorted": 5072,
+      "valueSorted": 6381,
       "tg": "https://t.me/center_spb_2024",
       "value": 15470,
       "pop": 5600044,
       "valuePerPop": 2762.478294813398,
-      "valueSortedPerPop": 905.7071694436687
+      "valueSortedPerPop": 1139.4553328509562
     },
     {
       "region": "Саратовская область",
-      "valueSorted": 2081,
+      "valueSorted": 4285,
       "tg": "https://t.me/center_s_o_2024",
       "value": 4449,
       "pop": 2404944,
       "valuePerPop": 1849.9391254016725,
-      "valueSortedPerPop": 865.3008136571995
+      "valueSortedPerPop": 1781.7462693518019
     },
     {
       "region": "Саха (Якутия)",
@@ -458,46 +458,46 @@
     },
     {
       "region": "Сахалинская область",
-      "valueSorted": 172,
-      "value": 172,
+      "valueSorted": 508,
+      "value": 508,
       "pop": 460535,
-      "valuePerPop": 373.4786715450509,
-      "valueSortedPerPop": 373.4786715450509
+      "valuePerPop": 1103.0649136330571,
+      "valueSortedPerPop": 1103.0649136330571
     },
     {
       "region": "Свердловская область",
-      "valueSorted": 1163,
+      "valueSorted": 1349,
       "tg": "https://t.me/center_so",
       "value": 4118,
       "pop": 4239161,
       "valuePerPop": 971.4186368481877,
-      "valueSortedPerPop": 274.34673983837837
+      "valueSortedPerPop": 318.2233465537166
     },
     {
       "region": "Смоленская область",
-      "valueSorted": 372,
+      "valueSorted": 471,
       "value": 1295,
       "pop": 873041,
       "valuePerPop": 1483.32094368993,
-      "valueSortedPerPop": 426.0968270676864
+      "valueSortedPerPop": 539.4935633034416
     },
     {
       "region": "Ставропольский край",
-      "valueSorted": 563,
+      "valueSorted": 2120,
       "tg": "https://t.me/center_sk",
-      "value": 1720,
+      "value": 2120,
       "pop": 2891204,
-      "valuePerPop": 594.9078653737336,
-      "valueSortedPerPop": 194.72856291012326
+      "valuePerPop": 733.2585317397181,
+      "valueSortedPerPop": 733.2585317397181
     },
     {
       "region": "Тамбовская область",
-      "valueSorted": 58,
+      "valueSorted": 131,
       "tg": "https://t.me/center_to_2023",
       "value": 1626,
       "pop": 966250,
       "valuePerPop": 1682.7943078913324,
-      "valueSortedPerPop": 60.02587322121604
+      "valueSortedPerPop": 135.5756791720569
     },
     {
       "region": "Татарстан",
@@ -509,30 +509,30 @@
     },
     {
       "region": "Тверская область",
-      "valueSorted": 2205,
+      "valueSorted": 3300,
       "tg": "https://t.me/center_tvr",
-      "value": 2205,
+      "value": 3300,
       "pop": 1211183,
-      "valuePerPop": 1820.5341389368907,
-      "valueSortedPerPop": 1820.5341389368907
+      "valuePerPop": 2724.608915415755,
+      "valueSortedPerPop": 2724.608915415755
     },
     {
       "region": "Томская область",
-      "valueSorted": 3497,
+      "valueSorted": 3627,
       "tg": "https://t.me/center_tmsk",
-      "value": 3497,
+      "value": 3627,
       "pop": 1052106,
-      "valuePerPop": 3323.8095781223565,
-      "valueSortedPerPop": 3323.8095781223565
+      "valuePerPop": 3447.3712724763473,
+      "valueSortedPerPop": 3447.3712724763473
     },
     {
       "region": "Тульская область",
-      "valueSorted": 3163,
+      "valueSorted": 3490,
       "tg": "https://t.me/center_to_2024",
-      "value": 3174,
+      "value": 3490,
       "pop": 1481471,
-      "valuePerPop": 2142.4651579409924,
-      "valueSortedPerPop": 2135.0401054087456
+      "valuePerPop": 2355.7666670491694,
+      "valueSortedPerPop": 2355.7666670491694
     },
     {
       "region": "Тыва",
@@ -544,30 +544,30 @@
     },
     {
       "region": "Тюменская область",
-      "valueSorted": 275,
+      "valueSorted": 323,
       "tg": "https://t.me/center_to",
       "value": 3170,
       "pop": 1608494,
       "valuePerPop": 1970.787581427099,
-      "valueSortedPerPop": 170.96737693768208
+      "valueSortedPerPop": 200.80895545771386
     },
     {
       "region": "Ульяновская область",
-      "valueSorted": 1765,
+      "valueSorted": 2628,
       "tg": "https://t.me/center_ul",
-      "value": 2318,
+      "value": 2628,
       "pop": 1181006,
-      "valuePerPop": 1962.733466214397,
-      "valueSortedPerPop": 1494.488597009668
+      "valuePerPop": 2225.2215484087296,
+      "valueSortedPerPop": 2225.2215484087296
     },
     {
       "region": "Хабаровский край",
-      "valueSorted": 2544,
+      "valueSorted": 2902,
       "tg": "https://t.me/center_hk",
-      "value": 2544,
+      "value": 2902,
       "pop": 1284090,
-      "valuePerPop": 1981.1695441908278,
-      "valueSortedPerPop": 1981.1695441908278
+      "valuePerPop": 2259.9662017459837,
+      "valueSortedPerPop": 2259.9662017459837
     },
     {
       "region": "Ханты-Мансийский автономный округ",
@@ -578,25 +578,25 @@
     },
     {
       "region": "Челябинская область",
-      "valueSorted": 3856,
+      "valueSorted": 5144,
       "tg": "https://t.me/Nadezdinru",
-      "value": 3856,
+      "value": 5144,
       "pop": 3407145,
-      "valuePerPop": 1131.739330142979,
-      "valueSortedPerPop": 1131.739330142979
+      "valuePerPop": 1509.768442493642,
+      "valueSortedPerPop": 1509.768442493642
     },
     {
       "region": "Ярославская область",
-      "valueSorted": 139,
+      "valueSorted": 306,
       "tg": "https://t.me/center_yar",
       "value": 2793,
       "pop": 1194605,
       "valuePerPop": 2338.0113091775106,
-      "valueSortedPerPop": 116.35645255126171
+      "valueSortedPerPop": 256.1516149689646
     }
   ],
-  "total": 202928,
-  "totalSorted": 96272,
-  "percSorted": 0.4744145706851691,
-  "updatedAt": "2024-01-29T10:29:24.966Z"
+  "total": 218362,
+  "totalSorted": 133445,
+  "percSorted": 0.6111182348577133,
+  "updatedAt": "2024-01-29T15:21:07.238Z"
 }
