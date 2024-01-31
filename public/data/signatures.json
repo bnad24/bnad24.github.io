@@ -9,7 +9,7 @@
       "region": "Республика Алтай",
       "valueSorted": 39,
       "tg": "https://t.me/center_ra_2024",
-      "value": 813
+      "value": 834
     },
     {
       "region": "Алтайский край",
@@ -57,9 +57,9 @@
       "region": "Белгородская область",
       "valueSorted": 596,
       "tg": "https://t.me/center_bo_2024",
-      "value": 2448,
+      "value": 2867,
       "pop": 1514527,
-      "valuePerPop": 1616.3462255872626,
+      "valuePerPop": 1893.0002568458667,
       "valueSortedPerPop": 393.5222019812126
     },
     {
@@ -136,9 +136,9 @@
       "region": "Ивановская область",
       "valueSorted": 651,
       "tg": "https://t.me/centr_io",
-      "value": 2559,
+      "value": 2596,
       "pop": 914725,
-      "valuePerPop": 2797.562108830523,
+      "valuePerPop": 2838.0114241985298,
       "valueSortedPerPop": 711.6893055289842
     },
     {
@@ -446,9 +446,9 @@
       "region": "Рязанская область",
       "valueSorted": 191,
       "tg": "https://t.me/center_rya",
-      "value": 2153,
+      "value": 2908,
       "pop": 1088918,
-      "valuePerPop": 1977.1920383353017,
+      "valuePerPop": 2670.540848805879,
       "valueSortedPerPop": 175.40347390712617
     },
     {
@@ -496,9 +496,9 @@
       "region": "Свердловская область",
       "valueSorted": 1431,
       "tg": "https://t.me/center_so",
-      "value": 4118,
+      "value": 5286,
       "pop": 4239161,
-      "valuePerPop": 971.4186368481877,
+      "valuePerPop": 1246.9448553617096,
       "valueSortedPerPop": 337.56679682607006
     },
     {
@@ -527,9 +527,9 @@
       "region": "Тамбовская область",
       "valueSorted": 126,
       "tg": "https://t.me/center_to_2023",
-      "value": 1626,
+      "value": 1670,
       "pop": 966250,
-      "valuePerPop": 1682.7943078913324,
+      "valuePerPop": 1728.3311772315653,
       "valueSortedPerPop": 130.40103492884865
     },
     {
@@ -575,9 +575,9 @@
       "region": "Тюменская область",
       "valueSorted": 437,
       "tg": "https://t.me/center_to",
-      "value": 3170,
+      "value": 4600,
       "pop": 1608494,
-      "valuePerPop": 1970.787581427099,
+      "valuePerPop": 2859.817941503046,
       "valueSortedPerPop": 271.6827044427893
     },
     {
@@ -653,14 +653,14 @@
       "region": "Ярославская область",
       "valueSorted": 341,
       "tg": "https://t.me/center_yar",
-      "value": 2793,
+      "value": 3244,
       "pop": 1194605,
-      "valuePerPop": 2338.0113091775106,
+      "valuePerPop": 2715.541957383403,
       "valueSortedPerPop": 285.4500023020162
     }
   ],
-  "total": 233113,
+  "total": 237438,
   "totalSorted": 164996,
-  "percSorted": 0.7077940741185605,
-  "updatedAt": "2024-01-30T20:20:56.521Z"
+  "percSorted": 0.6949014058406826,
+  "updatedAt": "2024-01-31T07:48:26.995Z"
 }
