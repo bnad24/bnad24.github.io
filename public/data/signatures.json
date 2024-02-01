@@ -3,13 +3,19 @@
     {
       "region": "Республика Адыгея",
       "valueSorted": 126,
-      "value": 126
+      "value": 126,
+      "pop": 497985,
+      "valuePerPop": 253.0196692671466,
+      "valueSortedPerPop": 253.0196692671466
     },
     {
       "region": "Республика Алтай",
       "valueSorted": 39,
       "tg": "https://t.me/center_ra_2024",
-      "value": 834
+      "value": 834,
+      "pop": 210769,
+      "valuePerPop": 3956.9386389839115,
+      "valueSortedPerPop": 185.03669894529082
     },
     {
       "region": "Алтайский край",
@@ -51,7 +57,10 @@
       "region": "Республика Башкортостан",
       "valueSorted": 3664,
       "tg": "https://t.me/center_rb",
-      "value": 3664
+      "value": 3664,
+      "pop": 4077600,
+      "valuePerPop": 898.5677849715519,
+      "valueSortedPerPop": 898.5677849715519
     },
     {
       "region": "Белгородская область",
@@ -75,7 +84,10 @@
       "region": "Республика Бурятия",
       "valueSorted": 782,
       "tg": "https://t.me/center_ula",
-      "value": 1500
+      "value": 1500,
+      "pop": 974628,
+      "valuePerPop": 1539.0487447518437,
+      "valueSortedPerPop": 802.3574122639612
     },
     {
       "region": "Владимирская область",
@@ -116,12 +128,18 @@
     {
       "region": "Республика Дагестан",
       "valueSorted": 157,
-      "value": 157
+      "value": 157,
+      "pop": 3209781,
+      "valuePerPop": 48.91299437562874,
+      "valueSortedPerPop": 48.91299437562874
     },
     {
       "region": "Еврейская АО",
       "valueSorted": 55,
-      "value": 55
+      "value": 55,
+      "pop": 147458,
+      "valuePerPop": 372.98756256018663,
+      "valueSortedPerPop": 372.98756256018663
     },
     {
       "region": "Забайкальский край",
@@ -145,7 +163,10 @@
       "region": "Республика Ингушетия",
       "valueSorted": 59,
       "tg": "https://t.me/nad_ing",
-      "value": 59
+      "value": 59,
+      "pop": 519078,
+      "valuePerPop": 113.66307183120841,
+      "valueSortedPerPop": 113.66307183120841
     },
     {
       "region": "Иркутская область",
@@ -176,7 +197,10 @@
     {
       "region": "Республика Калмыкия",
       "valueSorted": 357,
-      "value": 357
+      "value": 357,
+      "pop": 264483,
+      "valuePerPop": 1349.8032009618767,
+      "valueSortedPerPop": 1349.8032009618767
     },
     {
       "region": "Калужская область",
@@ -207,13 +231,19 @@
       "region": "Республика Карелия",
       "valueSorted": 404,
       "tg": "https://t.me/center_10",
-      "value": 2430
+      "value": 2430,
+      "pop": 527880,
+      "valuePerPop": 4603.318936121846,
+      "valueSortedPerPop": 765.3254527544138
     },
     {
       "region": "Кемеровская область — Кузбасс",
       "valueSorted": 3894,
       "tg": "https://t.me/center_ko",
-      "value": 3894
+      "value": 3894,
+      "pop": 2568238,
+      "valuePerPop": 1516.214618738606,
+      "valueSortedPerPop": 1516.214618738606
     },
     {
       "region": "Кировская область",
@@ -228,7 +258,10 @@
       "region": "Республика Коми",
       "valueSorted": 2080,
       "tg": "https://t.me/center_rk_2024",
-      "value": 2109
+      "value": 2109,
+      "pop": 726434,
+      "valuePerPop": 2903.2231420886137,
+      "valueSortedPerPop": 2863.302103150458
     },
     {
       "region": "Костромская область",
@@ -304,12 +337,18 @@
     {
       "region": "Республика Марий Эл",
       "valueSorted": 141,
-      "value": 1111
+      "value": 1111,
+      "pop": 672321,
+      "valuePerPop": 1652.4844531109395,
+      "valueSortedPerPop": 209.7212492247007
     },
     {
       "region": "Республика Мордовия",
       "valueSorted": 453,
-      "value": 453
+      "value": 453,
+      "pop": 771373,
+      "valuePerPop": 587.2645270187056,
+      "valueSortedPerPop": 587.2645270187056
     },
     {
       "region": "Москва",
@@ -341,7 +380,10 @@
     {
       "region": "Ненецкий АО",
       "valueSorted": 195,
-      "value": 195
+      "value": 195,
+      "pop": 41383,
+      "valuePerPop": 4712.07983954764,
+      "valueSortedPerPop": 4712.07983954764
     },
     {
       "region": "Нижегородская область",
@@ -482,7 +524,10 @@
       "region": "Республика Саха (Якутия)",
       "valueSorted": 2343,
       "tg": "https://t.me/center_rs2024",
-      "value": 2343
+      "value": 2343,
+      "pop": 997565,
+      "valuePerPop": 2348.71913108419,
+      "valueSortedPerPop": 2348.71913108419
     },
     {
       "region": "Сахалинская область",
@@ -504,7 +549,10 @@
     {
       "region": "Республика Северная Осетия — Алания",
       "valueSorted": 25,
-      "value": 25
+      "value": 25,
+      "pop": 680748,
+      "valuePerPop": 36.72430914229641,
+      "valueSortedPerPop": 36.72430914229641
     },
     {
       "region": "Смоленская область",
@@ -536,7 +584,10 @@
       "region": "Республика Татарстан",
       "valueSorted": 10144,
       "tg": "https://t.me/center_rt",
-      "value": 10144
+      "value": 10144,
+      "pop": 4001625,
+      "valuePerPop": 2534.9701683691,
+      "valueSortedPerPop": 2534.9701683691
     },
     {
       "region": "Тверская область",
@@ -569,7 +620,10 @@
       "region": "Республика Тыва",
       "valueSorted": 425,
       "tg": "https://t.me/center_tu",
-      "value": 576
+      "value": 576,
+      "pop": 337271,
+      "valuePerPop": 1707.8254578662263,
+      "valueSortedPerPop": 1260.1142701269898
     },
     {
       "region": "Тюменская область",
@@ -609,12 +663,18 @@
     {
       "region": "Республика Хакасия",
       "valueSorted": 262,
-      "value": 262
+      "value": 262,
+      "pop": 530233,
+      "valuePerPop": 494.12239524888116,
+      "valueSortedPerPop": 494.12239524888116
     },
     {
       "region": "Ханты-Мансийский АО — Югра",
       "valueSorted": 892,
-      "value": 1389
+      "value": 1389,
+      "pop": 1730353,
+      "valuePerPop": 802.7263801085675,
+      "valueSortedPerPop": 515.5017502209087
     },
     {
       "region": "Челябинская область",
@@ -637,17 +697,26 @@
       "region": "Чувашская Республика — Чувашия",
       "valueSorted": 2679,
       "tg": "https://t.me/center_chu",
-      "value": 2679
+      "value": 2679,
+      "pop": 1173177,
+      "valuePerPop": 2283.5428925047117,
+      "valueSortedPerPop": 2283.5428925047117
     },
     {
       "region": "Чукотский АО",
       "valueSorted": 7,
-      "value": 7
+      "value": 7,
+      "pop": 47840,
+      "valuePerPop": 146.3210702341137,
+      "valueSortedPerPop": 146.3210702341137
     },
     {
       "region": "Ямало-Ненецкий АО",
       "valueSorted": 376,
-      "value": 376
+      "value": 376,
+      "pop": 512387,
+      "valuePerPop": 733.8203350202093,
+      "valueSortedPerPop": 733.8203350202093
     },
     {
       "region": "Ярославская область",
@@ -662,5 +731,5 @@
   "total": 243925,
   "totalSorted": 173919,
   "percSorted": 0.7130019473198729,
-  "updatedAt": "2024-01-31T11:48:31.186Z"
+  "updatedAt": "2024-02-01T19:30:30.113Z"
 }
