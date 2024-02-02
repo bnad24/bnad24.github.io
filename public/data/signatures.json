@@ -28,12 +28,12 @@
     },
     {
       "region": "Амурская область",
-      "valueSorted": 1169,
+      "valueSorted": 1154,
       "tg": "https://t.me/center_ao",
-      "value": 1169,
+      "value": 1154,
       "pop": 756198,
-      "valuePerPop": 1545.891419972018,
-      "valueSortedPerPop": 1545.891419972018
+      "valuePerPop": 1526.055345293164,
+      "valueSortedPerPop": 1526.055345293164
     },
     {
       "region": "Архангельская область",
@@ -653,12 +653,12 @@
     },
     {
       "region": "Хабаровский край",
-      "valueSorted": 2861,
+      "valueSorted": 2859,
       "tg": "https://t.me/center_hk",
-      "value": 2861,
+      "value": 2859,
       "pop": 1284090,
-      "valuePerPop": 2228.036975601399,
-      "valueSortedPerPop": 2228.036975601399
+      "valuePerPop": 2226.4794523748337,
+      "valueSortedPerPop": 2226.4794523748337
     },
     {
       "region": "Республика Хакасия",
@@ -728,8 +728,8 @@
       "valueSortedPerPop": 282.10161517823883
     }
   ],
-  "total": 237563,
-  "totalSorted": 165103,
-  "percSorted": 0.694986172089088,
-  "updatedAt": "2024-02-02T01:58:32.772Z"
+  "total": 237546,
+  "totalSorted": 165086,
+  "percSorted": 0.6949643437481583,
+  "updatedAt": "2024-02-02T13:22:55.608Z"
 }
