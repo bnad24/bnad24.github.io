@@ -19,6 +19,8 @@ export interface SignJson {
 export interface Meme {
   id: string;
   url: string;
+  name?: string;
+  description?: string;
 }
 
 export interface MemesJson {

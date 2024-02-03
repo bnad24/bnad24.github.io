@@ -2,24 +2,11 @@
 
 import { useMemo } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import { MemesJson } from '../types';
+import { Meme, MemesJson } from '../types';
 import { useJson } from '../util/useJson';
 import { Sharing } from './Sharing';
 import Link from 'next/link';
 import { UpdatedAt } from './UpdatedAt';
-
-export interface Address {
-  region: string;
-  texts: string[];
-  tgs: string[];
-  phones: string[];
-  html?: string;
-}
-
-export interface AddressesJson {
-  addresses: Address[];
-  updatedAt: string;
-}
 
 export function MemePage({ id }: { id: string }) {
   const data = useJson<MemesJson>('/data/memes.json');
@@ -49,47 +36,40 @@ export function MemePage({ id }: { id: string }) {
     return { meme: data.memes[i], prevUrl, nextUrl };
   }, [data, id]);
 
-  if (!memeData) {
+  const name = useMemo(() => {
+    if (memeData?.meme?.name) {
+      return <h2>{memeData?.meme?.name}</h2>;
+    }
+    return null;
+  }, [memeData?.meme?.name]);
+
+  const description = useMemo(() => {
+    if (memeData?.meme?.description) {
+      return <p>{addPeriod(memeData?.meme?.description)}</p>;
+    }
+    return null;
+  }, [memeData?.meme?.description]);
+
+  if (!memeData || !data) {
     return null;
   }
-
   const { meme, prevUrl, nextUrl } = memeData;
 
   return (
-    <div>
-      <h1>{'Борис Надеждин 2024: Мемы'}</h1>
+    <article>
+      <header>
+        <h1>{'Борис Надеждин 2024: Мемы'}</h1>
+        {name}
+        {description}
+      </header>
 
-      <p>
-        {'Мемы о Борисе Надеждине, кандидате в президенты России в 2024 году. Добавляйте ещё на GitHub: '}
-        <a target="_blank" rel="noreferrer" href="https://github.com/bnad24/bnad24.github.io/issues/new/choose">
-          {'кидайте в Issues'}
-        </a>
-        {' или, если умеете, через Pull Request в папку '}
-        <a
-          target="_blank"
-          rel="noreferrer"
-          href="https://github.com/bnad24/bnad24.github.io/tree/main/public/content/memes"
-        >
-          {'memes'}
-        </a>
-        {'.'}
-      </p>
-
-      <div style={{ marginBottom: '1rem' }}>
-        <UpdatedAt data={data} />
-      </div>
-
-      <div style={{ marginBottom: '1rem', display: 'flex' }}>
-        <Sharing />
-      </div>
-
-      <div style={{ display: 'flex', marginBottom: '0.25rem' }}>
+      <nav style={{ display: 'flex', marginBottom: '0.25rem' }}>
         <div style={{ margin: 'auto' }}>
           <Link href="/memes">{'К списку'}</Link>
         </div>
-      </div>
+      </nav>
 
-      <div style={{ display: 'flex', marginBottom: '1rem' }}>
+      <nav style={{ display: 'flex', marginBottom: '1rem' }}>
         <div style={{ marginRight: 'auto' }}>
           {!!prevUrl && (
             <Link style={{ padding: '2rem' }} href={prevUrl}>
@@ -111,15 +91,60 @@ export function MemePage({ id }: { id: string }) {
             </Link>
           )}
         </div>
-      </div>
+      </nav>
 
-      <div style={{ flex: '1' }} className="meme-img-wrapper">
-        <img className="meme-img" src={meme.url} />
-      </div>
+      <main>
+        <figure style={{ flex: '1' }} className="meme-img-wrapper">
+          <picture>
+            <img className="meme-img" src={meme.url} alt={memeCaption(meme)} />
+          </picture>
+          <figcaption>{memeCaption(meme)}</figcaption>
+        </figure>
+      </main>
 
-      <div style={{ marginBottom: '1rem', display: 'flex' }}>
+      <aside style={{ marginBottom: '1rem', display: 'flex' }}>
         <Sharing />
-      </div>
-    </div>
+      </aside>
+
+      <footer>
+        {'Мемы о Борисе Надеждине, кандидате в президенты России в 2024 году. Добавляйте ещё на GitHub: '}
+        <a target="_blank" rel="noreferrer" href="https://github.com/bnad24/bnad24.github.io/issues/new/choose">
+          {'кидайте в Issues'}
+        </a>
+        {' или, если умеете, через Pull Request в папку '}
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://github.com/bnad24/bnad24.github.io/tree/main/public/content/memes"
+        >
+          {'memes'}
+        </a>
+        {'.'}
+
+        <div style={{ marginBottom: '1rem' }}>
+          <UpdatedAt data={data} />
+        </div>
+      </footer>
+    </article>
   );
+}
+
+function memeCaption(meme: Meme) {
+  if (!meme.name) {
+    return undefined;
+  }
+  const name = addPeriod(meme.name);
+  if (!meme.description) {
+    return name;
+  }
+
+  const description = addPeriod(meme.description);
+  return [name, description].join(' ');
+}
+
+function addPeriod(s: string) {
+  if (!['.', '!', '?'].some((c) => s.endsWith(c))) {
+    return `${s}.`;
+  }
+  return s;
 }

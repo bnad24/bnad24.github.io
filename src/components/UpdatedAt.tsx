@@ -9,7 +9,7 @@ export function UpdatedAt({ data }: { data: { updatedAt: string } }) {
     <p>
       <b>
         {'Обновлено: '}
-        {updatedAt}
+        <time dateTime={data.updatedAt}>{updatedAt}</time>
       </b>
     </p>
   );

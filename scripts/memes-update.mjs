@@ -11,7 +11,7 @@ async function main() {
     .map((item) => {
       const id = item.name.replace(/\.(jpg|png|gif)$/, '');
       const url = item.path.replace(/^public/, '') + item.name;
-      return { url, id };
+      return { url, id, name: '', description: '' };
     });
   memes = sortBy(memes, (x) => -x.id);
 
