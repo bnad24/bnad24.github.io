@@ -17,7 +17,7 @@ function formatPercentage(value?: number): string {
 
 export function SignTable({ data }: { data: SignJson }) {
   const rows = useMemo(() => {
-    const regionsAndValues = sortBy(data.stats, (d) => -d.value);
+    const regionsAndValues = sortBy(data.stats, (d) => -(d.value ?? 0));
     return regionsAndValues.map((datum, i) => {
       return <Region key={datum.region} i={i} datum={datum} />;
     });
@@ -26,8 +26,8 @@ export function SignTable({ data }: { data: SignJson }) {
   const totalRequired = useMemo(() => {
     const clamped = data.stats
       .map(({ value }) => value)
-      .filter(isFinite)
-      .map((value) => clamp(value, 0, N_PER_REGION_MAX));
+      .filter((value) => isFinite(value))
+      .map((value) => clamp(value ?? 0, 0, N_PER_REGION_MAX));
     return sum(clamped);
   }, [data]);
 
@@ -35,7 +35,7 @@ export function SignTable({ data }: { data: SignJson }) {
     const clamped = data.stats
       .map(({ value }) => value)
       .filter(isFinite)
-      .map((value) => clamp(value, 0, N_PER_REGION_DESIRED));
+      .map((value) => clamp(value ?? 0, 0, N_PER_REGION_DESIRED));
     return sum(clamped);
   }, [data]);
 
