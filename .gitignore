@@ -3,3 +3,4 @@
 /out
 /tmp
 /tsconfig.tsbuildinfo
+/\.env.local

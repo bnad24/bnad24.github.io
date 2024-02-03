@@ -1,11 +1,12 @@
 'use client';
 
 import { QueryClient, QueryClientProvider, useQueryErrorResetBoundary } from '@tanstack/react-query';
-import { ReactNode, Suspense, useMemo } from 'react';
+import { ReactNode, Suspense } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import PlausibleProvider from 'next-plausible';
 import { ErrorFallback } from './components/ErrorFallback';
 import { SUSPENSE_FALLBACK } from './components/SuspenseFallback';
+import { DOMAIN } from './constants';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -20,14 +21,8 @@ const queryClient = new QueryClient({
 
 export default function Providers({ children }: { children: ReactNode }) {
   const { reset } = useQueryErrorResetBoundary();
-  const domain = useMemo(() => {
-    if (typeof window !== 'undefined') {
-      return window.location.host;
-    }
-    return undefined;
-  }, []);
   return (
-    <PlausibleProvider domain={domain} trackFileDownloads trackOutboundLinks>
+    <PlausibleProvider domain={DOMAIN} trackFileDownloads trackOutboundLinks>
       <QueryClientProvider client={queryClient}>
         <ErrorBoundary onReset={reset} FallbackComponent={ErrorFallback}>
           <Suspense fallback={SUSPENSE_FALLBACK}>{children}</Suspense>
