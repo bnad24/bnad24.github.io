@@ -1,6 +1,6 @@
 import fs from 'fs-extra';
 import { MetadataRoute } from 'next';
-import { DOMAIN } from '../constants';
+import { BASE_URL } from '../constants';
 import { MemesJson } from '../types';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -34,7 +34,7 @@ function createSitemapEntry({
   priority?: number;
 }): SitemapEntry {
   return {
-    url: `${DOMAIN}${url}`,
+    url: `${BASE_URL}${url}`,
     lastModified: new Date(),
     changeFrequency: changeFrequency ?? 'daily',
     priority: priority ?? 1,
