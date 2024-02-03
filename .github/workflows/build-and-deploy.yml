@@ -41,6 +41,10 @@ jobs:
 
       - name: 'yarn build'
         run: |
+          echo "" > .env.local
+          echo 'NEXT_PUBLIC_DOMAIN=bnad24.github.io' >> .env.local
+          echo 'NEXT_PUBLIC_BASE_URL=https://bnad24.github.io' >> .env.local
+          echo "" >> .env.local
           yarn build
 
       - name: Upload artifact
