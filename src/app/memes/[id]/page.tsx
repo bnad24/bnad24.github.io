@@ -24,12 +24,27 @@ export async function generateMetadata(
   }
 
   const { memes } = (await fs.readJSON('public/data/memes.json')) as MemesJson;
-  const meme = memes.find((meme) => meme.id == id);
-  if (!meme) {
+  const i = memes.findIndex((meme) => meme.id === id);
+  if (i === -1) {
     throw new Error(`Meme not found: id='${id}'`);
   }
 
+  const meme = memes[i];
   const { name, url, id: memeId, description } = meme;
+
+  const prevAndNext = [];
+
+  const prev = i > 0 ? memes[i - 1] : undefined;
+  if (prev) {
+    const prevUrl = `/memes/${prev.id}`;
+    prevAndNext.push({ rel: 'prev', url: prevUrl });
+  }
+
+  const next = i < memes.length - 1 ? memes[i + 1] : undefined;
+  if (next) {
+    const nextUrl = `/memes/${next.id}`;
+    prevAndNext.push({ rel: 'next', url: nextUrl });
+  }
 
   return generateMetadataBase(
     {
@@ -39,6 +54,9 @@ export async function generateMetadata(
       description: `${description ?? name ?? memeId} | Мемы о Борисе Надеждине 2024`,
       image: url,
       canonical: `/memes/${memeId}`,
+      icons: {
+        other: [...prevAndNext],
+      },
     },
     parent,
   );

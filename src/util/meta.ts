@@ -1,24 +1,26 @@
 import type { Metadata, ResolvedMetadata } from 'next';
 import type { TemplateString } from 'next/dist/lib/metadata/types/metadata-types';
 import { BASE_URL } from '../constants';
-import { AlternateLinkDescriptor } from 'next/dist/lib/metadata/types/alternative-urls-types';
 
 export async function generateMetadataBase(
-  meta: {
+  meta: Metadata & {
     title?: string | TemplateString;
     description?: string;
     image?: string;
-    canonical?: string | URL | AlternateLinkDescriptor;
-    keywords?: string | string[] | null | undefined;
+    canonical?: string;
+    keywords?: string[];
   },
   parentPromise?: ResolvedMetadata,
 ): Promise<Metadata> {
   const parent = await parentPromise;
 
-  const title = meta.title ?? parent?.title ?? '';
-  const description = meta.description ?? parent?.description ?? '';
-  const canonical = meta.canonical ?? parent?.alternates?.canonical;
-  const image = meta.image ?? parent?.openGraph?.images;
+  // eslint-disable-next-line prefer-const
+  let { title, description, image, canonical, keywords, ...rest } = meta;
+  title = meta.title ?? parent?.title ?? '';
+  description = meta.description ?? parent?.description ?? '';
+  canonical = meta.canonical ?? (parent?.alternates?.canonical as unknown as string) ?? '/';
+  image = meta.image ?? (parent?.openGraph?.images as unknown as string);
+  keywords = meta.keywords ?? parent?.keywords ?? [];
 
   return {
     title: title ?? parent?.title,
@@ -38,6 +40,7 @@ export async function generateMetadataBase(
       description,
       images: image ?? [],
     },
-    keywords: meta.keywords,
+    keywords,
+    ...rest,
   };
 }
