@@ -352,21 +352,21 @@
     },
     {
       "region": "Москва",
-      "valueSorted": 7270,
+      "valueSorted": 7269,
       "tg": "https://t.me/center_msk",
       "value": 28590,
       "pop": 13104177,
       "valuePerPop": 2181.7470872073845,
-      "valueSortedPerPop": 554.7849361314335
+      "valueSortedPerPop": 554.7086245858859
     },
     {
       "region": "Московская область",
-      "valueSorted": 3339,
+      "valueSorted": 3338,
       "tg": "https://t.me/center_mo",
       "value": 3480,
       "pop": 8591736,
       "valuePerPop": 405.0403783356472,
-      "valueSortedPerPop": 388.6292595582546
+      "valueSortedPerPop": 388.5128686449397
     },
     {
       "region": "Мурманская область",
@@ -582,12 +582,12 @@
     },
     {
       "region": "Республика Татарстан",
-      "valueSorted": 10137,
+      "valueSorted": 10133,
       "tg": "https://t.me/center_rt",
-      "value": 10137,
+      "value": 10133,
       "pop": 4001625,
-      "valuePerPop": 2533.220879017899,
-      "valueSortedPerPop": 2533.220879017899
+      "valuePerPop": 2532.221285102927,
+      "valueSortedPerPop": 2532.221285102927
     },
     {
       "region": "Тверская область",
@@ -728,8 +728,8 @@
       "valueSortedPerPop": 282.10161517823883
     }
   ],
-  "total": 236668,
-  "totalSorted": 165087,
-  "percSorted": 0.6975467743843696,
-  "updatedAt": "2024-02-05T19:17:26.415Z"
+  "total": 236664,
+  "totalSorted": 165081,
+  "percSorted": 0.6975332116418214,
+  "updatedAt": "2024-02-06T01:58:05.598Z"
 }
